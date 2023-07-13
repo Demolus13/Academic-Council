@@ -1,0 +1,26 @@
+/* Root CSS */
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  --red: rgb(237, 28, 36);
+  --blue: rgb(26, 46, 79);
+}
+
+/* Utilities */
+.h-extrabold{
+  font-weight: 800;
+}
+
+.h-bold{
+  font-weight: 700;
+}
+.h-semibold{
+  font-weight: 600;
+}
+
+.h-medium{
+  font-weight: 500;
+}
+
+/* Responsive Section */
