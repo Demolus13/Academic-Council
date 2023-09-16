@@ -12,7 +12,7 @@ export default function Footer() {
         </div>
         <p className="footer-item h-semibold" style={{marginBottom: "0px"}}>Website developed by:</p>
       </div>
-        <img src="/Images/IITGN Logo.png" alt="IITGN Logo" />
+        <img src={"../images/IITGN Logo.png"} alt="IITGN Logo" />
     </div>
   )
 }

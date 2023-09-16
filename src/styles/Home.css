@@ -142,6 +142,7 @@
 }
 
 #whatwedo .box{
+  overflow: hidden;
   background-color: var(--blue);
   margin: 1rem 1rem;
   width: 200px;
@@ -161,6 +162,11 @@
     background-color: rgba(255, 255, 255, 0.4);
     height: 20%;
     padding: 0.5rem;
+    transition: all 0.6s ease-in;
+}
+
+#whatwedo .box-link:hover{
+  background-color: rgba(237, 28, 36, 0.4);
 }
 
 #whatwedo .box-link a{

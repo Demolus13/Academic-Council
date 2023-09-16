@@ -3,8 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  inset: 0px 0px auto 0px;
   padding: 3rem 6rem;
   color: white;
+}
+
+#navbar.active{
+  position: sticky;
 }
 
 #navbar ul{
@@ -49,16 +54,12 @@
   z-index: 3;
 }
 
-.hamburger.active{
-  position: fixed;
-  right: 6rem;
-}
-
 .bar{
   display: block;
   width: 25px;
   height: 3px;
   margin: 5px 10px;
+  border-radius: 1.5px;
   transition: all 0.5s ease;
   background-color: white;
 }
@@ -79,7 +80,7 @@
   display: flex;
   align-items: center;
   position: fixed;
-  bottom: -100%;
+  bottom: -120%;
   right: 0px;
   background-color: #ED4146;
   width: 50%;
@@ -90,22 +91,6 @@
 
 .ham-menu.active{
   bottom: 0px;
-}
-
-.backdrop{
-  position: fixed;
-  top: -100%;
-  left: 0px;
-  background-color: black;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
-  z-index: 1;
-  opacity: 0.6;
-}
-
-.backdrop.active{
-  top: 0px;
 }
 
 .ham-container{
@@ -153,6 +138,22 @@
   font-size: 1.25rem;
 }
 
+.backdrop{
+  position: fixed;
+  top: -100%;
+  left: 0px;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.backdrop.active{
+  top: 0px;
+}
+
 /* Responsive Section */
 @media screen and (max-width: 900px) {
   #navbar{
@@ -160,9 +161,6 @@
   }
   .ham-container{
     margin: 3rem;
-  }
-  .hamburger.active{
-    right: 3rem;
   }
 }
 
@@ -188,9 +186,6 @@
   .navbar-item{
     font-size: 0.75rem;
   }
-  .hamburger.active{
-    right: 1.5rem;
-  }
   .ham-container{
     margin: 1.5rem;
   }
@@ -205,4 +200,8 @@
   }
 }
 
-
+@media screen and (max-height: 871px) {
+  .ham-item{
+    margin: 0px;
+  }
+}
