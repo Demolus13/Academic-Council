@@ -6,6 +6,8 @@
   inset: 0px 0px auto 0px;
   padding: 3rem 6rem;
   color: white;
+  position: relative;
+  z-index: 1;
 }
 
 #navbar.active{

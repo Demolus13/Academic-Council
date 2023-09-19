@@ -84,10 +84,8 @@
 }
 
 .container .subunit-1.active{
-    position: relative;
     transform: translateY(-15px);
     transition: 0.3s;
-    z-index: -1;
 }
 
 .container .subunit-2{
@@ -106,10 +104,8 @@
 }
 
 .container .subunit-2.active{
-    position: relative;
     transform: translateY(-15px);
     transition: 0.3s;
-    z-index: -1;
 }
 
 .search{
