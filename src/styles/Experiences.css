@@ -3,6 +3,7 @@
     content: "";
     background-image: url(../../public/Images/Experiences\ BG.jpg);
     background-size: cover;
+    background-position: center;
     position: fixed;
     top: 0px;
     width: 100%;
