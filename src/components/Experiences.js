@@ -59,12 +59,6 @@ export default function Experiences() {
           </div>
         </div>
         <div id="quill" className={`container-2 h-medium ${isActive === 2 ? "active" : ""}`}>
-          <div className="unit">
-            <img src={quill[isQuill].imgSrc} alt="" />
-            <div className="subunit">
-              <span>Name:</span> {quill[isQuill].name} <br /> {quill[isQuill].discipline} <br /> {quill[isQuill].info}
-            </div>
-          </div>
           <div className="quill-unit">
             {quill.map((card, index) => (
               <div className="quill-card">
@@ -76,6 +70,11 @@ export default function Experiences() {
                 <h4 className="h-medium" onClick={() => showQuill(index)}>{card.name}</h4>
               </div>
             ))}
+          </div>
+          <div className="unit">
+            <div className="subunit">
+              <span>Name:</span> {quill[isQuill].name} <br /> {quill[isQuill].discipline} <br /> {quill[isQuill].info} <br/> {quill[isQuill].description}  
+            </div>
           </div>
         </div>
         <div className={`container-3 ${isActive === 3 ? "active" : ""}`}>

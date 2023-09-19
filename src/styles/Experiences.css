@@ -165,7 +165,7 @@
 }
 
 .subunit{
-    width: 50vw;
+    width: 80vw;
     padding: 0.5rem;
     margin-left: 3rem;
     background-color: rgba(29, 29, 27, 0.6);
@@ -236,7 +236,7 @@
 }
 
 .container-2 .subunit{
-    width: 30vw;
+    width: 85vw;
     font-size: 1.2rem;
     text-align: center;
 }
