@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import '../styles/Experiences.css'
-import { alumni, quill } from '../utilities/experiencesData';
+import { alumni, quill, qna_prof } from '../utilities/experiencesData';
 
 export default function Experiences() {
   const [isActive, setActive] = useState(1);
   const [isAlumni, setAlumni] = useState(0);
   const [isQuill, setQuill] = useState(0);
+  const [isQnA, setQnA] = useState(0);
   const container_1 = document.getElementById("alumni-corner");
   const container_2 = document.getElementById("quill");
   const setView = (view) => {
@@ -13,11 +14,15 @@ export default function Experiences() {
   }
   const showAlumni = (view) => {
     setAlumni(view)
-    container_1.scrollIntoView({behavior: "smooth"});
+    container_1.scrollIntoView({ behavior: "smooth" });
   }
   const showQuill = (view) => {
     setQuill(view)
-    container_2.scrollIntoView({behavior: "smooth"});
+    container_2.scrollIntoView({ behavior: "smooth" });
+  }
+  const showQnA = (view) => {
+    setQnA(view)
+    container_2.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
@@ -39,41 +44,44 @@ export default function Experiences() {
           </div>
         </form>
         <div id="alumni-corner" className={`container-1 ${isActive === 1 ? "active" : ""}`}>
-          <div className="unit">
-            <img src={alumni[isAlumni].imgSrc} alt="" />
-            <div className="subunit">
-              <span>Name:</span> {alumni[isAlumni].name} <br /> {alumni[isAlumni].info}
+          <div className="alumni-container">
+            <div className="alumni-unit">
+              {alumni.map((card, index) => (
+                <div className="alumni-card" key={index}>
+                  <div className="alumni-bg">
+                    <div className="alumni-img">
+                      <img src={card.imgSrc} onClick={() => showAlumni(index)} alt="" />
+                    </div>
+                  </div>
+                  <h4 className="h-medium" onClick={() => showAlumni(index)}>{card.name}</h4>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="alumni-unit">
-            {alumni.map((card, index) => (
-              <div className="alumni-card" key={index}>
-              <div className="alumni-bg">
-                <div className="alumni-img">
-                  <img src={card.imgSrc} onClick={() => showAlumni(index)} alt="" />
-                </div>
-              </div>
-                  <h4 className="h-medium" onClick={() => showAlumni(index)}>{card.name}</h4>
-              </div>
-            ))}
+          <div className="unit">
+            <div className="subunit">
+              <span>Name:</span> {alumni[isAlumni].name} <br /> <br /> {alumni[isAlumni].info}
+            </div>
           </div>
         </div>
         <div id="quill" className={`container-2 h-medium ${isActive === 2 ? "active" : ""}`}>
-          <div className="quill-unit">
-            {quill.map((card, index) => (
-              <div className="quill-card">
-                <div className="quill-bg">
-                <div className="quill-img">
-                <img src={card.imgSrc} onClick={() => showQuill(index)} alt="" />
+          <div className="quill-container">
+            <div className="quill-unit">
+              {quill.map((card, index) => (
+                <div className="quill-card" key={index}>
+                  <div className="quill-bg">
+                    <div className="quill-img">
+                      <img src={card.imgSrc} onClick={() => showQuill(index)} alt="" />
+                    </div>
+                  </div>
+                  <h4 className="h-medium" onClick={() => showQuill(index)}>{card.name}</h4>
                 </div>
-                </div>
-                <h4 className="h-medium" onClick={() => showQuill(index)}>{card.name}</h4>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           <div className="unit">
             <div className="subunit">
-              <span>Name:</span> {quill[isQuill].name} <br /> {quill[isQuill].discipline} <br /> {quill[isQuill].info} <br/> {quill[isQuill].description}  
+              <span>Name:</span> {quill[isQuill].name} <br /> {quill[isQuill].discipline} <br /> {quill[isQuill].info} <br /> {quill[isQuill].description}
             </div>
           </div>
         </div>
@@ -93,6 +101,27 @@ export default function Experiences() {
           <button className="btn">
             <a className="h-medium" href="./">Overseas Experiences</a>
           </button>
+        </div>
+        <div id="quill" className={`container-2 h-medium ${isActive === 4 ? "active" : ""}`}>
+          <div className="quill-container">
+            <div className="quill-unit">
+              {qna_prof.map((card, index) => (
+                <div className="quill-card" key={index}>
+                  <div className="quill-bg">
+                    <div className="quill-img">
+                      <img src={card.imgSrc} onClick={() => showQnA(index)} alt="" />
+                    </div>
+                  </div>
+                  <h4 className="h-medium" onClick={() => showQnA(index)}>{card.name}</h4>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="unit">
+            <div className="subunit">
+              <span>Name:</span> {qna_prof[isQnA].name} <br /> {qna_prof[isQnA].discipline} <br /> {qna_prof[isQnA].info} <br /> <br />{qna_prof[isQnA].description}
+            </div>
+          </div>
         </div>
       </div>
     </>

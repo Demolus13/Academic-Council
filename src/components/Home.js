@@ -8,7 +8,7 @@ export default function Home(props) {
     {/* Home Section */}
     <div id="home">
         <h1 className="h-extrabold">Student Academic Council</h1>
-        <p className="h-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, perspiciatis sunt ducimus dignissimos excepturi eius accusamus consequatur. Unde praesentium placeat id dicta, nisi blanditiis sint commodi eos recusandae repudiandae et. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, eum?</p>
+        <p className="h-semibold">IIT Gandhinagar prides itself in the freedom it gives to its students. The Student Academic Council is an extension of that same freedom -- to cater to the academic needs of the student body, you need a student body. That's where we come in.</p>
         <button className="btn"><a className="h-semibold" href="./">Objective & Structure 2023-24</a></button>
     </div>
 
