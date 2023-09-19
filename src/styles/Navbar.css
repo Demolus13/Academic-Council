@@ -175,7 +175,7 @@
     font-size: 1rem;
   }
   .subham-item a{
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -196,12 +196,12 @@
     font-size: 0.75rem;
   }
   .subham-item a{
-    font-size: 0.5rem;
+    font-size: 0.65rem;
   }
 }
 
 @media screen and (max-height: 871px) {
   .ham-item{
-    margin: 0px;
+    margin: 5px;
   }
 }

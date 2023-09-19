@@ -4,21 +4,21 @@
     background-image: url(../../public/Images/Council\ BG.png);
     background-size: cover;
     position: fixed;
-    top: 0px;
+    inset: 0px;
     width: 100%;
     height: 100%;
-    z-index: -2;
+    z-index: -3;
   }
   
   #council::after{
     content: "";
     background-color: var(--blue);
     position: fixed;
-    top: 0px;
+    inset: 0px;
     width: 100%;
     height: 100%;
     opacity: 0.65;
-    z-index: -1;
+    z-index: -2;
   }
   
   #council{
@@ -28,6 +28,7 @@
     align-items: center;
     color: white;
     height: auto;
+    padding: 0rem 1rem;
   }
 
   #council .members{
@@ -58,7 +59,7 @@
 
   .cards img{
     max-width: 100%;
-    border-radius: 1vw;
+    border-radius: 20px;
   }
 
   .cards h2{

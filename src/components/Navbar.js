@@ -29,7 +29,7 @@ export default function Navbar() {
               <a href="/" className="ham-link">Home</a>
             </li>
             <li className="ham-item">
-              <a href="/about" className="ham-link">About Us</a>
+              <a href="/council" className="ham-link">Council</a>
             </li>
             <li className="ham-item">
               <a href="/events" className="ham-link">Events</a>
