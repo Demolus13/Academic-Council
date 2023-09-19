@@ -3,6 +3,7 @@
     content: "";
     background-image: url(../../public/Images/Council\ BG.png);
     background-size: cover;
+    background-position: center;
     position: fixed;
     inset: 0px;
     width: 100%;
