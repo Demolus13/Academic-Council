@@ -1,7 +1,7 @@
 /* Council Section*/
 #council::before{
     content: "";
-    background-image: url(../../public/Images/Council\ BG.png);
+    background-image: url(../../public/Images/Council\ BG.webp);
     background-size: cover;
     background-position: center;
     position: fixed;

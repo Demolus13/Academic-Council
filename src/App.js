@@ -11,7 +11,7 @@ function App() {
     <>
     <Navbar/>
     <Routes>
-      <Route path='/' element={<Home ug={800} pg={400} f={215}/>}/>
+      <Route path='/' element={<Home ug={"800+"} pg={"500+"} f={"120+"}/>}/>
       <Route path='/experiences' element={<Experiences/>}/>
       <Route path='/council' element={<Council/>}/>
     </Routes>

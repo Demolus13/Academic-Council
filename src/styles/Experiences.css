@@ -1,7 +1,7 @@
 /* Experiences Section */
 #experiences::before{
     content: "";
-    background-image: url(../../public/Images/Experiences\ BG.jpg);
+    background-image: url(../../public/Images/Experiences\ BG.webp);
     background-size: cover;
     background-position: center;
     position: fixed;
@@ -175,6 +175,15 @@
     text-align:justify;
 }
 
+.subunit::-webkit-scrollbar {
+    display: none; /* Chrome*/
+}
+
+.subunit {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .subunit span{
     color: var(--red);
 }
@@ -189,6 +198,15 @@
 .alumni-unit{
     display: flex;
     overflow: scroll;
+}
+
+.alumni-unit::-webkit-scrollbar {
+    display: none; /* Chrome*/
+}
+
+.alumni-unit {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .alumni-card{
@@ -246,6 +264,15 @@
 .quill-unit{
     display: flex;
     overflow: scroll;
+}
+
+.quill-unit::-webkit-scrollbar {
+    display: none; /* Chrome*/
+}
+
+.quill-unit {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .quill-card{

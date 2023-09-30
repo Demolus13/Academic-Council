@@ -16,16 +16,16 @@ export default function Council() {
           </div>
           <h2 className="h-semibold">{cards.name}</h2>
           <p className="council-btn">{cards.position}</p>
-          <p>{cards.ug} <br /> {cards.branch}</p>
+          <p>{cards.ug} <br /> Contact no: {cards.contact}</p>
           <div className="links">
-            <a href={cards.linkedin}>
-              <img src="/Images/linkedin.png" alt="" />
+            <a href={cards.linkedin} rel="noreferrer" target="_blank">
+              <img src="/Images/linkedin.webp" alt="" />
             </a>
-            <a href={cards.www}>
-              <img src="/Images/world-wide-web.png" alt="" />
+            <a href={cards.www} rel="noreferrer" target="_blank">
+              <img src="/Images/world-wide-web.webp" alt="" />
             </a>
-            <a href={cards.email}>
-              <img src="/Images/mail.png" alt="" />
+            <a href={`mailto:${cards.email}`} rel="noreferrer" target="_blank">
+              <img src="/Images/mail.webp" alt="" />
             </a>
           </div>
         </div>

@@ -7,6 +7,15 @@
   --blue: rgb(26, 46, 79);
 }
 
+body::-webkit-scrollbar {
+  display: none; /* Chrome*/
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 /* Utilities */
 .h-extrabold{
   font-weight: 800;
