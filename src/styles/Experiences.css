@@ -173,6 +173,7 @@
     overflow-y: scroll;
     width: 85vw;
     text-align:justify;
+    white-space: pre-line;
 }
 
 .subunit::-webkit-scrollbar {

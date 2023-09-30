@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer-item btn">
           <p className="h-semibold">academic.secretary@iitgn.ac.in</p>
         </div>
-        <p className="footer-item h-semibold" style={{marginBottom: "0px"}}>Website developed by:</p>
+        <p className="footer-item h-semibold" style={{marginBottom: "0px"}}>Website developed by: <br /> Netram Choudhary & Parth Govale</p>
       </div>
         <img src={"../images/IITGN Logo.webp"} alt="IITGN Logo" />
     </div>

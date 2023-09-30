@@ -60,7 +60,7 @@ export default function Navbar() {
               <a href="/CRs" className="ham-link">CRs</a>
             </li>
             <li className="ham-item">
-              <a href="/Project-Courses" className="ham-link">Project Courses</a>
+              <a href="https://students.iitgn.ac.in/student-acad-council/project-courses/login" className="ham-link" target="blank">Project Courses</a>
             </li>
             <li className="ham-item">
               <a href="/ADH-PAL" className="ham-link">ADH & PAL</a>

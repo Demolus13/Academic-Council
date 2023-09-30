@@ -123,22 +123,22 @@ export const members = [
     {
         name: "Parth Govale",
         position: "Webmaster",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Computer Science Engineer",
         contact: "96198 69044",
         imgSrc: "./Images/parth.webp",
-        linkedin: "",
-        www: "",
+        linkedin: "https://www.linkedin.com/in/parth-govale-a65120277/",
+        www: "https://github.com/Demolus13",
         email: "parth.govale@iitgn.ac.in"
     },
     {
         name: "Harsh Jain",
         position: "General Member",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Material Science Engineer",
         contact: "98814 67068",
         imgSrc: "./Images/harsh.webp",
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/in/harsh-jain-449a19255/",
         www: "",
         email: "harsh.jain@iitgn.ac.in"
     },
@@ -156,7 +156,7 @@ export const members = [
     {
         name: "Mayank Dahotre",
         position: "General Member",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Material Science Engineer",
         contact: "",
         imgSrc: "./Images/noimg.webp",
@@ -167,7 +167,7 @@ export const members = [
     {
         name: "Athrava Bodhale",
         position: "General Member",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Material Science Engineer",
         contact: "",
         imgSrc: "./Images/noimg.webp",
@@ -178,7 +178,7 @@ export const members = [
     {
         name: "Shrishti Mishra",
         position: "General Member",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Material Science Engineer",
         contact: "92638 70017",
         imgSrc: "./Images/Shrishti Mishra.webp",
@@ -189,7 +189,7 @@ export const members = [
     {
         name: "Birudugadda Srivibhav",
         position: "General Member",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Material Science Engineer",
         contact: "93925 39193",
         imgSrc: "./Images/Birudugadda Srivibhav.webp",
@@ -200,7 +200,7 @@ export const members = [
     {
         name: "Birudugadda Srivibhav",
         position: "General Member",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Material Science Engineer",
         contact: "93925 39193",
         imgSrc: "./Images/Birudugadda Srivibhav.webp",
@@ -211,7 +211,7 @@ export const members = [
     {
         name: "Shrey Agarwal",
         position: "General Member",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Material Science Engineer",
         contact: "",
         imgSrc: "./Images/noimg.webp",
@@ -222,7 +222,7 @@ export const members = [
     {
         name: "Ishan Agarwal",
         position: "General Member",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Material Science Engineer",
         contact: "91188 86527",
         imgSrc: "./Images/Ishan Agarwal.webp",

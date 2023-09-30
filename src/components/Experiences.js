@@ -14,15 +14,21 @@ export default function Experiences() {
   }
   const showAlumni = (view) => {
     setAlumni(view)
-    container_1.scrollIntoView({ behavior: "smooth" });
+    if (container_1){
+      container_1.scrollIntoView({ behavior: "smooth" });
+    }
   }
   const showQuill = (view) => {
     setQuill(view)
-    container_2.scrollIntoView({ behavior: "smooth" });
+    if (container_2){
+      container_2.scrollIntoView({ behavior: "smooth" });
+    }
   }
   const showQnA = (view) => {
     setQnA(view)
-    container_2.scrollIntoView({ behavior: "smooth" });
+    if (container_2){
+      container_2.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   return (
