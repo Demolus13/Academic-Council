@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import '../styles/Navbar.css';
-
+import { Link } from "react-router-dom";
 export default function Navbar() {
   const [isActive, setActive] = useState(false);
   const Toggle = () => {
@@ -13,9 +13,14 @@ export default function Navbar() {
         <li className="navbar-item">Student Academic Council</li>
       </ul>
       <ul>
-        <li className="navbar-item"><a href="/">Home</a></li>
-        <li className="navbar-item"><a href="/#/council">Council</a></li>
-        <li className="navbar-item"><a href="/#/experiences">Experiences</a></li>
+        <Link to="/" className="navbar-item">Home</Link>
+        <Link to="/council" className="navbar-item">Council</Link>
+        <Link to="/experiences" className="navbar-item">Experiences</Link>
+
+        {/* <li className="navbar-item"><a href="/">Home</a></li> */}
+
+        {/* <li className="navbar-item"><a href="/#/council">Council</a></li>
+        <li className="navbar-item"><a href="/#/experiences">Experiences</a></li> */}
         <div className={`hamburger ${isActive ? "active" : ""}`} onClick={Toggle}>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -26,16 +31,16 @@ export default function Navbar() {
         <div className="ham-container">
           <ul className="ham-subcontainer">
             <li className="ham-item">
-              <a href="/" className="ham-link">Home</a>
+              <Link to="/" className="ham-link">Home</Link>
             </li>
             <li className="ham-item">
-              <a href="/council" className="ham-link">Council</a>
+              <Link to="/council" className="ham-link">Council</Link>
             </li>
             <li className="ham-item">
-              <a href="/events" className="ham-link">Events</a>
+              <Link to="/events" className="ham-link">Events</Link>
             </li>
             <li className="ham-item">
-              <a href="/experiences" className="ham-link">Experiences</a>
+              <Link to="/experiences" className="ham-link">Experiences</Link>
             </li>
             <ul>
               <li className="subham-item">
