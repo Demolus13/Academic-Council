@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '../styles/Home.css';
+import { Link } from "react-router-dom";
 
 export default function Home(props) {
   return (
@@ -64,35 +65,35 @@ export default function Home(props) {
                 <img src='/Images/hackathon.svg' alt="" />
                 <h2 className="h-semibold">Events</h2>
                 <div className="box-link">
-                    <a className="h-semibold" href="./">Find out more</a>
+                    <Link className="h-semibold" to="./">Find out more</Link>
                 </div>
             </div>
             <div className="box">
                 <img src='/Images/meeting.svg' alt="" />
                 <h2 className="h-semibold">ADH & PAL</h2>
                 <div className="box-link">
-                    <a className="h-semibold" href="./">Find out more</a>
+                    <Link className="h-semibold" to="./">Find out more</Link>
                 </div>
             </div>
             <div className="box">
                 <img src='/Images/calculator.svg' alt="" />
                 <h2 className="h-semibold">P/F Calculator</h2>
                 <div className="box-link">
-                    <a className="h-semibold" href="./">Find out more</a>
+                    <Link className="h-semibold" to="./">Find out more</Link>
                 </div>
             </div>
             <div className="box">
                 <img src='/Images/speech.svg' alt="" />
                 <h2 className="h-semibold">CRs</h2>
                 <div className="box-link">
-                    <a className="h-semibold" href="./">Find out more</a>
+                    <Link className="h-semibold" to="./">Find out more</Link>
                 </div>
             </div>
             <div className="box">
                 <img src='/Images/online-course.svg' alt="" />
                 <h2 className="h-semibold">SRCs</h2>
                 <div className="box-link">
-                    <a className="h-semibold" href="./">Find out more</a>
+                    <Link className="h-semibold" to="./">Find out more</Link>
                 </div>
             </div>
         </div>

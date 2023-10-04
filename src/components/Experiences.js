@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/Experiences.css'
 import { alumni, quill, qna_prof } from '../utilities/experiencesData';
-
+import { Link } from "react-router-dom";
 export default function Experiences() {
   const [isActive, setActive] = useState(1);
   const [isAlumni, setAlumni] = useState(0);
@@ -93,19 +93,19 @@ export default function Experiences() {
         </div>
         <div className={`container-3 ${isActive === 3 ? "active" : ""}`}>
           <button className="btn">
-            <a className="h-medium" href="./">Academic Internship series</a>
+            <Link className="h-medium" to="./">Academic Internship series</Link>
           </button>
           <button className="btn">
-            <a className="h-medium" href="./">Invent@IITGN Experiences</a>
+            <Link className="h-medium" to="./">Invent@IITGN Experiences</Link>
           </button>
           <button className="btn">
-            <a className="h-medium" href="./">Internship Experiences</a>
+            <Link className="h-medium" to="./">Internship Experiences</Link>
           </button>
           <button className="btn">
-            <a className="h-medium" href="./">Conference/Workshop Experiences</a>
+            <Link className="h-medium" to="./">Conference/Workshop Experiences</Link>
           </button>
           <button className="btn">
-            <a className="h-medium" href="./">Overseas Experiences</a>
+            <Link className="h-medium" to="./">Overseas Experiences</Link>
           </button>
         </div>
         <div id="quill" className={`container-2 h-medium ${isActive === 4 ? "active" : ""}`}>

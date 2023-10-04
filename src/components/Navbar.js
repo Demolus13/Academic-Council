@@ -44,34 +44,34 @@ export default function Navbar() {
             </li>
             <ul>
               <li className="subham-item">
-                <a href="/quill" className="ham-link">The Quill</a>
+                <Link to="/quill" className="ham-link">The Quill</Link>
               </li>
               <li className="subham-item">
-                <a href="/student-archive" className="ham-link">Student Archive</a>
+                <Link to="/student-archive" className="ham-link">Student Archive</Link>
               </li>
               <li className="subham-item">
-                <a href="/alumni-corner" className="ham-link">Alumni Corner</a>
+                <Link to="/alumni-corner" className="ham-link">Alumni Corner</Link>
               </li>
               <li className="subham-item">
-                <a href="/QnA" className="ham-link">QnA with Faculty</a>
+                <Link to="/QnA" className="ham-link">QnA with Faculty</Link>
               </li>
             </ul>
           </ul>
           <ul className="ham-subcontainer">
           <li className="ham-item">
-              <a href="/calculator" className="ham-link">P/F Calculator</a>
+              <Link to="/calculator" className="ham-link">P/F Calculator</Link>
             </li>
             <li className="ham-item">
-              <a href="/CRs" className="ham-link">CRs</a>
+              <Link to="/CRs" className="ham-link">CRs</Link>
             </li>
             <li className="ham-item">
-              <a href="https://students.iitgn.ac.in/student-acad-council/project-courses/login" className="ham-link" target="blank">Project Courses</a>
+              <Link to="https://students.iitgn.ac.in/student-acad-council/project-courses/login" className="ham-link" target="blank">Project Courses</Link>
             </li>
             <li className="ham-item">
-              <a href="/ADH-PAL" className="ham-link">ADH & PAL</a>
+              <Link to="/ADH-PAL" className="ham-link">ADH & PAL</Link>
             </li>
             <li className="ham-item">
-              <a href="/SRCs" className="ham-link">SRCs</a>
+              <Link to="/SRCs" className="ham-link">SRCs</Link>
             </li>
           </ul>
         </div>
