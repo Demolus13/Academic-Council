@@ -1,5 +1,6 @@
 {
   "name": "academic-council",
+  "hompage":"https://students.iitgn.ac.in/student-academic-council",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

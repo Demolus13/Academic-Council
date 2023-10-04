@@ -14,8 +14,8 @@ export default function Navbar() {
       </ul>
       <ul>
         <li className="navbar-item"><a href="/">Home</a></li>
-        <li className="navbar-item"><a href="/council">Council</a></li>
-        <li className="navbar-item"><a href="/experiences">Experiences</a></li>
+        <li className="navbar-item"><a href="/#/council">Council</a></li>
+        <li className="navbar-item"><a href="/#/experiences">Experiences</a></li>
         <div className={`hamburger ${isActive ? "active" : ""}`} onClick={Toggle}>
           <span className="bar"></span>
           <span className="bar"></span>
