@@ -1,10 +1,18 @@
 import React, {useState} from "react"
 import '../styles/Navbar.css';
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isActive, setActive] = useState(false);
   const Toggle = () => {
     setActive(!isActive)
+  }
+  const Links = document.getElementsByClassName("linkEventListener");
+  for (let index = 0; index < Links.length; index++) {
+    const link = Links[index];
+    link.addEventListener("click", () => {
+      Toggle();
+    });
   }
 
   return (
@@ -13,9 +21,9 @@ export default function Navbar() {
         <li className="navbar-item">Student Academic Council</li>
       </ul>
       <ul>
-        <li className="navbar-item"><a href="/">Home</a></li>
-        <li className="navbar-item"><a href="/council">Council</a></li>
-        <li className="navbar-item"><a href="/experiences">Experiences</a></li>
+        <li className="navbar-item"><Link to="/">Home</Link></li>
+        <li className="navbar-item"><Link to="/council">Council</Link></li>
+        <li className="navbar-item"><Link to="/experiences">Experiences</Link></li>
         <div className={`hamburger ${isActive ? "active" : ""}`} onClick={Toggle}>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -26,47 +34,47 @@ export default function Navbar() {
         <div className="ham-container">
           <ul className="ham-subcontainer">
             <li className="ham-item">
-              <a href="/" className="ham-link">Home</a>
+              <Link to="/" className="ham-link linkEventListener">Home</Link>
             </li>
             <li className="ham-item">
-              <a href="/council" className="ham-link">Council</a>
+              <Link to="/council" className="ham-link linkEventListener">Council</Link>
             </li>
             <li className="ham-item">
-              <a href="/events" className="ham-link">Events</a>
+              <Link to="/events" className="ham-link linkEventListener">Events</Link>
             </li>
             <li className="ham-item">
-              <a href="/experiences" className="ham-link">Experiences</a>
+              <Link to="/experiences" className="ham-link linkEventListener">Experiences</Link>
             </li>
             <ul>
               <li className="subham-item">
-                <a href="/quill" className="ham-link">The Quill</a>
+                <Link to="/quill" className="ham-link linkEventListener">The Quill</Link>
               </li>
               <li className="subham-item">
-                <a href="/student-archive" className="ham-link">Student Archive</a>
+                <Link to="/student-archive" className="ham-link linkEventListener">Student Archive</Link>
               </li>
               <li className="subham-item">
-                <a href="/alumni-corner" className="ham-link">Alumni Corner</a>
+                <Link to="/alumni-corner" className="ham-link linkEventListener">Alumni Corner</Link>
               </li>
               <li className="subham-item">
-                <a href="/QnA" className="ham-link">QnA with Faculty</a>
+                <Link to="/QnA" className="ham-link linkEventListener">QnA with Faculty</Link>
               </li>
             </ul>
           </ul>
           <ul className="ham-subcontainer">
           <li className="ham-item">
-              <a href="/calculator" className="ham-link">P/F Calculator</a>
+              <Link to="/calculator" className="ham-link linkEventListener">P/F Calculator</Link>
             </li>
             <li className="ham-item">
-              <a href="/CRs" className="ham-link">CRs</a>
+              <Link to="/CRs" className="ham-link linkEventListener">CRs</Link>
             </li>
             <li className="ham-item">
-              <a href="https://students.iitgn.ac.in/student-acad-council/project-courses/login" className="ham-link" target="blank">Project Courses</a>
+              <Link to="https://students.iitgn.ac.in/student-acad-council/project-courses/login" className="ham-link linkEventListener" target="blank">Project Courses</Link>
             </li>
             <li className="ham-item">
-              <a href="/ADH-PAL" className="ham-link">ADH & PAL</a>
+              <Link to="/ADH-PAL" className="ham-link linkEventListener">ADH & PAL</Link>
             </li>
             <li className="ham-item">
-              <a href="/SRCs" className="ham-link">SRCs</a>
+              <Link to="/SRCs" className="ham-link linkEventListener">SRCs</Link>
             </li>
           </ul>
         </div>

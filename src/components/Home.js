@@ -64,35 +64,35 @@ export default function Home(props) {
                 <img src='/Images/hackathon.svg' alt="" />
                 <h2 className="h-semibold">Events</h2>
                 <div className="box-link">
-                    <a className="h-semibold" href="./">Find out more</a>
+                    <a className="h-semibold" href="/events">Find out more</a>
                 </div>
             </div>
             <div className="box">
                 <img src='/Images/meeting.svg' alt="" />
                 <h2 className="h-semibold">ADH & PAL</h2>
                 <div className="box-link">
-                    <a className="h-semibold" href="./">Find out more</a>
+                    <a className="h-semibold" href="/ADH">Find out more</a>
                 </div>
             </div>
             <div className="box">
                 <img src='/Images/calculator.svg' alt="" />
                 <h2 className="h-semibold">P/F Calculator</h2>
                 <div className="box-link">
-                    <a className="h-semibold" href="./">Find out more</a>
+                    <a className="h-semibold" href="/calculator">Find out more</a>
                 </div>
             </div>
             <div className="box">
                 <img src='/Images/speech.svg' alt="" />
                 <h2 className="h-semibold">CRs</h2>
                 <div className="box-link">
-                    <a className="h-semibold" href="./">Find out more</a>
+                    <a className="h-semibold" href="/CRs">Find out more</a>
                 </div>
             </div>
             <div className="box">
                 <img src='/Images/online-course.svg' alt="" />
                 <h2 className="h-semibold">SRCs</h2>
                 <div className="box-link">
-                    <a className="h-semibold" href="./">Find out more</a>
+                    <a className="h-semibold" href="/SRCs">Find out more</a>
                 </div>
             </div>
         </div>

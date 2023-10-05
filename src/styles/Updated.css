@@ -1,0 +1,33 @@
+#updated::before{
+    content: "";
+    background-image: url(../../public/Images/Updated\ BG.webp);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+  }
+  
+  #updated::after{
+    content: "";
+    background-color: var(--blue);
+    position: fixed;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.70;
+    z-index: -2;
+  }
+  
+  #updated{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: calc(100vh - 77px);
+    padding: 0rem 1rem;
+    font-size: 3rem;
+  }
