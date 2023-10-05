@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Footer.css';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -12,6 +13,7 @@ export default function Footer() {
         </div>
         <p className="footer-item h-semibold" style={{marginBottom: "0px"}}>Website developed by: <br /> Netram Choudhary & Parth Govale</p>
       </div>
+
         <img src={"../images/IITGN Logo.webp"} alt="IITGN Logo" />
     </div>
   )

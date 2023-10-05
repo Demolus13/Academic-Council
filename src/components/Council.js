@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Council.css'
 import { members } from '../utilities/councilData'
+import { Link } from "react-router-dom";
 
 export default function Council() {
   return (
@@ -18,15 +19,15 @@ export default function Council() {
           <p className="council-btn">{cards.position}</p>
           <p>{cards.ug} <br /> Contact no: {cards.contact}</p>
           <div className="links">
-            <a href={cards.linkedin} rel="noreferrer" target="_blank">
+            <Link to={cards.linkedin} rel="noreferrer" target="_blank">
               <img src="/Images/linkedin.webp" alt="" />
-            </a>
-            <a href={cards.www} rel="noreferrer" target="_blank">
+            </Link>
+            <Link to={cards.www} rel="noreferrer" target="_blank">
               <img src="/Images/world-wide-web.webp" alt="" />
-            </a>
-            <a href={`mailto:${cards.email}`} rel="noreferrer" target="_blank">
+            </Link>
+            <Link to={`mailto:${cards.email}`} rel="noreferrer" target="_blank">
               <img src="/Images/mail.webp" alt="" />
-            </a>
+            </Link>
           </div>
         </div>
       ))}
