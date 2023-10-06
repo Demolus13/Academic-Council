@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <div id="navbar" className={`h-semibold ${isActive ? "active" : ""}`}>
       <ul>
-        <li className="navbar-item">Student Academic Council</li>
+        <li className="navbar-item"><Link to="/">Student Academic Council</Link></li>
       </ul>
       <ul>
         <li className="navbar-item"><Link to="/">Home</Link></li>
