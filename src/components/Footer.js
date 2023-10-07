@@ -14,7 +14,7 @@ export default function Footer() {
         <p className="footer-item h-semibold" style={{marginBottom: "0px"}}>Website developed by: <br /> Netram Choudhary & Parth Govale</p>
       </div>
 
-        <img src={"../images/IITGN Logo.webp"} alt="IITGN Logo" />
+        <img src={"../Images/IITGN Logo.webp"} alt="IITGN Logo" />
     </div>
   )
 }
