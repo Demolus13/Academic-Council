@@ -20,13 +20,13 @@ export default function Council() {
           <p>{cards.ug} <br /> Contact no: {cards.contact}</p>
           <div className="links">
             <Link to={cards.linkedin} rel="noreferrer" target="_blank">
-              <img src="/Images/linkedin.webp" alt="" />
+              <img src="../Images/linkedin.webp" alt="" />
             </Link>
             <Link to={cards.www} rel="noreferrer" target="_blank">
-              <img src="/Images/world-wide-web.webp" alt="" />
+              <img src="../Images/world-wide-web.webp" alt="" />
             </Link>
             <Link to={`mailto:${cards.email}`} rel="noreferrer" target="_blank">
-              <img src="/Images/mail.webp" alt="" />
+              <img src="../Images/mail.webp" alt="" />
             </Link>
           </div>
         </div>

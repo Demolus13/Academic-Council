@@ -46,7 +46,7 @@ export default function Experiences() {
         <form className="search" action="backend.php">
           <input type="text" placeholder="What are you looking for......" />
           <div className="i-search">
-            <img src="/Images/search.webp" alt="" />
+            <img src="../Images/search.webp" alt="" />
           </div>
         </form>
         <div id="alumni-corner" className={`container-1 ${isActive === 1 ? "active" : ""}`}>
