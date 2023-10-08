@@ -42,14 +42,14 @@
     width: 80%;
 }
 
-.btn{
+#experiences .btn{
     margin: 1rem 0rem;
     padding: 10px 0px;
-    border: 2px solid white;
+    border: 3px solid white;
     background-color: transparent;
 }
 
-.btn a{
+#experiences .btn a{
     text-decoration: none;
     padding: 11px 60px;
     font-size: 1.3rem;
@@ -57,7 +57,7 @@
     transition: all 0.6s ease-in;
 }
 
-.btn a:hover{
+#experiences .btn a:hover{
     background-color: var(--red);
 }
 
@@ -372,4 +372,20 @@
         font-size: 0.65rem;
         padding: 1rem 0.25rem;
     }
+    #experiences .btn{
+        border: 2px solid white;
+    }
 }
+
+@media screen and (max-width: 450px) {
+    #experiences .btn a{
+      font-size: 0.75rem;
+      padding: 11px 3rem;
+    }
+  }
+  
+  @media screen and (max-width: 310px) {
+    #experiences .btn a{
+      padding: 11px 1rem;
+    }
+  }

@@ -198,17 +198,6 @@ export const members = [
         email: "birudugadda.srivibhav@iitgn.ac.in"
     },
     {
-        name: "Birudugadda Srivibhav",
-        position: "General Member",
-        ug: "Junior Undergraduate",
-        branch: "Material Science Engineer",
-        contact: "93925 39193",
-        imgSrc: "./Images/Birudugadda Srivibhav.webp",
-        linkedin: "",
-        www: "",
-        email: "birudugadda.srivibhav@iitgn.ac.in"
-    },
-    {
         name: "Shrey Agarwal",
         position: "General Member",
         ug: "Junior Undergraduate",

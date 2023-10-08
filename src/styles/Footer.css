@@ -28,6 +28,11 @@
     max-height: 200px;
 }
 
+#footer .footer-item a{
+    text-decoration: none;
+    color: black;
+}
+
 /* Responsive Section */
 @media screen and (max-width: 792px) {
     #footer img{
