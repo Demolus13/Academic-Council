@@ -40,7 +40,7 @@ export default function Experiences() {
         <div className="container h-bold">
           <h3 className={`subunit-1 ${isActive === 1 ? "active" : ""}`} onClick={() => setView(1)}>Alumni Corner</h3>
           <h3 className={`subunit-2 ${isActive === 2 ? "active" : ""}`} onClick={() => setView(2)}>The Quill</h3>
-          <h3 className={`subunit-1 ${isActive === 3 ? "active" : ""}`} onClick={() => setView(3)}>Student Archieve</h3>
+          <h3 className={`subunit-1 ${isActive === 3 ? "active" : ""}`} onClick={() => setView(3)}>Student Archive</h3>
           <h3 className={`subunit-2 ${isActive === 4 ? "active" : ""}`} onClick={() => setView(4)}>QnA with Faculty</h3>
         </div>
         <form className="search" action="backend.php">
