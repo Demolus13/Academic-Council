@@ -164,31 +164,6 @@
     border-radius: 5vh;
 }
 
-.subunit{
-    height: 100vh;
-    padding: 1rem;
-    background-color: rgba(29, 29, 27, 0.6);
-    color: white;
-    font-size: 1.2rem;
-    overflow-y: scroll;
-    width: 85vw;
-    text-align:justify;
-    white-space: pre-line;
-}
-
-.subunit::-webkit-scrollbar {
-    display: none; /* Chrome*/
-}
-
-.subunit {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.subunit span{
-    color: var(--red);
-}
-
 .alumni-container{
     display: flex;
     justify-content: center;

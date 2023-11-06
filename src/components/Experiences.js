@@ -4,31 +4,17 @@ import { alumni, quill, qna_prof } from '../utilities/experiencesData';
 import { Link } from "react-router-dom";
 export default function Experiences() {
   const [isActive, setActive] = useState(1);
-  const [isAlumni, setAlumni] = useState(0);
-  const [isQuill, setQuill] = useState(0);
-  const [isQnA, setQnA] = useState(0);
-  const container_1 = document.getElementById("alumni-corner");
-  const container_2 = document.getElementById("quill");
   const setView = (view) => {
     setActive(view);
   }
   const showAlumni = (view) => {
-    setAlumni(view)
-    if (container_1){
-      container_1.scrollIntoView({ behavior: "smooth" });
-    }
+    window.open(`#/experiences/alumni/${view}`)
   }
   const showQuill = (view) => {
-    setQuill(view)
-    if (container_2){
-      container_2.scrollIntoView({ behavior: "smooth" });
-    }
+    window.open(`#/experiences/quill/${view}`)
   }
   const showQnA = (view) => {
-    setQnA(view)
-    if (container_2){
-      container_2.scrollIntoView({ behavior: "smooth" });
-    }
+    window.open(`#/experiences/QnA/${view}`)
   }
 
   return (
@@ -64,11 +50,6 @@ export default function Experiences() {
               ))}
             </div>
           </div>
-          <div className="unit">
-            <div className="subunit">
-              <span>Name:</span> {alumni[isAlumni].name} <br /> <br /> {alumni[isAlumni].info}
-            </div>
-          </div>
         </div>
         <div id="quill" className={`container-2 h-medium ${isActive === 2 ? "active" : ""}`}>
           <div className="quill-container">
@@ -83,11 +64,6 @@ export default function Experiences() {
                   <h4 className="h-medium" onClick={() => showQuill(index)}>{card.name}</h4>
                 </div>
               ))}
-            </div>
-          </div>
-          <div className="unit">
-            <div className="subunit">
-              <span>Name:</span> {quill[isQuill].name} <br /> {quill[isQuill].discipline} <br /> {quill[isQuill].info} <br /> {quill[isQuill].description}
             </div>
           </div>
         </div>
@@ -121,11 +97,6 @@ export default function Experiences() {
                   <h4 className="h-medium" onClick={() => showQnA(index)}>{card.name}</h4>
                 </div>
               ))}
-            </div>
-          </div>
-          <div className="unit">
-            <div className="subunit">
-              <span>Name:</span> {qna_prof[isQnA].name} <br /> {qna_prof[isQnA].discipline} <br /> {qna_prof[isQnA].info} <br /> <br />{qna_prof[isQnA].description}
             </div>
           </div>
         </div>
