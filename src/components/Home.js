@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../styles/Home.css';
 import { Link } from "react-router-dom";
-
+import Teamwork from '../Images/teamwork.svg'
 export default function Home(props) {
   return (
     <>
@@ -21,7 +21,7 @@ export default function Home(props) {
       <div className="container">
         <div className="subcontainer">
           <div className="box">
-            <img src={'/Images/teamwork.svg'} alt="" />
+            <img src={Teamwork} alt="" />
           </div>
           <div className="box">
             <h2 className="h-semibold" id='ug'>Under Graduate</h2>
