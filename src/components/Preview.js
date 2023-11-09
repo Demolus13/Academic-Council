@@ -5,6 +5,9 @@ import { useParams } from 'react-router-dom';
 
 export default function Preview(props) {
   const { index } = useParams();
+  const alumni_ind = index%alumni.length
+  const quill_ind = index%quill.length
+  const qna_prof_ind = index%qna_prof.length
   return (
     <>
       {/* preview Section */}
@@ -14,15 +17,15 @@ export default function Preview(props) {
               <div className="preview-card">
                 <div className="preview-bg">
                   <div className="preview-img">
-                    <img src={alumni[index].imgSrc} alt="" />
+                    <img src={alumni[alumni_ind].imgSrc} alt="" />
                   </div>
                 </div>
-                <h3 className="h-medium">{alumni[index].name}</h3>
+                <h3 className="h-medium">{alumni[alumni_ind].name}</h3>
               </div>
           </div>
           <div className="unit">
             <div className="subunit">
-              <span>Name:</span> {alumni[index].name} <br /> <br /> {alumni[index].info}
+              <span>Name:</span> {alumni[alumni_ind].name} <br /> <br /> {alumni[alumni_ind].info}
             </div>
           </div>
         </div>
@@ -31,15 +34,15 @@ export default function Preview(props) {
               <div className="preview-card">
                 <div className="preview-bg">
                   <div className="preview-img">
-                    <img src={quill[index].imgSrc} alt="" />
+                    <img src={quill[quill_ind].imgSrc} alt="" />
                   </div>
                 </div>
-                <h3 className="h-medium">{quill[index].name}</h3>
+                <h3 className="h-medium">{quill[quill_ind].name}</h3>
               </div>
           </div>
           <div className="unit">
             <div className="subunit">
-              <span>Name:</span> {quill[index].name} <br /> {quill[index].discipline} <br /> {quill[index].info} <br /> {quill[index].description}
+              <span>Name:</span> {quill[quill_ind].name} <br /> {quill[quill_ind].discipline} <br /> {quill[quill_ind].info} <br /> {quill[quill_ind].description}
             </div>
           </div>
         </div>
@@ -48,15 +51,15 @@ export default function Preview(props) {
               <div className="preview-card">
                 <div className="preview-bg">
                   <div className="preview-img">
-                    <img src={qna_prof[index].imgSrc} alt="" />
+                    <img src={qna_prof[qna_prof_ind].imgSrc} alt="" />
                   </div>
                 </div>
-                <h3 className="h-medium">{qna_prof[index].name}</h3>
+                <h3 className="h-medium">{qna_prof[qna_prof_ind].name}</h3>
               </div>
           </div>
           <div className="unit">
             <div className="subunit">
-              <span>Name:</span> {qna_prof[index].name} <br /> {qna_prof[index].discipline} <br /> {qna_prof[index].info} <br /> <br />{qna_prof[index].description}
+              <span>Name:</span> {qna_prof[qna_prof_ind].name} <br /> {qna_prof[qna_prof_ind].discipline} <br /> {qna_prof[qna_prof_ind].info} <br /> <br />{qna_prof[qna_prof_ind].description}
             </div>
           </div>
         </div>

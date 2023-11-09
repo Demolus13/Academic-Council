@@ -51,6 +51,15 @@
   left: 0; 
 }
 
+.navbar-item .active{
+  color: var(--red);
+}
+
+.navbar-item .active::after{
+  width: 100%; 
+  left: 0;
+}
+
 .hamburger{
   cursor: pointer;
   z-index: 3;
