@@ -77,6 +77,12 @@ export default function Navbar() {
             <li className="ham-item">
               <Link to="/SRCs" className="ham-link linkEventListener">SRCs</Link>
             </li>
+            <li className="ham-item">
+              <Link to="https://sites.google.com/iitgn.ac.in/iws/advisories" className="ham-link linkEventListener">Advisories</Link>
+            </li>
+            <li className="ham-item">
+              <Link to="https://academics.iitgn.ac.in/request/index.php" className="ham-link linkEventListener">Request Portal</Link>
+            </li>
           </ul>
         </div>
       </div>

@@ -77,6 +77,12 @@
     justify-content: center;
     width: 80%;
   }
+  .links a{
+    transition: 0.5s;
+  }
+  .links a:hover{
+    transform: scale(1.075);
+  }
   .links img{
     height: 1.75rem;
     margin: 5px 1vw;
@@ -97,7 +103,7 @@
     background-color: var(--red);
     font-size: 1.25rem;
   }
-  
+
 /* Responsive Section */
 @media screen and (max-width: 600px) {
   #council h1{

@@ -66,19 +66,19 @@ export default function Experiences() {
         </div>
         <div className={`container-3 ${isActive === 3 ? "active" : ""}`}>
           <button className="btn">
-            <Link className="h-medium" to="./">Academic Internship series</Link>
+            <Link className="h-medium" to="./internship-series">Academic Internship series</Link>
           </button>
           <button className="btn">
-            <Link className="h-medium" to="./">Invent@IITGN Experiences</Link>
+            <Link className="h-medium" to="./invent">Invent@IITGN Experiences</Link>
           </button>
           <button className="btn">
-            <Link className="h-medium" to="./">Internship Experiences</Link>
+            <Link className="h-medium" to="./internship">Internship Experiences</Link>
           </button>
           <button className="btn">
-            <Link className="h-medium" to="./">Conference/Workshop Experiences</Link>
+            <Link className="h-medium" to="./workshop">Conference/Workshop Experiences</Link>
           </button>
           <button className="btn">
-            <Link className="h-medium" to="./">Overseas Experiences</Link>
+            <Link className="h-medium" to="./overseas">Overseas Experiences</Link>
           </button>
         </div>
         <div id="quill" className={`container-2 h-medium ${isActive === 4 ? "active" : ""}`}>
