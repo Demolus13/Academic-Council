@@ -411,10 +411,32 @@ export const members22 = [
 ]
 export const members21 = [
     {
-        name: "Reuben Devanesan",
-        position: "Special Advisor",
+        name: "Sresth Tosniwal",
+        position: "Coordinator for Academic Discussion Hours",
         ug: "Senior Undergraduate",
-        branch: "Chemical Engineer & Computer Science Engineer",
+        branch: "Mechanical Engineer",
+        contact: "",
+        imgSrc: "./Images/noimg.webp",
+        linkedin: "",
+        www: "",
+        email: "sresth.t@alumni.iitgn.ac.in"
+    },
+    {
+        name: "Tejendra Patel",
+        position: "Coordinator for Class Representatives and Course Feedback",
+        ug: "Senior Undergraduate",
+        branch: "Mechanical Engineer",
+        contact: "",
+        imgSrc: "./Images/tejendra.webp",
+        linkedin: "",
+        www: "",
+        email: "tejendra.p@alumni.iitgn.ac.in"
+    },
+    {
+        name: "Reuben Devanesan",
+        position: "Coordinator for Peer Assisted Learning",
+        ug: "Senior Undergraduate",
+        branch: "Chemical Engineer",
         contact: "98676 08536",
         imgSrc: "./Images/Reuben Devanesan.webp",
         linkedin: "",
@@ -422,8 +444,85 @@ export const members21 = [
         email: "reuben.sd@iitgn.ac.in"
     },
     {
-        name: "Kalash Kankaria",
+        name: "Sanjay Venkitesh",
+        position: "Coordinator for Documenattion and Outreach",
+        ug: "Senior Undergraduate",
+        branch: "Electric Engineer",
+        contact: "",
+        imgSrc: "./Images/noimg.webp",
+        linkedin: "",
+        www: "",
+        email: "venkitesh.s@alumni.iitgn.ac.in"
+    },
+    {
+        name: "Revant Shah",
         position: "Coordinator for Events and Initiatives",
+        ug: "Senior Undergraduate",
+        branch: "Chemical Engineer",
+        contact: "",
+        imgSrc: "./Images/Revant.webp",
+        linkedin: "",
+        www: "",
+        email: "revant.s@alumni.iitgn.ac.in"
+    },
+    {
+        name: "Varun Jain",
+        position: "Special Advisor",
+        ug: "Senior Undergraduate",
+        branch: "Electric Engineer",
+        contact: "",
+        imgSrc: "./Images/Varun.webp",
+        linkedin: "",
+        www: "",
+        email: "varun.jain@alumni.iitgn.ac.in"
+    },
+    {
+        name: "Gaurav Viramgami",
+        position: "Webmaster",
+        ug: "Senior Undergraduate",
+        branch: "Chemical Engineer",
+        contact: "",
+        imgSrc: "./Images/gaurav.webp",
+        linkedin: "",
+        www: "",
+        email: "viramgami.g@alumni.iitgn.ac.in"
+    },
+    {
+        name: "Aishwarya Omar",
+        position: "General Member",
+        ug: "Senior Undergraduate",
+        branch: "Mechanical Engineer",
+        contact: "",
+        imgSrc: "./Images/noimg.webp",
+        linkedin: "",
+        www: "",
+        email: "aishwarya.omar@iitgn.ac.in"
+    },
+    {
+        name: "Eesha Kulkarni",
+        position: "General Member",
+        ug: "Junior Undergraduate",
+        branch: "Chemical Engineer",
+        contact: "",
+        imgSrc: "./Images/eesha.webp",
+        linkedin: "",
+        www: "",
+        email: "merguvipul@iitgn.ac.in"
+    },
+    {
+        name: "Guru Sharan N",
+        position: "General Member",
+        ug: "Senior Undergraduate",
+        branch: "Material Science Engineer",
+        contact: "",
+        imgSrc: "./Images/guru.webp",
+        linkedin: "",
+        www: "",
+        email: "gurusharan.n@iitgn.ac.in"
+    },
+    {
+        name: "Kalash Kankaria",
+        position: "General Member",
         ug: "Senior Undergraduate",
         branch: "Computer Science Engineer",
         contact: "93140 27008",
@@ -433,139 +532,18 @@ export const members21 = [
         email: "kalash.kankaria@iitgn.ac.in"
     },
     {
-        name: "Eesha Kulkarni",
-        position: "Coordinator for Documentation and Outreach",
-        ug: "Senior Undergraduate",
-        branch: "Chemical Engineer",
-        contact: "",
-        imgSrc: "./Images/eesha.webp",
-        linkedin: "",
-        www: "",
-        email: "eesha.kulkarni@iitgn.ac.in"
-    },
-    {
-        name: "Chaitanya Guntoorkar",
-        position: "Coordinator for Peer Assisted Learning",
-        ug: "Senior Undergraduate",
-        branch: "Material Science Engineer",
-        contact: "",
-        imgSrc: "./Images/noimg.webp",
-        linkedin: "",
-        www: "",
-        email: "shashikant.gc@alumni.iitgn.ac.in"
-    },
-    {
-        name: "Yash Khandelwal",
-        position: "Coordinator for Academic Discussion Hours",
-        ug: "Senior Undergraduate",
-        branch: "Chemical Engineer",
-        contact: "",
-        imgSrc: "./Images/Yash Khandelwal.webp",
-        linkedin: "",
-        www: "",
-        email: "yash.khandelwal@iitgn.ac.in"
-    },
-    {
-        name: "Deepak Patel",
-        position: "Coordinator for Class Representatives and Course Feedback",
-        ug: "Senior Undergraduate",
-        branch: "Chemical Engineer",
-        contact: "",
-        imgSrc: "./Images/deepak.webp",
-        linkedin: "",
-        www: "",
-        email: "deepak.p@alumni.iitgn.ac.in"
-    },
-    {
-        name: "Aravind Krishna",
-        position: "Webmaster",
-        ug: "Senior Undergraduate",
-        branch: "Chemical Engineer",
-        contact: "",
-        imgSrc: "./Images/noimg.webp",
-        linkedin: "",
-        www: "",
-        email: "aravind.krishna@iitgn.ac.in"
-    },
-    {
-        name: "Naman Dharmani",
-        position: "Webmaster",
-        ug: "Senior Undergraduate",
-        branch: "Computer Science Engineer",
-        contact: "",
-        imgSrc: "./Images/noimg.webp",
-        linkedin: "",
-        www: "",
-        email: "dharmaninaman@iitgn.ac.in"
-    },
-    {
-        name: "Zaqi Momin",
-        position: "Webmaster",
-        ug: "Senior Undergraduate",
-        branch: "",
-        contact: "",
-        imgSrc: "./Images/noimg.webp",
-        linkedin: "",
-        www: "",
-        email: "zaqimomin@iitgn.ac.in"
-    },
-    {
-        name: "Aditya Gupte",
-        position: "General Member",
-        ug: "Senior Undergraduate",
-        branch: "Chemical Engineer",
-        contact: "96644 88377",
-        imgSrc: "./Images/AdityaGupte.webp",
-        linkedin: "",
-        www: "",
-        email: "adityaaditya@iitgn.ac.in"
-    },
-    {
-        name: "Vipul Mergu",
-        position: "General Member",
-        ug: "Junior Undergraduate",
-        branch: "",
-        contact: "",
-        imgSrc: "./Images/noimg.webp",
-        linkedin: "",
-        www: "",
-        email: "merguvipul@iitgn.ac.in"
-    },
-    {
-        name: "Aditi Garg",
-        position: "General Member",
-        ug: "Senior Undergraduate",
-        branch: "Material Science Engineer",
-        contact: "",
-        imgSrc: "./Images/noimg.webp",
-        linkedin: "",
-        www: "",
-        email: "gargaditi@iitgn.ac.in"
-    },
-    {
-        name: "Madhav Kanda",
-        position: "General Member",
-        ug: "Senior Undergraduate",
-        branch: "Chemical Engineer",
-        contact: "",
-        imgSrc: "./Images/Madhav Kanda.webp",
-        linkedin: "",
-        www: "",
-        email: "madhav.kanda@iitgn.ac.in"
-    },
-    {
-        name: "Ritu Vaja",
+        name: "Progyan Das",
         position: "General Member",
         ug: "Junior Undergraduate",
         branch: "Computer Science Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/progyan.webp",
         linkedin: "",
         www: "",
-        email: "vajaritu@alumni.iitgn.ac.in"
+        email: "progyan.das@iitgn.ac.in"
     },
     {
-        name: "Rahul Kumar Singh",
+        name: "Saniya Patwardhan",
         position: "General Member",
         ug: "Junior Undergraduate",
         branch: "Mechanical Engineer",
@@ -573,28 +551,28 @@ export const members21 = [
         imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
-        email: ""
+        email: "patwardhan.saniya@iitgn.ac.in"
     },
     {
-        name: "Amaan Ansari",
+        name: "Sourav Yadav",
         position: "General Member",
         ug: "Junior Undergraduate",
         branch: "Mechanical Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/sourav.webp",
         linkedin: "",
         www: "",
-        email: "amaan.ansari@iitgn.ac.in"
+        email: "yadav.sourav@alumni.iitgn.ac.in"
     },
     {
-        name: "Archit Bahirat",
+        name: "Umang Agarwal",
         position: "General Member",
         ug: "Junior Undergraduate",
         branch: "Material Science Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/umang.webp",
         linkedin: "",
         www: "",
-        email: "bahirat.archit@iitgn.ac.in"
+        email: "agarwal.umang@alumni.iitgn.ac.in"
     },
 ]
