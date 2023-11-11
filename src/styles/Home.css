@@ -1,7 +1,7 @@
 /* Home Section*/
 #home::before{
   content: "";
-  background-image: url(../../public/Images/IITGN\ BG.webp);
+  background-image: url(https://drive.google.com/uc?export=view&id=1-uiLUwcFtq26r4KjyDhi__c2aBzL6V93);
   background-size: cover;
   position: fixed;
   inset: 0px;

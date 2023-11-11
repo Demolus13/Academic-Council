@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../styles/Home.css';
 import { Link } from "react-router-dom";
-import Teamwork from '../Images/teamwork.svg'
+
 export default function Home(props) {
   return (
     <>
@@ -21,7 +21,7 @@ export default function Home(props) {
       <div className="container">
         <div className="subcontainer">
           <div className="box">
-            <img src={Teamwork} alt="" />
+            <img src={'/student-academic-council/Images/teamwork.svg'} alt="" />
           </div>
           <div className="box">
             <h2 className="h-semibold" id='ug'>Under Graduate</h2>
@@ -32,7 +32,7 @@ export default function Home(props) {
         </div>
         <div className="subcontainer">
           <div className="box">
-            <img src={'/Images/team.svg'} alt="" />
+            <img src={'/student-academic-council/Images/team.svg'} alt="" />
           </div>
           <div className="box">
             <h2 className="h-semibold" id='pg'>Post Graduate</h2>
@@ -43,7 +43,7 @@ export default function Home(props) {
         </div>
         <div className="subcontainer">
           <div className="box">
-            <img src={'/Images/teaching.svg'} alt="Not Found" />
+            <img src={'/student-academic-council/Images/teaching.svg'} alt="Not Found" />
           </div>
           <div className="box">
             <h2 className="h-semibold" id='f'>Faculty</h2>
@@ -62,35 +62,35 @@ export default function Home(props) {
         </h1>
         <div className="container">
             <div className="box">
-                <img src={'/Images/hackathon.svg'}alt="" />
+                <img src={'/student-academic-council/Images/hackathon.svg'}alt="" />
                 <h2 className="h-semibold">Events</h2>
                 <div className="box-link">
                     <Link className="h-semibold" to="/events">Find out more</Link>
                 </div>
             </div>
             <div className="box">
-                <img src={'/Images/meeting.svg'} alt="" />
+                <img src={'/student-academic-council/Images/meeting.svg'} alt="" />
                 <h2 className="h-semibold">ADH & PAL</h2>
                 <div className="box-link">
                     <Link className="h-semibold" to="/ADH">Find out more</Link>
                 </div>
             </div>
             <div className="box">
-                <img src={'/Images/calculator.svg'} alt="" />
+                <img src={'/student-academic-council/Images/calculator.svg'} alt="" />
                 <h2 className="h-semibold">P/F Calculator</h2>
                 <div className="box-link">
                     <Link className="h-semibold" to="/calculator">Find out more</Link>
                 </div>
             </div>
             <div className="box">
-                <img src={'/Images/speech.svg'} alt="" />
+                <img src={'/student-academic-council/Images/speech.svg'} alt="" />
                 <h2 className="h-semibold">CRs</h2>
                 <div className="box-link">
                     <Link className="h-semibold" to="/CRs">Find out more</Link>
                 </div>
             </div>
             <div className="box">
-                <img src={'/Images/online-course.svg'} alt="" />
+                <img src={'/student-academic-council/Images/online-course.svg'} alt="" />
                 <h2 className="h-semibold">SRCs</h2>
                 <div className="box-link">
                     <Link className="h-semibold" to="/SRCs">Find out more</Link>
