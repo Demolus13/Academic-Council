@@ -1,10 +1,11 @@
 import React, {useState} from "react"
 import '../styles/Navbar.css';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [isActive, setActive] = useState(false);
-  const [isPage, setPage] = useState(0);
+  const loc = useLocation().pathname;
+  console.log(loc)
   const Toggle = () => {
     setActive(!isActive)
   }
@@ -19,12 +20,12 @@ export default function Navbar() {
   return (
     <div id="navbar" className={`h-semibold ${isActive ? "active" : ""}`}>
       <ul>
-        <li className="nav-item"><Link to="/" onClick={() => setPage(0)}>Student Academic Council</Link></li>
+        <li className="nav-item"><Link to="/">Student Academic Council</Link></li>
       </ul>
       <ul>
-        <li className="navbar-item"><Link to="/" className={isPage === 0 ? "active" : ""} onClick={() => setPage(0)}>Home</Link></li>
-        <li className="navbar-item"><Link to="/council" className={isPage === 1 ? "active" : ""} onClick={() => setPage(1)}>Council</Link></li>
-        <li className="navbar-item"><Link to="/experiences" className={isPage === 2 ? "active" : ""} onClick={() => setPage(2)}>Experiences</Link></li>
+        <li className="navbar-item"><Link to="/" className={loc === "/" ? "active" : ""}>Home</Link></li>
+        <li className="navbar-item"><Link to="/council" className={loc === "/council" ? "active" : ""}>Council</Link></li>
+        <li className="navbar-item"><Link to="/experiences" className={loc === "experiences" ? "active" : ""}>Experiences</Link></li>
         <div className={`hamburger ${isActive ? "active" : ""}`} onClick={Toggle}>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -35,16 +36,16 @@ export default function Navbar() {
         <div className="ham-container">
           <ul className="ham-subcontainer">
             <li className="ham-item">
-              <Link to="/" className="ham-link linkEventListener" onClick={() => setPage(0)}>Home</Link>
+              <Link to="/" className="ham-link linkEventListener">Home</Link>
             </li>
             <li className="ham-item">
-              <Link to="/council" className="ham-link linkEventListener" onClick={() => setPage(1)}>Council</Link>
+              <Link to="/council" className="ham-link linkEventListener">Council</Link>
             </li>
             <li className="ham-item">
               <Link to="/events" className="ham-link linkEventListener">Events</Link>
             </li>
             <li className="ham-item">
-              <Link to="/experiences" className="ham-link linkEventListener" onClick={() => setPage(2)}>Experiences</Link>
+              <Link to="/experiences" className="ham-link linkEventListener">Experiences</Link>
             </li>
             <ul>
               <li className="subham-item">

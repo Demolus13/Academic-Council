@@ -67,6 +67,7 @@ export default function Home(props) {
                 <div className="box-link">
                     <Link className="h-semibold" to="/events">Find out more</Link>
                 </div>
+                <div className="one-liner"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam minus expedita consectetur.</p></div>
             </div>
             <div className="box">
                 <img src={'/student-academic-council/Images/meeting.svg'} alt="" />
@@ -74,6 +75,7 @@ export default function Home(props) {
                 <div className="box-link">
                     <Link className="h-semibold" to="/ADH">Find out more</Link>
                 </div>
+                <div className="one-liner"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam minus expedita consectetur.</p></div>
             </div>
             <div className="box">
                 <img src={'/student-academic-council/Images/calculator.svg'} alt="" />
@@ -81,6 +83,7 @@ export default function Home(props) {
                 <div className="box-link">
                     <Link className="h-semibold" to="/calculator">Find out more</Link>
                 </div>
+                <div className="one-liner"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam minus expedita consectetur.</p></div>
             </div>
             <div className="box">
                 <img src={'/student-academic-council/Images/speech.svg'} alt="" />
@@ -88,6 +91,7 @@ export default function Home(props) {
                 <div className="box-link">
                     <Link className="h-semibold" to="/CRs">Find out more</Link>
                 </div>
+                <div className="one-liner"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam minus expedita consectetur.</p></div>
             </div>
             <div className="box">
                 <img src={'/student-academic-council/Images/online-course.svg'} alt="" />
@@ -95,6 +99,7 @@ export default function Home(props) {
                 <div className="box-link">
                     <Link className="h-semibold" to="/SRCs">Find out more</Link>
                 </div>
+                <div className="one-liner"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam minus expedita consectetur.</p></div>
             </div>
         </div>
     </div>

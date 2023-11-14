@@ -1,5 +1,5 @@
 /* Home Section*/
-#home::before{
+#home::before {
   content: "";
   background-image: url(https://drive.google.com/uc?export=view&id=1-uiLUwcFtq26r4KjyDhi__c2aBzL6V93);
   background-size: cover;
@@ -10,7 +10,7 @@
   z-index: -2;
 }
 
-#home::after{
+#home::after {
   content: "";
   background-color: var(--blue);
   position: fixed;
@@ -21,7 +21,7 @@
   z-index: -1;
 }
 
-#home{
+#home {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,12 +30,12 @@
   height: 95vh;
 }
 
-#home h1{
+#home h1 {
   font-size: 2.6rem;
   text-align: center;
 }
 
-#home p{
+#home p {
   margin-top: 25px;
   margin-bottom: 15px;
   text-align: center;
@@ -43,14 +43,14 @@
   width: 80%;
 }
 
-#home .btn{
+#home .btn {
   margin: 1rem 0rem;
   padding: 10px 0px;
   border: 3px solid white;
   background-color: transparent;
 }
 
-#home .btn a{
+#home .btn a {
   text-decoration: none;
   padding: 11px 60px;
   font-size: 1.3rem;
@@ -58,12 +58,12 @@
   transition: all 0.6s ease-in;
 }
 
-#home .btn a:hover{
+#home .btn a:hover {
   background-color: var(--red);
 }
 
 /* Student/Faculty Section */
-#students_faculty{
+#students_faculty {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,14 +72,14 @@
   padding: 1rem 3rem;
 }
 
-#students_faculty h1{
+#students_faculty h1 {
   font-size: 2rem;
   text-decoration: underline;
   text-underline-offset: 12.5px;
   text-decoration-color: var(--red);
 }
 
-#students_faculty .container{
+#students_faculty .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -87,7 +87,7 @@
   padding-top: 1rem;
 }
 
-#students_faculty .subcontainer{
+#students_faculty .subcontainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -96,27 +96,29 @@
   min-width: 225px;
 }
 
-#students_faculty .box{
+#students_faculty .box {
   width: 75%;
   text-align: center;
   margin: 10px 0px 10px 0px;
 }
 
-#students_faculty .box h2{
+#students_faculty .box h2 {
   font-size: 1.25rem;
 }
 
-#students_faculty .box img{
+#students_faculty .box img {
   width: 50%;
 }
 
-#ug, #pg, #f{
-    border: 3px solid var(--red);
-    border-radius: 30px;
+#ug,
+#pg,
+#f {
+  border: 3px solid var(--red);
+  border-radius: 30px;
 }
 
 /* What we do Section */
-#whatwedo{
+#whatwedo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,14 +127,14 @@
   padding: 1rem 3rem 3rem 3rem;
 }
 
-#whatwedo h1{
+#whatwedo h1 {
   font-size: 2rem;
   text-decoration: underline;
   text-underline-offset: 12.5px;
   text-decoration-color: var(--red);
 }
 
-#whatwedo .container{
+#whatwedo .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -141,7 +143,7 @@
   padding-top: 1rem;
 }
 
-#whatwedo .box{
+#whatwedo .box {
   overflow: hidden;
   background-color: var(--blue);
   margin: 1rem 1rem;
@@ -152,71 +154,97 @@
   color: white;
 }
 
-#whatwedo .box img{
+#whatwedo .box img {
   width: 50%;
   height: 50%;
   padding: 1rem 1rem 0rem 1rem;
 }
 
-#whatwedo .box-link{
-    background-color: rgba(255, 255, 255, 0.4);
-    height: 20%;
-    padding: 0.5rem;
-    transition: all 0.6s ease-in;
+#whatwedo .box-link {
+  position: relative;
+  z-index: 2;
+  background-color: #768295;
+  height: 20%;
+  padding: 0.5rem;
+  transition: all 0.6s ease-in;
 }
 
-#whatwedo .box-link:hover{
-  background-color: rgba(237, 28, 36, 0.4);
+#whatwedo .box-link:hover {
+  background-color: #6f273d;
 }
 
-#whatwedo .box-link a{
-    color: white;
-    text-decoration: none;
+#whatwedo .box-link a {
+  color: white;
+  text-decoration: none;
+}
+
+#whatwedo .one-liner {
+  position: relative;
+  z-index: 1;
+  top: -56px;
+  width: 200px;
+  height: 200px;
+  padding: 0.5rem;
+  background-color: var(--blue);
+  box-sizing: border-box;
+  transition: 1s cubic-bezier(0.34, 0.16, 0.34, 0.96);
+  text-align: center;
+}
+
+#whatwedo .box:hover .one-liner{
+  top: -200px;
 }
 
 /* Responsive Section */
 @media screen and (max-width: 959px) {
-  #students_faculty .subcontainer{
+  #students_faculty .subcontainer {
     width: 50vw;
   }
 }
 
 @media screen and (max-width: 600px) {
-  #home h1{
+  #home h1 {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 450px) {
-  #home p{
+  #home p {
     font-size: 0.75rem;
   }
-  #home .btn a{
+
+  #home .btn a {
     font-size: 0.75rem;
     padding: 11px 3rem;
   }
-  #home .btn{
+
+  #home .btn {
     border: 2px solid white;
-}
-  #students_faculty{
+  }
+
+  #students_faculty {
     padding: 1rem 1.5rem;
   }
-  #students_faculty h1{
+
+  #students_faculty h1 {
     font-size: 1.5rem;
   }
-  #students_faculty .box{
+
+  #students_faculty .box {
     width: 100%;
   }
-  #whatwedo{
+
+  #whatwedo {
     padding: 1rem 1.5rem 3rem 1.5rem;
   }
-  #Whatwedo h1{
+
+  #Whatwedo h1 {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 310px) {
-  #home .btn a{
+  #home .btn a {
     padding: 11px 1rem;
   }
 }
