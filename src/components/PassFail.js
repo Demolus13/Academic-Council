@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import '../styles/PassFail.css'
+import '../styles/PassFail.css';
 
-const grade_map = { "A+": 11, "A": 10, "A-": 9, "B": 8, "B-": 7, "C": 6, "C-": 5, "D": 4, "E": 2, "F": -1, "P": 0, "S": 0, "U": -1, "P[E]": 0 };
+const grade_map = {
+  "A+": 11, "A": 10, "A-": 9, "B": 8, "B-": 7, "C": 6, "C-": 5, "D": 4, "E": 2, "F": -1, "P": 0, "S": 0, "U": -1, "P[E]": 0
+};
 
 class PassFailCalculator extends Component {
   constructor(props) {
@@ -13,6 +15,7 @@ class PassFailCalculator extends Component {
       sems: {},
       counter: 0,
       pf: [],
+      selectedCourses: [], // New state property to store selected course codes
     };
   }
 
@@ -82,22 +85,6 @@ class PassFailCalculator extends Component {
     return { cpi, spi };
   }
 
- /* function doCalc() {
-    // Get the value from the text area
-    const text = document.getElementById('gdata').value.trim();
-
-    // Check if the input is empty
-    if (text === '') {
-        alert('Please paste your grade data into the input field.');
-        return false; // Prevent further processing
-    }
-
-    // Continue with the calculations
-    // ...
-
-    return false;
-}
-*/
   doCalc() {
     const { gdata, pf, sems } = this.state;
     const pdata = this.pprocess(gdata);
@@ -110,93 +97,36 @@ class PassFailCalculator extends Component {
     });
   }
 
-  render() {
-    const { cpi, spi, sems } = this.state;
-
-    return (
-      <div id="passfail">
-      <div className="container" style={{ paddingTop: '20px', paddingBottom: '50px' }}>
-        <div className="row" style={{marginBottom: "20px"}}>
-          <div className="col-lg-12 col-sm-10">
-            <h1 className='passfailHeading'>Pass Fail Calculator</h1>
-            <p>The pass fail calculator helps the students to figure out what courses to add to Pass/Fail given the choices they have to reap its benefits.</p>
-            <p style={{marginBottom: "10px"}}>The document below contains the step-by-step process to use this feature.</p>
-            <a className="btn btn-info guide" href="https://students.iitgn.ac.in/student-acad-council/Readme.pdf" target="_">Pass Pail Calculator Guide</a>
-          </div>
-        </div>
-
-        <div>
-          <div className="form-group" style={{marginBottom: "20px"}}>
-            <label htmlFor="gdata">Paste your grade data from the table on IMS here:</label>
-            <textarea
-              id="gdata"
-              name="gdata"
-              className="form-control"
-              rows="5"
-              value={this.state.gdata}
-              onChange={(e) => this.setState({ gdata: e.target.value })}
-            ></textarea>
-          </div>
-          <button onClick={() => this.doCalc()} className="btn btn-primary">Submit</button>
-        </div>
-
-        <h3 className="haha">Credits: {cpi.credits}</h3>
-        <h3 className="haha">Grade: {cpi.grade}</h3>
-
-        {Object.keys(spi).length > 0 && (
-          <div className="row">
-            {Object.keys(spi).map((sem) => (
-              <div key={sem} className="col-6 card" style={{ width: '100%' }}>
-                <div className="card-body">
-                  <h5 className="card-title text-center">{spi[sem].name}</h5>
-                  <ul className="list-group">
-                    {sems[sem].map((course) =>
-                      course.credit ? (
-                        <li
-                          key={course.code}
-                          className="list-group-item list-group-item-action"
-                          onClick={() => this.changet(course, sem)}
-                        >
-                          {course.code}: {course.name} [C: {course.credit} | G: {course.grade}]
-                        </li>
-                      ) : null
-                    )}
-                  </ul>
-                  <p className="card-text">Credits Taken: {spi[sem].credits}</p>
-                  <p className="card-text">Grade: {spi[sem].grade}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      </div>
-    );
-  }
-
   changet(course, semester) {
-    const { pf, sems } = this.state;
+    const { pf, sems, selectedCourses } = this.state;
     const coursecode = course.code;
     const courseCredit = course.credit;
-  
+
     const maxCreditsAllowed = 8; // Maximum allowed credits
-  
+
     const currentTotalCredits = pf.reduce((total, code) => {
-      const selectedCourse = sems[semester].find(course => course.code === code);
+      const selectedCourse = Object.values(sems).flat().find(course => course.code === code);
       return total + (selectedCourse ? selectedCourse.credit : 0);
     }, 0);
-  
+
     if (currentTotalCredits + courseCredit > maxCreditsAllowed) {
       alert(`You can select a maximum of ${maxCreditsAllowed} credits.`);
     } else {
       const newCounter = pf.length + 1;
       const newPf = [...pf, coursecode];
-  
+
       if (currentTotalCredits + courseCredit <= maxCreditsAllowed) {
         this.setState({ counter: newCounter, pf: newPf });
-  
+
+        // Toggle the course in the selectedCourses list
+        this.setState((prevState) => ({
+          selectedCourses: prevState.selectedCourses.includes(coursecode)
+            ? prevState.selectedCourses.filter((code) => code !== coursecode)
+            : [...prevState.selectedCourses, coursecode],
+        }));
+
         const cpispi = this.doCPISPI(sems, newPf);
-  
+
         this.setState({
           cpi: cpispi.cpi,
           spi: cpispi.spi,
@@ -204,8 +134,71 @@ class PassFailCalculator extends Component {
       }
     }
   }
-  
 
+  render() {
+    const { cpi, spi, sems, selectedCourses } = this.state;
+
+    return (
+      <div id="passfail">
+        <div className="container" style={{ paddingTop: '20px', paddingBottom: '50px' }}>
+          <div className="row" style={{ marginBottom: "20px" }}>
+            <div className="col-lg-12 col-sm-10">
+              <h1 className='passfailHeading'>Pass Fail Calculator</h1>
+              <p>The pass fail calculator helps the students to figure out what courses to add to Pass/Fail given the choices they have to reap its benefits.</p>
+              <p style={{ marginBottom: "10px" }}>The document below contains the step-by-step process to use this feature.</p>
+              <a className="btn btn-info guide" href="https://students.iitgn.ac.in/student-acad-council/Readme.pdf" target="_">Pass Pail Calculator Guide</a>
+            </div>
+          </div>
+
+          <div>
+            <div className="form-group" style={{ marginBottom: "20px" }}>
+              <label htmlFor="gdata">Paste your grade data from the table on IMS here:</label>
+              <textarea
+                id="gdata"
+                name="gdata"
+                className="form-control"
+                rows="5"
+                value={this.state.gdata}
+                onChange={(e) => this.setState({ gdata: e.target.value })}
+              ></textarea>
+            </div>
+            <button onClick={() => this.doCalc()} className="btn btn-primary">Submit</button>
+          </div>
+
+          <h3 className="haha">Credits: {cpi.credits}</h3>
+          <h3 className="haha">Grade: {cpi.grade}</h3>
+
+          {Object.keys(spi).length > 0 && (
+            <div className="row">
+              {Object.keys(spi).map((sem) => (
+                <div key={sem} className="col-6 card" style={{ width: '100%' }}>
+                  <div className="card-body">
+                    <h5 className="card-title text-center">{spi[sem].name}</h5>
+                    <ul className="list-group">
+                      {sems[sem].map((course) =>
+                        course.credit ? (
+                          <li
+                            key={course.code}
+                            className={`list-group-item list-group-item-action ${selectedCourses.includes(course.code) ? 'selected-course' : ''}`}
+                            onClick={() => this.changet(course, sem)}
+                          >
+                            {course.code}: {course.name} [C: {course.credit} | G: {course.grade}]
+                          </li>
+                        ) : null
+                      )}
+                    </ul>
+                    <p className="card-text">Credits Taken: {spi[sem].credits}</p>
+                    <p className="card-text">Grade: {spi[sem].grade}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default PassFailCalculator;
+
