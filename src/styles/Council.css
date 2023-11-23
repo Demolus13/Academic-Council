@@ -82,7 +82,7 @@
     transition: 0.5s;
   }
   .links a:hover{
-    transform: scale(1.075);
+    transform: scale(1.1);
   }
   .links img{
     height: 1.75rem;
@@ -103,6 +103,11 @@
     border-radius: 5px;
     background-color: var(--red);
     font-size: 1.25rem;
+    transition: 0.5s;
+  }
+
+  .council-btn:hover{
+    transform: scale(1.1);
   }
 
 /* Responsive Section */
