@@ -67,7 +67,7 @@ export default function Home(props) {
                 <div className="box-link">
                     <Link className="h-semibold" to="/events">Find out more</Link>
                 </div>
-                <div className="one-liner"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam minus expedita consectetur.</p></div>
+                <div className="one-liner"><p>SAC conducts fun academic events to bring the student community together.</p></div>
             </div>
             <div className="box">
                 <img src={'/student-academic-council/Images/meeting.svg'} alt="" />
@@ -75,7 +75,7 @@ export default function Home(props) {
                 <div className="box-link">
                     <Link className="h-semibold" to="/ADH">Find out more</Link>
                 </div>
-                <div className="one-liner"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam minus expedita consectetur.</p></div>
+                <div className="one-liner"><p>ADH & PAL are mentorship programs where students learn from their peers.</p></div>
             </div>
             <div className="box">
                 <img src={'/student-academic-council/Images/calculator.svg'} alt="" />
@@ -83,7 +83,7 @@ export default function Home(props) {
                 <div className="box-link">
                     <Link className="h-semibold" to="/calculator">Find out more</Link>
                 </div>
-                <div className="one-liner"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam minus expedita consectetur.</p></div>
+                <div className="one-liner"><p>P/F Calculator is a tool to help students figure courses to add to P/F.</p></div>
             </div>
             <div className="box">
                 <img src={'/student-academic-council/Images/speech.svg'} alt="" />
@@ -91,7 +91,7 @@ export default function Home(props) {
                 <div className="box-link">
                     <Link className="h-semibold" to="/CRs">Find out more</Link>
                 </div>
-                <div className="one-liner"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam minus expedita consectetur.</p></div>
+                <div className="one-liner"><p>Class Representatives act as medium of communication between students and professors.</p></div>
             </div>
             <div className="box">
                 <img src={'/student-academic-council/Images/online-course.svg'} alt="" />
@@ -99,7 +99,7 @@ export default function Home(props) {
                 <div className="box-link">
                     <Link className="h-semibold" to="/SRCs">Find out more</Link>
                 </div>
-                <div className="one-liner"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam minus expedita consectetur.</p></div>
+                <div className="one-liner"><p>SRCs are Graded 1 credit Short Courses taught by IITGN students.</p></div>
             </div>
         </div>
     </div>
