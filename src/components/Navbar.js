@@ -49,16 +49,16 @@ export default function Navbar() {
             </li>
             <ul>
               <li className="subham-item">
-                <Link to="/quill" className="ham-link linkEventListener">The Quill</Link>
+                <Link to="/experiences" className="ham-link linkEventListener">The Quill</Link>
               </li>
               <li className="subham-item">
-                <Link to="/student-archive" className="ham-link linkEventListener">Student Archive</Link>
+                <Link to="/experiences" className="ham-link linkEventListener">Student Archive</Link>
               </li>
               <li className="subham-item">
-                <Link to="/alumni-corner" className="ham-link linkEventListener">Alumni Corner</Link>
+                <Link to="/experiences" className="ham-link linkEventListener">Alumni Corner</Link>
               </li>
               <li className="subham-item">
-                <Link to="/QnA" className="ham-link linkEventListener">QnA with Faculty</Link>
+                <Link to="/experiences" className="ham-link linkEventListener">QnA with Faculty</Link>
               </li>
             </ul>
           </ul>
