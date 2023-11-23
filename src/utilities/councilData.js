@@ -46,7 +46,7 @@ export const members = [
     {
         name: "Aaryan Darad",
         position: "Coordinator for Events & Initiatives",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Chemical Engineer",
         contact: "99985 83773",
         imgSrc: "./Images/AaryanDarad.webp",
@@ -57,7 +57,7 @@ export const members = [
     {
         name: "Vikash Kumar Beniwal",
         position: "Coordinator for Peer Assisted Learning",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Chemical Engineer",
         contact: "",
         imgSrc: "./Images/VIKASH BENIWAL .webp",
@@ -68,7 +68,7 @@ export const members = [
     {
         name: "Aditya Gupte",
         position: "Coordinator for Academic Discussion Hours",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Chemical Engineer",
         contact: "96644 88377",
         imgSrc: "./Images/AdityaGupte.webp",
@@ -79,7 +79,7 @@ export const members = [
     {
         name: "Yash Ahire",
         position: "Coordinator for Class Representatives and Course Feedback",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Chemical Engineer",
         contact: "72191 93716",
         imgSrc: "./Images/Yash Ahire.webp",
@@ -101,7 +101,7 @@ export const members = [
     {
         name: "Nishat Tatar",
         position: "Coordinator for Documentation & Outreach",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Chemical Engineer",
         contact: "8530 32662",
         imgSrc: "./Images/index.webp",
@@ -112,7 +112,7 @@ export const members = [
     {
         name: "Netram Choudhary",
         position: "Webmaster",
-        ug: "Senior Undergraduate",
+        ug: "Junior Undergraduate",
         branch: "Chemical Engineer",
         contact: "78771 92651",
         imgSrc: "./Images/NetramChoudhary.webp",
@@ -123,7 +123,7 @@ export const members = [
     {
         name: "Parth Govale",
         position: "Webmaster",
-        ug: "Junior Undergraduate",
+        ug: "Sophomore",
         branch: "Computer Science Engineer",
         contact: "96198 69044",
         imgSrc: "./Images/parth.webp",
@@ -134,7 +134,7 @@ export const members = [
     {
         name: "Harsh Jain",
         position: "General Member",
-        ug: "Junior Undergraduate",
+        ug: "Sophomore",
         branch: "Material Science Engineer",
         contact: "98814 67068",
         imgSrc: "./Images/harsh.webp",
@@ -156,7 +156,7 @@ export const members = [
     {
         name: "Mayank Dahotre",
         position: "General Member",
-        ug: "Junior Undergraduate",
+        ug: "Sophomore",
         branch: "Material Science Engineer",
         contact: "",
         imgSrc: "./Images/noimg.webp",
@@ -167,7 +167,7 @@ export const members = [
     {
         name: "Athrava Bodhale",
         position: "General Member",
-        ug: "Junior Undergraduate",
+        ug: "Sophomore",
         branch: "Material Science Engineer",
         contact: "",
         imgSrc: "./Images/noimg.webp",
@@ -178,7 +178,7 @@ export const members = [
     {
         name: "Shrishti Mishra",
         position: "General Member",
-        ug: "Junior Undergraduate",
+        ug: "Sophomore",
         branch: "Material Science Engineer",
         contact: "92638 70017",
         imgSrc: "./Images/Shrishti Mishra.webp",
@@ -189,7 +189,7 @@ export const members = [
     {
         name: "Birudugadda Srivibhav",
         position: "General Member",
-        ug: "Junior Undergraduate",
+        ug: "Sophomore",
         branch: "Material Science Engineer",
         contact: "93925 39193",
         imgSrc: "./Images/Birudugadda Srivibhav.webp",
@@ -200,7 +200,7 @@ export const members = [
     {
         name: "Shrey Agarwal",
         position: "General Member",
-        ug: "Junior Undergraduate",
+        ug: "Sophomore",
         branch: "Material Science Engineer",
         contact: "",
         imgSrc: "./Images/noimg.webp",
@@ -211,7 +211,7 @@ export const members = [
     {
         name: "Ishan Agarwal",
         position: "General Member",
-        ug: "Junior Undergraduate",
+        ug: "Sophomore",
         branch: "Material Science Engineer",
         contact: "91188 86527",
         imgSrc: "./Images/Ishan Agarwal.webp",
