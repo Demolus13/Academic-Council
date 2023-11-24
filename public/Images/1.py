@@ -11,7 +11,7 @@ os.makedirs(output_directory, exist_ok=True)
 output_files = set(os.listdir(output_directory))
 
 for filename in os.listdir(input_directory):
-    if filename.endswith((".png", ".jpg", ".jpeg", ".JPG", ".heic", ".HEIC")):
+    if filename.endswith(("BG.webp", ".png", ".jpg", ".jpeg", ".JPG", ".heic", ".HEIC")):
         input_path = os.path.join(input_directory, filename)
         output_filename = os.path.splitext(filename)[0] + ".webp"
         output_path = os.path.join(output_directory, output_filename)
