@@ -109,20 +109,32 @@ class PassFailCalculator extends Component {
       return total + (selectedCourse ? selectedCourse.credit : 0);
     }, 0);
 
-    if (currentTotalCredits + courseCredit > maxCreditsAllowed) {
-      alert(`You can select a maximum of ${maxCreditsAllowed} credits.`);
-    } else {
-      const newCounter = pf.length + 1;
-      const newPf = [...pf, coursecode];
+    if (selectedCourses.includes(coursecode)) {
+      // Deselect the course
+      const newPf = pf.filter(code => code !== coursecode);
+      const updatedSelectedCourses = selectedCourses.filter(code => code !== coursecode);
+      const cpispi = this.doCPISPI(sems, newPf);
 
-      if (currentTotalCredits + courseCredit <= maxCreditsAllowed) {
+      this.setState({
+        counter: newPf.length,
+        pf: newPf,
+        selectedCourses: updatedSelectedCourses,
+        cpi: cpispi.cpi,
+        spi: cpispi.spi,
+      });
+    } else {
+      // Select the course
+      if (currentTotalCredits + courseCredit > maxCreditsAllowed) {
+        alert(`You can select a maximum of ${maxCreditsAllowed} credits.`);
+      } else {
+        const newCounter = pf.length + 1;
+        const newPf = [...pf, coursecode];
+
         this.setState({ counter: newCounter, pf: newPf });
 
         // Toggle the course in the selectedCourses list
         this.setState((prevState) => ({
-          selectedCourses: prevState.selectedCourses.includes(coursecode)
-            ? prevState.selectedCourses.filter((code) => code !== coursecode)
-            : [...prevState.selectedCourses, coursecode],
+          selectedCourses: [...prevState.selectedCourses, coursecode],
         }));
 
         const cpispi = this.doCPISPI(sems, newPf);
