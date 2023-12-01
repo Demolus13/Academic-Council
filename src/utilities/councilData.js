@@ -15,7 +15,7 @@ export const members = [
         position: "Special Advisor",
         ug: "Senior Undergraduate",
         branch: "Chemical Engineer",
-        contact: "",
+        contact: "73740 16840",
         imgSrc: "./Images/Yash Khandelwal.webp",
         linkedin: "",
         www: "",
@@ -59,7 +59,7 @@ export const members = [
         position: "Coordinator for Peer Assisted Learning",
         ug: "Junior Undergraduate",
         branch: "Chemical Engineer",
-        contact: "",
+        contact: "63679 22581",
         imgSrc: "./Images/VIKASH BENIWAL .webp",
         linkedin: "",
         www: "",
@@ -92,7 +92,7 @@ export const members = [
         position: "Coordinator for Documentation & Outreach",
         ug: "Senior Undergraduate",
         branch: "Chemical Engineer",
-        contact: "",
+        contact: "97268 83487",
         imgSrc: "./Images/Madhav Kanda.webp",
         linkedin: "",
         www: "",
@@ -132,6 +132,28 @@ export const members = [
         email: "parth.govale@iitgn.ac.in"
     },
     {
+        name: "Jayashree Mahato",
+        position: "Social Media Manager",
+        ug: "Junior Undergraduate",
+        branch: "",
+        contact: "62061 51114",
+        imgSrc: "./Images/noimg.webp",
+        linkedin: "",
+        www: "",
+        email: "jayashree.mahato@iitgn.ac.in"
+    },
+    {
+        name: "Graphic Designer",
+        position: "Arul Singh",
+        ug: "Sophomore",
+        branch: "Material Science Engineer",
+        contact: "83197 12668",
+        imgSrc: "./Images/noimg.webp",
+        linkedin: "",
+        www: "",
+        email: "arul.singh@iitgn.ac.in"
+    },
+    {
         name: "Harsh Jain",
         position: "General Member",
         ug: "Sophomore",
@@ -143,23 +165,12 @@ export const members = [
         email: "harsh.jain@iitgn.ac.in"
     },
     {
-        name: "Kritika Agarwal",
-        position: "General Member",
-        ug: "Senior Undergraduate",
-        branch: "Material Science Engineer",
-        contact: "",
-        imgSrc: "./Images/noimg.webp",
-        linkedin: "",
-        www: "",
-        email: "agarwalkritika@iitgn.ac.in"
-    },
-    {
         name: "Mayank Dahotre",
         position: "General Member",
         ug: "Sophomore",
         branch: "Material Science Engineer",
-        contact: "",
-        imgSrc: "./Images/noimg.webp",
+        contact: "98237 50066",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "mayank.dahotre@iitgn.ac.in"
@@ -169,8 +180,8 @@ export const members = [
         position: "General Member",
         ug: "Sophomore",
         branch: "Material Science Engineer",
-        contact: "",
-        imgSrc: "./Images/noimg.webp",
+        contact: "90225 08427",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "atharva.bodhale@iitgn.ac.in"
@@ -202,8 +213,8 @@ export const members = [
         position: "General Member",
         ug: "Sophomore",
         branch: "Material Science Engineer",
-        contact: "",
-        imgSrc: "./Images/noimg.webp",
+        contact: "99271 66739",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "shrey.agarwal@iitgn.ac.in"
@@ -260,7 +271,7 @@ export const members22 = [
         ug: "Senior Undergraduate",
         branch: "Material Science Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "shashikant.gc@alumni.iitgn.ac.in"
@@ -293,7 +304,7 @@ export const members22 = [
         ug: "Senior Undergraduate",
         branch: "Chemical Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "aravind.krishna@iitgn.ac.in"
@@ -304,7 +315,7 @@ export const members22 = [
         ug: "Senior Undergraduate",
         branch: "Computer Science Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "dharmaninaman@iitgn.ac.in"
@@ -315,7 +326,7 @@ export const members22 = [
         ug: "Senior Undergraduate",
         branch: "",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "zaqimomin@iitgn.ac.in"
@@ -337,7 +348,7 @@ export const members22 = [
         ug: "Junior Undergraduate",
         branch: "",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "merguvipul@iitgn.ac.in"
@@ -348,7 +359,7 @@ export const members22 = [
         ug: "Senior Undergraduate",
         branch: "Material Science Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "gargaditi@iitgn.ac.in"
@@ -370,7 +381,7 @@ export const members22 = [
         ug: "Junior Undergraduate",
         branch: "Computer Science Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "vajaritu@alumni.iitgn.ac.in"
@@ -381,7 +392,7 @@ export const members22 = [
         ug: "Junior Undergraduate",
         branch: "Mechanical Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: ""
@@ -392,7 +403,7 @@ export const members22 = [
         ug: "Junior Undergraduate",
         branch: "Mechanical Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "amaan.ansari@iitgn.ac.in"
@@ -403,7 +414,7 @@ export const members22 = [
         ug: "Junior Undergraduate",
         branch: "Material Science Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "bahirat.archit@iitgn.ac.in"
@@ -416,7 +427,7 @@ export const members21 = [
         ug: "Senior Undergraduate",
         branch: "Mechanical Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "sresth.t@alumni.iitgn.ac.in"
@@ -449,7 +460,7 @@ export const members21 = [
         ug: "Senior Undergraduate",
         branch: "Electric Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "venkitesh.s@alumni.iitgn.ac.in"
@@ -493,7 +504,7 @@ export const members21 = [
         ug: "Senior Undergraduate",
         branch: "Mechanical Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "aishwarya.omar@iitgn.ac.in"
@@ -548,7 +559,7 @@ export const members21 = [
         ug: "Junior Undergraduate",
         branch: "Mechanical Engineer",
         contact: "",
-        imgSrc: "./Images/noimg.webp",
+        imgSrc: "./Images/fool.webp",
         linkedin: "",
         www: "",
         email: "patwardhan.saniya@iitgn.ac.in"

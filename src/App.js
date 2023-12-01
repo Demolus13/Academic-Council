@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
@@ -13,13 +14,20 @@ import Preview from './components/Preview';
 import PassFailCalculator from './components/PassFail';
 
 function App() {
+  const [activeLink, setActiveLink] = useState(0);
+
+  // Callback function to update the activeLink state
+  const handleLinkClick = (value) => {
+    setActiveLink(value);
+  };
+
   return (
 
     <HashRouter>
-      <Navbar />
+      <Navbar onLinkClick={handleLinkClick} />
       <Routes>
         <Route path='/' element={<Home ug={"800+"} pg={"500+"} f={"120+"} />} />
-        <Route path='/experiences' element={<Experiences />} />
+        <Route path='/experiences' element={<Experiences activeLink={activeLink} />} />
         <Route path='/calculator' element={<PassFailCalculator />} />
         <Route path="/experiences/alumni/:index" element={<Preview isActive={0} />} />
         <Route path="/experiences/quill/:index" element={<Preview isActive={1} />} />

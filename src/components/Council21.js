@@ -8,7 +8,7 @@ export default function Council21() {
     <>
     {/* council Section */}
     <div id="council">
-      <h1 className="h-bold">Student Academic Council 2022-2023</h1>
+      <h1 className="h-bold">Student Academic Council 2021-2022</h1>
       <div className="members">
       {members21.map((cards, index) => (
         <div className="cards" key={index}>

@@ -2,10 +2,9 @@ import React, {useState} from "react"
 import '../styles/Navbar.css';
 import { Link, useLocation } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ onLinkClick }) {
   const [isActive, setActive] = useState(false);
   const loc = useLocation().pathname;
-  console.log(loc)
   const Toggle = () => {
     setActive(!isActive)
   }
@@ -24,7 +23,7 @@ export default function Navbar() {
       </ul>
       <ul>
         <li className="navbar-item"><Link to="/" className={loc === "/" ? "active" : ""}>Home</Link></li>
-        <li className="navbar-item"><Link to="/council" className={loc === "/council" ? "active" : ""}>Council</Link></li>
+        <li className="navbar-item"><Link to="/council" className={loc.startsWith("/council") ? "active" : ""}>Council</Link></li>
         <li className="navbar-item"><Link to="/experiences" className={loc === "experiences" ? "active" : ""}>Experiences</Link></li>
         <div className={`hamburger ${isActive ? "active" : ""}`} onClick={Toggle}>
           <span className="bar"></span>
@@ -48,17 +47,18 @@ export default function Navbar() {
               <Link to="/experiences" className="ham-link linkEventListener">Experiences</Link>
             </li>
             <ul>
-              <li className="subham-item">
-                <Link to="/quill" className="ham-link linkEventListener">The Quill</Link>
+            <li className="subham-item">
+                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(1)}>Alumni Corner</Link>
               </li>
               <li className="subham-item">
-                <Link to="/student-archive" className="ham-link linkEventListener">Student Archive</Link>
+                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(2)}>The Quill</Link>
               </li>
               <li className="subham-item">
-                <Link to="/alumni-corner" className="ham-link linkEventListener">Alumni Corner</Link>
+                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(3)}>Student Archive</Link>
               </li>
+
               <li className="subham-item">
-                <Link to="/QnA" className="ham-link linkEventListener">QnA with Faculty</Link>
+                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(4)}>QnA with Faculty</Link>
               </li>
             </ul>
           </ul>
@@ -83,6 +83,9 @@ export default function Navbar() {
             </li>
             <li className="ham-item">
               <Link to="https://academics.iitgn.ac.in/request/index.php" className="ham-link linkEventListener">Request Portal</Link>
+            </li>
+            <li className="ham-item">
+              <Link to="/council" className="ham-link linkEventListener">Previous Council</Link>
             </li>
           </ul>
         </div>

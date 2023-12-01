@@ -1,18 +1,22 @@
-import React, { useState } from 'react'
-import '../styles/Experiences.css'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import '../styles/Experiences.css';
 import { alumni, quill, qna_prof } from '../utilities/experiencesData';
-import { Link } from "react-router-dom";
-export default function Experiences() {
-  const [isActive, setActive] = useState(1);
+import { Link } from 'react-router-dom';
+
+export default function Experiences({ activeLink }) {
+  const state = activeLink;
+  const [isActive, setActive] = useState(state);
+  console.log(isActive)
   const showAlumni = (view) => {
-    window.open(`#/experiences/alumni/${view}`)
-  }
+    window.open(`#/experiences/alumni/${view}`);
+  };
   const showQuill = (view) => {
-    window.open(`#/experiences/quill/${view}`)
-  }
+    window.open(`#/experiences/quill/${view}`);
+  };
   const showQnA = (view) => {
-    window.open(`#/experiences/QnA/${view}`)
-  }
+    window.open(`#/experiences/QnA/${view}`);
+  };
 
   return (
     <>
@@ -101,3 +105,11 @@ export default function Experiences() {
     </>
   )
 }
+
+Experiences.propTypes = {
+  activeLink: PropTypes.number,
+};
+
+Experiences.defaultProps = {
+  activeLink: 1,
+};
