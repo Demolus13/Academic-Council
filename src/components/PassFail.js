@@ -158,7 +158,7 @@ class PassFailCalculator extends Component {
               <p>The pass fail calculator helps the students to figure out what courses to add to Pass/Fail given the choices they have to reap its benefits.</p>
               <p style={{ marginBottom: "10px" }}>The document below contains the step-by-step process to use this feature.</p>
 
-              <a className="btn btn-info guide" href="https://students.iitgn.ac.in/student-academic-council/Pass_Fail_Guide.pdf" target="_">Pass Pail Calculator Guide</a>
+              <a className="btn btn-info guide" href="https://students.iitgn.ac.in/student-academic-council/P_F_Calculator.pdf" target="_">Pass Pail Calculator Guide</a>
             </div>
           </div>
 
