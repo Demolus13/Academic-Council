@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../styles/PassFail.css';
-
 const grade_map = {
   "A+": 11, "A": 10, "A-": 9, "B": 8, "B-": 7, "C": 6, "C-": 5, "D": 4, "E": 2, "F": -1, "P": 0, "S": 0, "U": -1, "P[E]": 0
 };
@@ -158,7 +157,8 @@ class PassFailCalculator extends Component {
               <h1 className='passfailHeading'>Pass Fail Calculator</h1>
               <p>The pass fail calculator helps the students to figure out what courses to add to Pass/Fail given the choices they have to reap its benefits.</p>
               <p style={{ marginBottom: "10px" }}>The document below contains the step-by-step process to use this feature.</p>
-              <a className="btn btn-info guide" href="https://students.iitgn.ac.in/student-acad-council/Readme.pdf" target="_">Pass Pail Calculator Guide</a>
+
+              <a className="btn btn-info guide" href="https://students.iitgn.ac.in/student-academic-council/Pass_Fail_Guide.pdf" target="_">Pass Pail Calculator Guide</a>
             </div>
           </div>
 
