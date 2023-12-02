@@ -99,7 +99,7 @@ export const members = [
         email: "madhav.kanda@iitgn.ac.in"
     },
     {
-        name: "Nishat Tatar",
+        name: "Nishant Tatar",
         position: "Coordinator for Documentation & Outreach",
         ug: "Junior Undergraduate",
         branch: "Chemical Engineer",
@@ -132,26 +132,37 @@ export const members = [
         email: "parth.govale@iitgn.ac.in"
     },
     {
-        name: "Jayashree Mahato",
-        position: "Social Media Manager",
-        ug: "Junior Undergraduate",
-        branch: "",
-        contact: "62061 51114",
-        imgSrc: "./Images/noimg.webp",
-        linkedin: "",
-        www: "",
-        email: "jayashree.mahato@iitgn.ac.in"
-    },
-    {
-        name: "Graphic Designer",
-        position: "Arul Singh",
+        name: "Birudugadda Srivibhav",
+        position: "General Member",
         ug: "Sophomore",
         branch: "Material Science Engineer",
-        contact: "83197 12668",
-        imgSrc: "./Images/noimg.webp",
+        contact: "93925 39193",
+        imgSrc: "./Images/Birudugadda Srivibhav.webp",
         linkedin: "",
         www: "",
-        email: "arul.singh@iitgn.ac.in"
+        email: "birudugadda.srivibhav@iitgn.ac.in"
+    },
+    {
+        name: "Ishan Agarwal",
+        position: "General Member",
+        ug: "Sophomore",
+        branch: "Material Science Engineer",
+        contact: "91188 86527",
+        imgSrc: "./Images/Ishan Agarwal.webp",
+        linkedin: "",
+        www: "",
+        email: "ishan.agarwal@iitgn.ac.in"
+    },
+    {
+        name: "Shrishti Mishra",
+        position: "General Member",
+        ug: "Sophomore",
+        branch: "Material Science Engineer",
+        contact: "92638 70017",
+        imgSrc: "./Images/Shrishti Mishra.webp",
+        linkedin: "",
+        www: "",
+        email: "shrishti.mishra@iitgn.ac.in"
     },
     {
         name: "Harsh Jain",
@@ -176,7 +187,7 @@ export const members = [
         email: "mayank.dahotre@iitgn.ac.in"
     },
     {
-        name: "Athrava Bodhale",
+        name: "Atharva Bodhale",
         position: "General Member",
         ug: "Sophomore",
         branch: "Material Science Engineer",
@@ -185,28 +196,6 @@ export const members = [
         linkedin: "",
         www: "",
         email: "atharva.bodhale@iitgn.ac.in"
-    },
-    {
-        name: "Shrishti Mishra",
-        position: "General Member",
-        ug: "Sophomore",
-        branch: "Material Science Engineer",
-        contact: "92638 70017",
-        imgSrc: "./Images/Shrishti Mishra.webp",
-        linkedin: "",
-        www: "",
-        email: "shrishti.mishra@iitgn.ac.in"
-    },
-    {
-        name: "Birudugadda Srivibhav",
-        position: "General Member",
-        ug: "Sophomore",
-        branch: "Material Science Engineer",
-        contact: "93925 39193",
-        imgSrc: "./Images/Birudugadda Srivibhav.webp",
-        linkedin: "",
-        www: "",
-        email: "birudugadda.srivibhav@iitgn.ac.in"
     },
     {
         name: "Shrey Agarwal",
@@ -220,15 +209,26 @@ export const members = [
         email: "shrey.agarwal@iitgn.ac.in"
     },
     {
-        name: "Ishan Agarwal",
-        position: "General Member",
-        ug: "Sophomore",
-        branch: "Material Science Engineer",
-        contact: "91188 86527",
-        imgSrc: "./Images/Ishan Agarwal.webp",
+        name: "Jayashree Mahato",
+        position: "Social Media Manager",
+        ug: "Junior Undergraduate",
+        branch: "",
+        contact: "62061 51114",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
-        email: "ishan.agarwal@iitgn.ac.in"
+        email: "jayashree.mahato@iitgn.ac.in"
+    },
+    {
+        name: "Arul Singh",
+        position: "Graphic Designer",
+        ug: "Sophomore",
+        branch: "Material Science Engineer",
+        contact: "83197 12668",
+        imgSrc: "./Images/noimg.webp",
+        linkedin: "",
+        www: "",
+        email: "arul.singh@iitgn.ac.in"
     },
 ]
 export const members22 = [

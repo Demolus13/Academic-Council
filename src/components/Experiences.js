@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function Experiences({ activeLink }) {
   const state = activeLink;
-  const [isActive, setActive] = useState(state);
+  const [isActive, setActive] = useState(1);
   console.log(isActive)
   const showAlumni = (view) => {
     window.open(`#/experiences/alumni/${view}`);
