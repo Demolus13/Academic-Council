@@ -13,7 +13,7 @@ export default function Footer() {
         </div>
         <p className="footer-item h-semibold" style={{marginBottom: "0px"}}>Website developed by: <br /> Netram Choudhary & Parth Govale</p>
       </div>
-        <img src={"https://drive.google.com/uc?export=view&id=1O0QVSfA2_II5lW_VHcuzIgNrqcbGLZCK"} alt="IITGN Logo" />
+        <img src={"https://drive.google.com/uc?export=view&id=1NMKo3GEW4n1LLq7Xj0ZcF7QENj2LyP2I"} alt="IITGN Logo" />
     </div>
   )
 }

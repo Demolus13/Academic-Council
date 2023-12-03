@@ -85,9 +85,7 @@ export default function Navbar({ onLinkClick }) {
             <li className="ham-item">
               <Link to="https://academics.iitgn.ac.in/request/index.php" className="ham-link linkEventListener">Request Portal</Link>
             </li>
-            <li className="ham-item">
-              <Link to="/council" className="ham-link linkEventListener">Previous Council</Link>
-            </li>
+          
           </ul>
         </div>
       </div>
