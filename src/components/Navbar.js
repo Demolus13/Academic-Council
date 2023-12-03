@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from 'react';
 import '../styles/Navbar.css';
 import { Link, useLocation } from "react-router-dom";
 
@@ -7,6 +7,7 @@ export default function Navbar({ onLinkClick }) {
   const loc = useLocation().pathname;
   const Toggle = () => {
     setActive(!isActive)
+    document.body.style.overflow = isActive ? 'visible' : 'hidden';
   }
   const Links = document.getElementsByClassName("linkEventListener");
   for (let index = 0; index < Links.length; index++) {
@@ -47,7 +48,7 @@ export default function Navbar({ onLinkClick }) {
               <Link to="/experiences" className="ham-link linkEventListener">Experiences</Link>
             </li>
             <ul>
-            <li className="subham-item">
+              <li className="subham-item">
                 <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(1)}>Alumni Corner</Link>
               </li>
               <li className="subham-item">
@@ -63,7 +64,7 @@ export default function Navbar({ onLinkClick }) {
             </ul>
           </ul>
           <ul className="ham-subcontainer">
-          <li className="ham-item">
+            <li className="ham-item">
               <Link to="/calculator" className="ham-link linkEventListener">P/F Calculator</Link>
             </li>
             <li className="ham-item">

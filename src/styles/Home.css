@@ -162,7 +162,7 @@
 
 #whatwedo .box-link {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   background-color: #768295;
   height: 20%;
   padding: 0.5rem;
@@ -180,7 +180,6 @@
 
 #whatwedo .one-liner {
   position: relative;
-  z-index: 1;
   top: -56px;
   width: 200px;
   height: 200px;

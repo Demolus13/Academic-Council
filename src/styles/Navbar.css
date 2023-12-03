@@ -10,9 +10,9 @@
   z-index: 1;
 }
 
-#navbar.active{
+/* #navbar.active{
   position: sticky;
-}
+} */
 
 #navbar ul{
   display: flex;
@@ -62,7 +62,7 @@
 
 .hamburger{
   cursor: pointer;
-  z-index: 3;
+  z-index: 4;
 }
 
 .bar{
@@ -97,7 +97,7 @@
   width: 50%;
   height: 100%;
   transition: 0.5s;
-  z-index: 2;
+  z-index: 3;
 }
 
 .ham-menu.active{
