@@ -38,7 +38,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 2.5rem 0rem 2.5rem 0rem;
+    margin: 0rem 0rem 2.5rem 0rem;
+  }
+
+  #council .switch-council{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 2.5rem;
+    margin-top: 1.25rem;
+    box-sizing: border-box;
+  }
+
+  .switch-btn{
+    background-color: var(--red);
+    padding: 2.5px 7.5px;
+    border-radius: 5px;
+    width: 5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .switch-btn:hover{
+    transform: scale(1.1);
   }
   
   .members .cards{

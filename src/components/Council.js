@@ -1,16 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react';
 import '../styles/Council.css'
-import { members } from '../utilities/councilData'
+import { allMembers } from '../utilities/councilData'
 import { Link } from "react-router-dom";
 
 export default function Council() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const l = allMembers.length
+
+  const nextCouncil = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % l);
+  };
+
+  const prevCouncil = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + l) % l);
+  };
+
+  const currentCouncil = allMembers[currentIndex];
+
   return (
     <>
     {/* council Section */}
     <div id="council">
-      <h1 className="h-bold">Student Academic Council 2023-2024</h1>
+      <h1 className="h-bold">Student Academic Council 20{23 - currentIndex}-20{24 - currentIndex}</h1>
+      <div className="switch-council">
+      <p className="switch-btn" onClick={prevCouncil}>previous</p>
+      <p className="switch-btn" onClick={nextCouncil}>next</p>
+      </div>
       <div className="members">
-      {members.map((cards, index) => (
+      {currentCouncil.map((cards, index) => (
         <div className="cards" key={index}>
           <div className="img">
           <img src={cards.imgSrc} alt="" />

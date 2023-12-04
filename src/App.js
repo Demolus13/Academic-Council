@@ -5,9 +5,6 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 import Experiences from './components/Experiences';
 import Council from './components/Council';
-import Council22 from './components/Council22';
-import Council21 from './components/Council21';
-import Council20 from './components/Council20';
 import { Routes, Route, HashRouter } from 'react-router-dom';
 import Updated from './components/Updated';
 import Preview from './components/Preview';
@@ -33,9 +30,6 @@ function App() {
         <Route path="/experiences/quill/:index" element={<Preview isActive={1} />} />
         <Route path="/experiences/QnA/:index" element={<Preview isActive={2} />} />
         <Route path='/council' element={<Council />} />
-        <Route path='/council-22' element={<Council22 />} />
-        <Route path='/council-21' element={<Council21 />} />
-        <Route path='/council-20' element={<Council20 />} />
         <Route path='*' element={<Updated />} />
       </Routes>
       <Footer />

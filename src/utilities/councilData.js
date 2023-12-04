@@ -1,4 +1,5 @@
-export const members = [
+export const allMembers = [
+    [
     {
         name: "Reuben Devanesan",
         position: "Academic Secretary",
@@ -230,8 +231,8 @@ export const members = [
         www: "",
         email: "arul.singh@iitgn.ac.in"
     },
-]
-export const members22 = [
+    ],
+    [
     {
         name: "Reuben Devanesan",
         position: "Special Advisor",
@@ -271,7 +272,7 @@ export const members22 = [
         ug: "Senior Undergraduate",
         branch: "Material Science Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "shashikant.gc@alumni.iitgn.ac.in"
@@ -304,7 +305,7 @@ export const members22 = [
         ug: "Senior Undergraduate",
         branch: "Chemical Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "aravind.krishna@iitgn.ac.in"
@@ -315,7 +316,7 @@ export const members22 = [
         ug: "Senior Undergraduate",
         branch: "Computer Science Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "dharmaninaman@iitgn.ac.in"
@@ -326,7 +327,7 @@ export const members22 = [
         ug: "Senior Undergraduate",
         branch: "",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "zaqimomin@iitgn.ac.in"
@@ -348,7 +349,7 @@ export const members22 = [
         ug: "Junior Undergraduate",
         branch: "",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "merguvipul@iitgn.ac.in"
@@ -359,7 +360,7 @@ export const members22 = [
         ug: "Senior Undergraduate",
         branch: "Material Science Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "gargaditi@iitgn.ac.in"
@@ -381,7 +382,7 @@ export const members22 = [
         ug: "Junior Undergraduate",
         branch: "Computer Science Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "vajaritu@alumni.iitgn.ac.in"
@@ -392,7 +393,7 @@ export const members22 = [
         ug: "Junior Undergraduate",
         branch: "Mechanical Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: ""
@@ -403,7 +404,7 @@ export const members22 = [
         ug: "Junior Undergraduate",
         branch: "Mechanical Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "amaan.ansari@iitgn.ac.in"
@@ -414,20 +415,20 @@ export const members22 = [
         ug: "Junior Undergraduate",
         branch: "Material Science Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "bahirat.archit@iitgn.ac.in"
     },
-]
-export const members21 = [
+    ],
+    [
     {
         name: "Sresth Tosniwal",
         position: "Coordinator for Academic Discussion Hours",
         ug: "Senior Undergraduate",
         branch: "Mechanical Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "sresth.t@alumni.iitgn.ac.in"
@@ -460,7 +461,7 @@ export const members21 = [
         ug: "Senior Undergraduate",
         branch: "Electric Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "venkitesh.s@alumni.iitgn.ac.in"
@@ -504,7 +505,7 @@ export const members21 = [
         ug: "Senior Undergraduate",
         branch: "Mechanical Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "aishwarya.omar@iitgn.ac.in"
@@ -559,7 +560,7 @@ export const members21 = [
         ug: "Junior Undergraduate",
         branch: "Mechanical Engineer",
         contact: "",
-        imgSrc: "./Images/fool.webp",
+        imgSrc: "./Images/noimg.webp",
         linkedin: "",
         www: "",
         email: "patwardhan.saniya@iitgn.ac.in"
@@ -586,8 +587,8 @@ export const members21 = [
         www: "",
         email: "agarwal.umang@alumni.iitgn.ac.in"
     },
-]
-export const members20 = [
+    ],
+    [
     {
         name: "Abhiraj Bhasin",
         position: "Coordinator for Academic Discussion Hours",
@@ -698,4 +699,5 @@ export const members20 = [
         www: "",
         email: "aditya.ss@alumni.iitgn.ac.in"
     },
+    ]
 ]
