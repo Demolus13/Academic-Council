@@ -45,7 +45,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0rem 2.5rem;
+    padding: 0rem min(2.5rem, 3vw);
     margin-top: 1.25rem;
     box-sizing: border-box;
   }
