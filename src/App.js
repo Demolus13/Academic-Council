@@ -23,7 +23,7 @@ function App() {
     <HashRouter>
       <Navbar onLinkClick={handleLinkClick} />
       <Routes>
-        <Route path='/' element={<Home ug={"800+"} pg={"500+"} f={"120+"} />} />
+        <Route path='/' element={<Home />} />
         <Route path='/experiences' element={<Experiences activeLink={activeLink} />} />
         <Route path='/calculator' element={<PassFailCalculator />} />
         <Route path="/experiences/alumni/:index" element={<Preview isActive={0} />} />
