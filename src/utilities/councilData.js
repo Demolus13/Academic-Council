@@ -212,7 +212,7 @@ export const allMembers = [
     {
         name: "Jayashree Mahato",
         position: "Social Media Manager",
-        ug: "Junior Undergraduate",
+        ug: "Post Undergraduate",
         branch: "",
         contact: "62061 51114",
         imgSrc: "./Images/noimg.webp",
