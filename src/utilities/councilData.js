@@ -267,17 +267,6 @@ export const allMembers = [
             email: "kalash.kankaria@iitgn.ac.in"
         },
         {
-            name: "Eesha Kulkarni",
-            position: "Coordinator for Documentation and Outreach",
-            ug: "Senior Undergraduate",
-            branch: "Chemical Engineer",
-            contact: "",
-            imgSrc: "./Images/eesha.webp",
-            linkedin: "",
-            www: "",
-            email: "eesha.kulkarni@iitgn.ac.in"
-        },
-        {
             name: "Chaitanya Guntoorkar",
             position: "Coordinator for Peer Assisted Learning",
             ug: "Senior Undergraduate",
@@ -309,6 +298,17 @@ export const allMembers = [
             linkedin: "",
             www: "",
             email: "deepak.p@alumni.iitgn.ac.in"
+        },
+        {
+            name: "Eesha Kulkarni",
+            position: "Coordinator for Documentation and Outreach",
+            ug: "Senior Undergraduate",
+            branch: "Chemical Engineer",
+            contact: "",
+            imgSrc: "./Images/eesha.webp",
+            linkedin: "",
+            www: "",
+            email: "eesha.kulkarni@iitgn.ac.in"
         },
         {
             name: "Aravind Krishna",
@@ -434,6 +434,50 @@ export const allMembers = [
     ],
     [
         {
+            name: "Bhavya Gupta",
+            position: "Academic Secretary",
+            ug: "Senior Undergraduate",
+            branch: "Chemical Engineer",
+            contact: "",
+            imgSrc: "./Images/bhavya.webp",
+            linkedin: "",
+            www: "",
+            email: "bhavya.gupta@alumni.iitgn.ac.in"
+        },
+        {
+            name: "Varun Jain",
+            position: "Special Advisor",
+            ug: "Senior Undergraduate",
+            branch: "Electric Engineer",
+            contact: "",
+            imgSrc: "./Images/Varun.webp",
+            linkedin: "",
+            www: "",
+            email: "varun.jain@alumni.iitgn.ac.in"
+        },
+        {
+            name: "Revant Shah",
+            position: "Coordinator for Events and Initiatives",
+            ug: "Senior Undergraduate",
+            branch: "Chemical Engineer",
+            contact: "",
+            imgSrc: "./Images/Revant.webp",
+            linkedin: "",
+            www: "",
+            email: "revant.s@alumni.iitgn.ac.in"
+        },
+        {
+            name: "Reuben Devanesan",
+            position: "Coordinator for Peer Assisted Learning",
+            ug: "Senior Undergraduate",
+            branch: "Chemical Engineer",
+            contact: "98676 08536",
+            imgSrc: "./Images/Reuben Devanesan.webp",
+            linkedin: "",
+            www: "",
+            email: "reuben.sd@iitgn.ac.in"
+        },
+        {
             name: "Sresth Tosniwal",
             position: "Coordinator for Academic Discussion Hours",
             ug: "Senior Undergraduate",
@@ -456,17 +500,6 @@ export const allMembers = [
             email: "tejendra.p@alumni.iitgn.ac.in"
         },
         {
-            name: "Reuben Devanesan",
-            position: "Coordinator for Peer Assisted Learning",
-            ug: "Senior Undergraduate",
-            branch: "Chemical Engineer",
-            contact: "98676 08536",
-            imgSrc: "./Images/Reuben Devanesan.webp",
-            linkedin: "",
-            www: "",
-            email: "reuben.sd@iitgn.ac.in"
-        },
-        {
             name: "Sanjay Venkitesh",
             position: "Coordinator for Documenattion and Outreach",
             ug: "Senior Undergraduate",
@@ -476,28 +509,6 @@ export const allMembers = [
             linkedin: "",
             www: "",
             email: "venkitesh.s@alumni.iitgn.ac.in"
-        },
-        {
-            name: "Revant Shah",
-            position: "Coordinator for Events and Initiatives",
-            ug: "Senior Undergraduate",
-            branch: "Chemical Engineer",
-            contact: "",
-            imgSrc: "./Images/Revant.webp",
-            linkedin: "",
-            www: "",
-            email: "revant.s@alumni.iitgn.ac.in"
-        },
-        {
-            name: "Varun Jain",
-            position: "Special Advisor",
-            ug: "Senior Undergraduate",
-            branch: "Electric Engineer",
-            contact: "",
-            imgSrc: "./Images/Varun.webp",
-            linkedin: "",
-            www: "",
-            email: "varun.jain@alumni.iitgn.ac.in"
         },
         {
             name: "Gaurav Viramgami",
@@ -601,6 +612,39 @@ export const allMembers = [
     ],
     [
         {
+            name: "Shantanu Jana",
+            position: "Academic Secretary",
+            ug: "Senior Undergraduate",
+            branch: "Chemical Engineer",
+            contact: "",
+            imgSrc: "./Images/shantanu.webp",
+            linkedin: "",
+            www: "",
+            email: "shantanu.jana@alumni.iitgn.ac.in"
+        },
+        {
+            name: "Nidhin Harilal",
+            position: "Special Advisor",
+            ug: "Senior Undergraduate",
+            branch: "Computer Science Engineer",
+            contact: "",
+            imgSrc: "./Images/nidhin.webp",
+            linkedin: "",
+            www: "",
+            email: "nidhin.harilal@alumni.iitgn.ac.in"
+        },
+        {
+            name: "Anas Ali",
+            position: "Coordinator for Events and Initiatives",
+            ug: "Senior Undergraduate",
+            branch: "Civil Engineer",
+            contact: "",
+            imgSrc: "./Images/anas.webp",
+            linkedin: "",
+            www: "",
+            email: "anas.ali@alumni.iitgn.ac.in"
+        },
+        {
             name: "Abhiraj Bhasin",
             position: "Coordinator for Academic Discussion Hours",
             ug: "Senior Undergraduate",
@@ -623,17 +667,6 @@ export const allMembers = [
             email: "bhavya.gupta@alumni.iitgn.ac.in"
         },
         {
-            name: "Reuben Devanesan",
-            position: "Webmaster",
-            ug: "Senior Undergraduate",
-            branch: "Chemical Engineer",
-            contact: "98676 08536",
-            imgSrc: "./Images/Reuben Devanesan.webp",
-            linkedin: "",
-            www: "",
-            email: "reuben.sd@iitgn.ac.in"
-        },
-        {
             name: "Revant Shah",
             position: "Coordinator for Documenattion and Outreach",
             ug: "Senior Undergraduate",
@@ -645,26 +678,26 @@ export const allMembers = [
             email: "revant.s@alumni.iitgn.ac.in"
         },
         {
-            name: "Anas Ali",
-            position: "Coordinator for Events and Initiatives",
+            name: "Reuben Devanesan",
+            position: "Webmaster",
             ug: "Senior Undergraduate",
-            branch: "Civil Engineer",
-            contact: "",
-            imgSrc: "./Images/anas.webp",
+            branch: "Chemical Engineer",
+            contact: "98676 08536",
+            imgSrc: "./Images/Reuben Devanesan.webp",
             linkedin: "",
             www: "",
-            email: "anas.ali@alumni.iitgn.ac.in"
+            email: "reuben.sd@iitgn.ac.in"
         },
         {
-            name: "Nidhin Harilal",
-            position: "Special Advisor",
+            name: "Aditya Shekhar",
+            position: "General Member and Webmaster",
             ug: "Senior Undergraduate",
-            branch: "Computer Science Engineer",
+            branch: "Chemical Engineer",
             contact: "",
-            imgSrc: "./Images/nidhin.webp",
+            imgSrc: "./Images/aditya.webp",
             linkedin: "",
             www: "",
-            email: "nidhin.harilal@alumni.iitgn.ac.in"
+            email: "aditya.ss@alumni.iitgn.ac.in"
         },
         {
             name: "Deepak Patel",
@@ -698,17 +731,6 @@ export const allMembers = [
             linkedin: "",
             www: "",
             email: "gomathy_g@alumni.iitgn.ac.in"
-        },
-        {
-            name: "Aditya Shekhar",
-            position: "General Member and Webmaster",
-            ug: "Senior Undergraduate",
-            branch: "Chemical Engineer",
-            contact: "",
-            imgSrc: "./Images/aditya.webp",
-            linkedin: "",
-            www: "",
-            email: "aditya.ss@alumni.iitgn.ac.in"
         },
     ]
 ]
