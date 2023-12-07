@@ -108,7 +108,7 @@ export const allMembers = [
             imgSrc: "./Images/index.webp",
             linkedin: "",
             www: "",
-            email: "madhav.kanda@iitgn.ac.in"
+            email: "maheshtatar@iitgn.ac.in"
         },
         {
             name: "Netram Choudhary",
