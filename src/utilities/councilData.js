@@ -61,7 +61,7 @@ export const allMembers = [
         ug: "Junior Undergraduate",
         branch: "Chemical Engineer",
         contact: "63679 22581",
-        imgSrc: "./Images/VIKASH BENIWAL .webp",
+        imgSrc: "./Images/vikash.webp",
         linkedin: "",
         www: "",
         email: "beniwalvikash@iitgn.ac.in"
@@ -73,6 +73,7 @@ export const allMembers = [
         branch: "Chemical Engineer",
         contact: "96644 88377",
         imgSrc: "./Images/AdityaGupte.webp",
+        
         linkedin: "",
         www: "",
         email: "adityaaditya@iitgn.ac.in"
