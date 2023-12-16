@@ -32,7 +32,7 @@ export default function Home() {
               <h2 className="h-semibold" id='ug'>Under Graduate</h2>
             </div>
             <div className="box">
-                <h2 className="h-semibold" ref={ref}>{inView && <CountUp start={0} end={800} duration={5} suffix="+" />}</h2>
+                <h2 className="h-semibold" ref={ref}>{inView && <CountUp start={0} end={1000} duration={5} suffix="+" />}</h2>
             </div>
           </div>
           <div className="subcontainer">
