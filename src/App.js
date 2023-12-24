@@ -29,12 +29,12 @@ function App() {
         <Route path='/experiences' element={<Experiences activeLink={activeLink} />} />
         <Route path='/calculator' element={<PassFailCalculator />} />
         <Route path='/SRCs' element={<SRCs />} />
+        <Route path='/internships' element={<Internship />} />
         <Route path="/experiences/alumni/:index" element={<Preview isActive={0} />} />
         <Route path="/experiences/quill/:index" element={<Preview isActive={1} />} />
         <Route path="/experiences/QnA/:index" element={<Preview isActive={2} />} />
         <Route path='/council' element={<Council />} />
         <Route path='*' element={<Updated />} />
-        <Route path='/internships' element={<Internship />} />
       </Routes>
       <Footer />
 
