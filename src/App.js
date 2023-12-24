@@ -9,6 +9,7 @@ import { Routes, Route, HashRouter } from 'react-router-dom';
 import Updated from './components/Updated';
 import Preview from './components/Preview';
 import PassFailCalculator from './components/PassFail';
+import SRCs from './components/SRCs';
 
 function App() {
   const [activeLink, setActiveLink] = useState(0);
@@ -26,6 +27,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/experiences' element={<Experiences activeLink={activeLink} />} />
         <Route path='/calculator' element={<PassFailCalculator />} />
+        <Route path='/SRCs' element={<SRCs />} />
         <Route path="/experiences/alumni/:index" element={<Preview isActive={0} />} />
         <Route path="/experiences/quill/:index" element={<Preview isActive={1} />} />
         <Route path="/experiences/QnA/:index" element={<Preview isActive={2} />} />

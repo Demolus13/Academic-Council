@@ -1,0 +1,165 @@
+/* Council Section*/
+/* https://drive.google.com/file/d/1MvwXJyfe_Ua3gCctK_-LUhQK6hnsdT_G/view*/
+#srcs::before {
+  content: "";
+  background-image: url(../../public/Images/SRCs\ BG.webp);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  inset: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+
+#srcs::after {
+  content: "";
+  background-color: var(--blue);
+  position: fixed;
+  inset: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  z-index: -2;
+}
+
+#srcs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: auto;
+}
+
+#srcs .srcs-initial {
+  width: 50%;
+  min-width: 350px;
+  text-align: justify;
+}
+
+#srcs .calendar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 17.5rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-top: 3rem;
+}
+
+#srcs .calendar .search {
+  background-color: var(--red);
+  padding: 0.3rem 1rem;
+}
+
+#srcs .allCourses {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0rem 3rem;
+  margin: 4rem 0rem;
+}
+
+#srcs .courses-unit{
+  width: 100%;
+  overflow: scroll;
+}
+
+#srcs .courses {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3rem;
+  margin-top: 1.5rem;
+}
+
+.courses-unit::-webkit-scrollbar {
+  display: none;
+}
+
+.courses-unit {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#srcs .course {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  width: 350px;
+  background-color: white;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+#srcs .date, #srcs .know-more {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#srcs .name, #srcs .instructors {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#srcs .course .date {
+  background-color: var(--red);
+  border-top-left-radius: 15px;
+  white-space: pre-line;
+  padding: 1rem 0rem;
+  border-bottom: 2px solid black;
+  line-height: 25px;
+}
+
+#srcs .course .name {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+#srcs .course .know-more h5{
+  background-color: var(--blue);
+  padding: 0.5rem;
+  width: 100%;
+}
+
+#srcs .course .instructors {
+  color: black;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1rem;
+  text-align: center;
+}
+
+#srcs .course .PC-know-more{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: var(--blue);
+  width: 100px;
+  height: 60px;
+  border-bottom-left-radius: 15px;
+  padding: 0rem 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 15px;
+}
+
+/* Responsive Section */
+@media screen and (max-width: 600px) {
+  #srcs h1 {
+    font-size: 1.5rem;
+  }
+  
+  #srcs .allCourses{
+    padding: 0rem 1.5rem;
+  }
+}
