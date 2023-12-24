@@ -10,6 +10,7 @@ import Updated from './components/Updated';
 import Preview from './components/Preview';
 import PassFailCalculator from './components/PassFail';
 import SRCs from './components/SRCs';
+import Internship from './components/Internships';
 
 function App() {
   const [activeLink, setActiveLink] = useState(0);
@@ -33,6 +34,7 @@ function App() {
         <Route path="/experiences/QnA/:index" element={<Preview isActive={2} />} />
         <Route path='/council' element={<Council />} />
         <Route path='*' element={<Updated />} />
+        <Route path='/internships' element={<Internship />} />
       </Routes>
       <Footer />
 
