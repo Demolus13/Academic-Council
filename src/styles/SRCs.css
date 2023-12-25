@@ -36,6 +36,7 @@
   width: 50%;
   min-width: 350px;
   text-align: justify;
+  margin-top: 0.5rem;
 }
 
 #srcs .calendar {
@@ -100,6 +101,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 #srcs .name, #srcs .instructors {
@@ -128,6 +130,7 @@
   background-color: var(--blue);
   padding: 0.5rem;
   width: 100%;
+  cursor: pointer;
 }
 
 #srcs .course .instructors {
@@ -151,6 +154,25 @@
   box-sizing: border-box;
   text-align: center;
   line-height: 15px;
+  cursor: pointer;
+}
+
+#srcs .course-details{
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 2rem 5rem;
+  padding-bottom: 0rem;
+  box-sizing: border-box;
+}
+
+#srcs .course-details h3{
+  white-space: pre-line;
+}
+
+#srcs .course-details h3 span{
+  color: var(--red);
 }
 
 /* Responsive Section */
@@ -161,5 +183,8 @@
   
   #srcs .allCourses{
     padding: 0rem 1.5rem;
+  }
+  #srcs .course-details{
+    padding: 2rem;
   }
 }

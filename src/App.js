@@ -9,7 +9,7 @@ import { Routes, Route, HashRouter } from 'react-router-dom';
 import Updated from './components/Updated';
 import Preview from './components/Preview';
 import PassFailCalculator from './components/PassFail';
-import SRCs from './components/SRCs';
+import SRCs, { SRCsKnownMore } from './components/SRCs';
 import Internship from './components/Internships';
 
 function App() {
@@ -27,12 +27,13 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/experiences' element={<Experiences activeLink={activeLink} />} />
-        <Route path='/calculator' element={<PassFailCalculator />} />
-        <Route path='/SRCs' element={<SRCs />} />
-        <Route path='/internships' element={<Internship />} />
         <Route path="/experiences/alumni/:index" element={<Preview isActive={0} />} />
         <Route path="/experiences/quill/:index" element={<Preview isActive={1} />} />
         <Route path="/experiences/QnA/:index" element={<Preview isActive={2} />} />
+        <Route path='/calculator' element={<PassFailCalculator />} />
+        <Route path='/SRCs' element={<SRCs />} />
+        <Route path='/SRCs/:index' element={<SRCsKnownMore />} />
+        <Route path='/internships' element={<Internship />} />
         <Route path='/council' element={<Council />} />
         <Route path='*' element={<Updated />} />
       </Routes>
