@@ -1,4 +1,4 @@
-/* Council Section*/
+/* SRCs Section*/
 /* https://drive.google.com/file/d/1MvwXJyfe_Ua3gCctK_-LUhQK6hnsdT_G/view*/
 #srcs::before {
   content: "";
@@ -32,6 +32,11 @@
   height: auto;
 }
 
+#srcs h1{
+  font-size: 2.6rem;
+  text-align: center;
+}
+
 #srcs .srcs-initial {
   width: 50%;
   min-width: 350px;
@@ -43,7 +48,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 17.5rem;
+  gap: 1.5rem;
   background-color: white;
   padding: 1.5rem;
   border-radius: 15px;

@@ -1,16 +1,17 @@
 import './App.css';
 import React, { useState } from 'react';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Footer from './components/Footer';
-import Experiences from './components/Experiences';
 import Council from './components/Council';
-import { Routes, Route, HashRouter } from 'react-router-dom';
-import Updated from './components/Updated';
+import Events from './components/Events';
+import Experiences from './components/Experiences';
 import Preview from './components/Preview';
 import PassFailCalculator from './components/PassFail';
 import SRCs, { SRCsKnownMore } from './components/SRCs';
 import Internship from './components/Internships';
+import Updated from './components/Updated';
+import Footer from './components/Footer';
 
 function App() {
   const [activeLink, setActiveLink] = useState(0);
@@ -26,6 +27,8 @@ function App() {
       <Navbar onLinkClick={handleLinkClick} />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/council' element={<Council />} />
+        <Route path='/events' element={<Events />} />
         <Route path='/experiences' element={<Experiences activeLink={activeLink} />} />
         <Route path="/experiences/alumni/:index" element={<Preview isActive={0} />} />
         <Route path="/experiences/quill/:index" element={<Preview isActive={1} />} />
@@ -34,7 +37,6 @@ function App() {
         <Route path='/SRCs' element={<SRCs />} />
         <Route path='/SRCs/:index' element={<SRCsKnownMore />} />
         <Route path='/internships' element={<Internship />} />
-        <Route path='/council' element={<Council />} />
         <Route path='*' element={<Updated />} />
       </Routes>
       <Footer />
