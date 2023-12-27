@@ -1,8 +1,10 @@
 /* SRCs Section*/
 /* https://drive.google.com/file/d/1MvwXJyfe_Ua3gCctK_-LUhQK6hnsdT_G/view*/
+
+
 #srcs::before {
   content: "";
-  background-image: url(../../public/Images/SRCs\ BG.webp);
+  background-image: url(https://drive.google.com/uc?export=view&id=1qV0tCmlIeK8ohMT4sAQy-qriyBy4VEOq);
   background-size: cover;
   background-position: center;
   position: fixed;
