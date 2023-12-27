@@ -32,7 +32,7 @@
   height: auto;
 }
 
-#srcs h1{
+#srcs h1 {
   font-size: 2.6rem;
   text-align: center;
 }
@@ -70,7 +70,7 @@
   margin: 4rem 0rem;
 }
 
-#srcs .courses-unit{
+#srcs .courses-unit {
   width: 100%;
   overflow: scroll;
 }
@@ -101,7 +101,8 @@
   box-sizing: border-box;
 }
 
-#srcs .date, #srcs .know-more {
+#srcs .date,
+#srcs .know-more {
   width: 100px;
   display: flex;
   justify-content: center;
@@ -109,7 +110,8 @@
   text-align: center;
 }
 
-#srcs .name, #srcs .instructors {
+#srcs .name,
+#srcs .instructors {
   width: 250px;
   display: flex;
   justify-content: center;
@@ -131,7 +133,7 @@
   border-bottom: 2px solid black;
 }
 
-#srcs .course .know-more h5{
+#srcs .course .know-more h5 {
   background-color: var(--blue);
   padding: 0.5rem;
   width: 100%;
@@ -146,7 +148,7 @@
   text-align: center;
 }
 
-#srcs .course .PC-know-more{
+#srcs .course .PC-know-more {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,7 +164,7 @@
   cursor: pointer;
 }
 
-#srcs .course-details{
+#srcs .course-details {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -172,11 +174,11 @@
   box-sizing: border-box;
 }
 
-#srcs .course-details h3{
+#srcs .course-details h3 {
   white-space: pre-line;
 }
 
-#srcs .course-details h3 span{
+#srcs .course-details h3 span {
   color: var(--red);
 }
 
@@ -185,11 +187,12 @@
   #srcs h1 {
     font-size: 1.5rem;
   }
-  
-  #srcs .allCourses{
+
+  #srcs .allCourses {
     padding: 0rem 1.5rem;
   }
-  #srcs .course-details{
+
+  #srcs .course-details {
     padding: 2rem;
   }
 }

@@ -57,7 +57,7 @@ export function SRCsKnownMore() {
   var ind = index % (l1 + l2)
   var course = allSRCs[0][ind]
   if (ind >= l1) {
-    ind = (ind + l2) % (l1 + l2)
+    ind -= l1
     course = allSRCs[1][ind]
   }
   return (
@@ -67,13 +67,13 @@ export function SRCsKnownMore() {
         <h1 className="h-extrabold" style={{ color: 'var(--red)', textAlign: "center" }}>Student Run Courses</h1>
         <h1 className="h-extrabold" style={{ textAlign: "center" }}>{course.name}</h1>
         <div className="course-details">
-        <h3 className="h-semibold" style={{display: course.instructors === "" ? "none" : "block"}}><span className="h-bold">Instructors: </span>{course.instructors}</h3>
-        <h3 className="h-semibold" style={{display: course.FA === "" ? "none" : "block"}}><span className="h-bold">Faculty Advisor: </span>{course.FA}</h3>
-        <h3 className="h-semibold" style={{display: course.mode_venue === "" ? "none" : "block"}}><span className="h-bold">Mode, and Venue: </span>{course.mode_venue}</h3>
-        <h3 className="h-semibold" style={{display: course.about === "" ? "none" : "block"}}><span className="h-bold">About the Course: </span>{course.about}</h3>
-        <h3 className="h-semibold" style={{display: course.prerequisites === "" ? "none" : "block"}}><span className="h-bold">Prerequisites: </span>{course.prerequisites}</h3>
-        <h3 className="h-semibold" style={{display: course.outcomes === "" ? "none" : "block"}}><span className="h-bold">Expected Outcomes: </span>{course.outcomes}</h3>
-        <h3 className="h-semibold" style={{display: course.resources === "" ? "none" : "block"}}><span className="h-bold">Resources: </span>{course.resources}</h3>
+          <h3 className="h-semibold" style={{ display: course.instructors === "" ? "none" : "block" }}><span className="h-bold">Instructors: </span>{course.instructors}</h3>
+          <h3 className="h-semibold" style={{ display: course.FA === "" ? "none" : "block" }}><span className="h-bold">Faculty Advisor: </span>{course.FA}</h3>
+          <h3 className="h-semibold" style={{ display: course.mode_venue === "" ? "none" : "block" }}><span className="h-bold">Mode, and Venue: </span>{course.mode_venue}</h3>
+          <h3 className="h-semibold" style={{ display: course.about === "" ? "none" : "block" }}><span className="h-bold">About the Course: </span>{course.about}</h3>
+          <h3 className="h-semibold" style={{ display: course.prerequisites === "" ? "none" : "block" }}><span className="h-bold">Prerequisites: </span>{course.prerequisites}</h3>
+          <h3 className="h-semibold" style={{ display: course.outcomes === "" ? "none" : "block" }}><span className="h-bold">Expected Outcomes: </span>{course.outcomes}</h3>
+          <h3 className="h-semibold" style={{ display: course.resources === "" ? "none" : "block" }}><span className="h-bold">Resources: </span>{course.resources}</h3>
         </div>
         <div className="allCourses">
           <h2 className="h-bold">Student Run Courses</h2>

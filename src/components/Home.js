@@ -32,7 +32,7 @@ export default function Home() {
               <h2 className="h-semibold" id='ug'>Under Graduate</h2>
             </div>
             <div className="box">
-                <h2 className="h-semibold" ref={ref}>{inView && <CountUp start={0} end={1000} duration={5} suffix="+" />}</h2>
+              <h2 className="h-semibold" ref={ref}>{inView && <CountUp start={0} end={1000} duration={5} suffix="+" />}</h2>
             </div>
           </div>
           <div className="subcontainer">
@@ -43,7 +43,7 @@ export default function Home() {
               <h2 className="h-semibold" id='pg'>Post Graduate</h2>
             </div>
             <div className="box">
-            <h2 className="h-semibold" ref={ref}>{inView && <CountUp start={0} end={500} duration={5} suffix="+" />}</h2>
+              <h2 className="h-semibold" ref={ref}>{inView && <CountUp start={0} end={500} duration={5} suffix="+" />}</h2>
             </div>
           </div>
           <div className="subcontainer">
@@ -54,7 +54,7 @@ export default function Home() {
               <h2 className="h-semibold" id='f'>Faculty</h2>
             </div>
             <div className="box">
-            <h2 className="h-semibold" ref={ref}>{inView && <CountUp start={0} end={120} duration={5} suffix="+" />}</h2>
+              <h2 className="h-semibold" ref={ref}>{inView && <CountUp start={0} end={120} duration={5} suffix="+" />}</h2>
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ export default function Navbar({ onLinkClick }) {
       <ul>
         <li className="navbar-item"><Link to="/" className={loc === "/" ? "active" : ""}>Home</Link></li>
         <li className="navbar-item"><Link to="/council" className={loc.startsWith("/council") ? "active" : ""}>Council</Link></li>
-        <li className="navbar-item"><Link to="/experiences" className={loc.startsWith("/experiences") ? "active" : ""}>Experiences</Link></li>
+        <li className="navbar-item"><Link to="/experiences" className={loc.startsWith("/experiences") ? "active" : ""} onClick={() => onLinkClick(1)}>Experiences</Link></li>
         <div className={`hamburger ${isActive ? "active" : ""}`} onClick={Toggle}>
           <span className="bar"></span>
           <span className="bar"></span>

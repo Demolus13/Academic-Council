@@ -42,18 +42,18 @@ class PassFailCalculator extends Component {
     let cpnum = 0;
     let cpdenom = 0;
     let credits = 0;
-  
+
     for (const sem in pdata) {
       let num = 0;
       let denom = 0;
       let semcredits = 0;
-  
+
       for (const crs of pdata[sem]) {
         if (crs.grade !== -1) {
           if (pfc.indexOf(crs.code) === -1 && crs.code !== "799" && !["S", "U"].includes(crs.grade)) {
             cpnum += crs.grade * crs.credit;
             num += crs.grade * crs.credit;
-  
+
             if (crs.grade !== 0) {
               cpdenom += crs.credit;
               denom += crs.credit;
@@ -68,22 +68,22 @@ class PassFailCalculator extends Component {
         }
         semcredits += crs.credit;
       }
-  
+
       spi[sem] = {
         name: sem,
         grade: this.bind(Math.round((num * 100) / denom) / 100),
         credits: semcredits,
       };
     }
-  
+
     const cpi = {
       grade: this.bind(Math.round((cpnum * 100) / cpdenom) / 100),
       credits,
     };
-  
+
     return { cpi, spi };
   }
-  
+
 
   doCalc() {
     const { gdata, pf, sems } = this.state;
@@ -101,26 +101,26 @@ class PassFailCalculator extends Component {
     const { pf, sems, selectedCourses } = this.state;
     const coursecode = course.code;
     const courseCredit = course.credit;
-  
+
     // Check if the course has a grade of 0
     if (course.grade === 0) {
       alert(`You cannot convert this course to pass-fail; it is already designated as pass-fail`);
       return;
     }
-  
+
     const maxCreditsAllowed = 8; // Maximum allowed credits
-  
+
     const currentTotalCredits = pf.reduce((total, code) => {
       const selectedCourse = Object.values(sems).flat().find(course => course.code === code);
       return total + (selectedCourse ? selectedCourse.credit : 0);
     }, 0);
-  
+
     if (selectedCourses.includes(coursecode)) {
       // Deselect the course
       const newPf = pf.filter(code => code !== coursecode);
       const updatedSelectedCourses = selectedCourses.filter(code => code !== coursecode);
       const cpispi = this.doCPISPI(sems, newPf);
-  
+
       this.setState({
         counter: newPf.length,
         pf: newPf,
@@ -135,16 +135,16 @@ class PassFailCalculator extends Component {
       } else {
         const newCounter = pf.length + 1;
         const newPf = [...pf, coursecode];
-  
+
         this.setState({ counter: newCounter, pf: newPf });
-  
+
         // Toggle the course in the selectedCourses list
         this.setState((prevState) => ({
           selectedCourses: [...prevState.selectedCourses, coursecode],
         }));
-  
+
         const cpispi = this.doCPISPI(sems, newPf);
-  
+
         this.setState({
           cpi: cpispi.cpi,
           spi: cpispi.spi,
@@ -152,7 +152,7 @@ class PassFailCalculator extends Component {
       }
     }
   }
-  
+
 
   render() {
     const { cpi, spi, sems, selectedCourses } = this.state;

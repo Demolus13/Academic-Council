@@ -12,7 +12,7 @@ function Internship() {
   const handleFetchCSVData2 = () => {
     setActiveComponent(<IndustryData />);
   };
- 
+
 
   return (
     <div>

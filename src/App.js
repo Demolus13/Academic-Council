@@ -4,9 +4,9 @@ import { Routes, Route, HashRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Council from './components/Council';
-import Events from './components/Events';
-import Experiences from './components/Experiences';
-import Preview from './components/Preview';
+import Events, { EventsKnownMore } from './components/Events';
+import { eventsDict } from './utilities/eventsData';
+import Experiences, { Preview } from './components/Experiences';
 import PassFailCalculator from './components/PassFail';
 import SRCs, { SRCsKnownMore } from './components/SRCs';
 import Internship from './components/Internships';
@@ -16,9 +16,9 @@ import Footer from './components/Footer';
 function App() {
   const [activeLink, setActiveLink] = useState(0);
 
-  // Callback function to update the activeLink state
   const handleLinkClick = (value) => {
     setActiveLink(value);
+    // console.log(value)
   };
 
   return (
@@ -29,10 +29,13 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/council' element={<Council />} />
         <Route path='/events' element={<Events />} />
+        {Object.keys(eventsDict).map(key => (
+          <Route path={`/events/${key}/:index`} element={<EventsKnownMore />} />
+        ))}
         <Route path='/experiences' element={<Experiences activeLink={activeLink} />} />
-        <Route path="/experiences/alumni/:index" element={<Preview isActive={0} />} />
-        <Route path="/experiences/quill/:index" element={<Preview isActive={1} />} />
-        <Route path="/experiences/QnA/:index" element={<Preview isActive={2} />} />
+        {["alumni", "quill", "QnA"].map((path, index) => (
+          <Route path={`/experiences/${path}/:index`} element={<Preview isActive={index} />} />
+        ))}
         <Route path='/calculator' element={<PassFailCalculator />} />
         <Route path='/SRCs' element={<SRCs />} />
         <Route path='/SRCs/:index' element={<SRCsKnownMore />} />

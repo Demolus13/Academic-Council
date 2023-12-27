@@ -148,10 +148,11 @@ h2 {
 }
 
 .selected-course {
-  background-color: red; 
+  background-color: red;
   color: white;
 }
+
 .selected-course:hover {
   background-color: red;
-  color: white; 
+  color: white;
 }
