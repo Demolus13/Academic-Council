@@ -8,12 +8,10 @@ export default function Events() {
   const [selectedEvent, setSelectedEvent] = useState("");
   const [selectedYear, setSelectedYear] = useState(0);
   const handleEvent = (selectedOption) => {
-    setSelectedEvent(selectedOption);
-    console.log(`Option selected:`, selectedOption);
+    setSelectedEvent(selectedOption.value);
   };
   const handleYear = (selectedOption) => {
-    setSelectedYear(selectedOption);
-    console.log(`Option selected:`, selectedOption);
+    setSelectedYear(selectedOption.value);
   };
 
   const customStyles = {
@@ -30,6 +28,7 @@ export default function Events() {
       ...defaultStyles,
       boxShadow: state.isFocused ? "0px 0px 1.5px 1.5px var(--red)" : "none",
       borderColor: state.isFocused ? "var(--red)" : "rgba(0,0,0,0.5)",
+      width: "150px",
       "&:hover": {
         borderColor: state.isFocused ? "var(--red)" : "rgba(0,0,0,0.5)",
       }
@@ -40,6 +39,25 @@ export default function Events() {
       borderColor: "var(--red)",
     }),
   };
+
+  function filterEventsByCategory(dict, category) {
+    if (category !== "") {
+      const filteredData = {};
+
+      for (const month in dict) {
+        const eventsInMonth = dict[month].filter(event => event.category === category);
+
+        if (eventsInMonth.length > 0) {
+          filteredData[month] = eventsInMonth;
+        }
+      }
+
+      return filteredData;
+    }
+    return dict
+  };
+
+  const newAllEvents = filterEventsByCategory(allEvents, selectedEvent)
 
   return (
     <>
@@ -54,7 +72,7 @@ export default function Events() {
               className="basic-single"
               name="event-select"
               options={eventOptions}
-              placeholder={'Select Category'}
+              placeholder={eventOptions[0].label}
               styles={customStyles}
               onChange={handleEvent}
             />
@@ -75,18 +93,18 @@ export default function Events() {
         </div>
         <h1 className="h-extrabold sac" style={{ fontSize: "1.7rem", textAlign: "center" }}>SAC EVENTS</h1>
         <div className="allEvents">
-          {Object.keys(allEvents).map(key => (
+          {Object.keys(newAllEvents).map(key => (
             <>
-              <div className="left-box"><h3 className="h-semibold">{eventsDict[key]}</h3></div>
+              <div className="left-box"><h3 className="h-semibold">{`${eventsDict[key]} ${2023 - selectedYear}`}</h3></div>
               <div className="right-box">
-                {allEvents[key].map((card, index) => (
+                {newAllEvents[key].map((card, index) => (
                   <div key={index}>
                     <div className="event">
                       <div className="fullEvent">
                         <h3 className="h-extrabold" style={{ fontSize: "1.5rem", textAlign: "center" }}>{card.name}</h3>
                         <div className="event-summary">
                           <p>{card.summary}</p>
-                          <div className="event-know-more" onClick={() => window.open(`#/events/${key}/${index}`)}>Know More</div>
+                          <div className="event-know-more" onClick={() => window.open(`#/events/${key}/${card.id}`)}>Know More</div>
                         </div>
                       </div>
                     </div>
@@ -107,6 +125,32 @@ export function EventsKnownMore() {
   const monthEvents = allEvents[month]
   const index = loc.split("/")[3] % monthEvents.length
   var event = allEvents[month][index]
+
+  function filterEventsByName(dict, name) {
+    const filteredData = {};
+    var count = 0;
+    const months = Object.keys(dict);
+    var monthIndex = 0;
+
+    while (count < 3 && monthIndex < months.length) {
+      const month = months[monthIndex];
+      const eventsInMonth = dict[month].filter(event => event.name !== name);
+      var eventIndex = 0;
+      const newEvents = [];
+      
+      while (count < 3 && eventIndex < eventsInMonth.length) {
+        newEvents.push(eventsInMonth[eventIndex]);
+        count++;
+        eventIndex++;
+      }
+
+      filteredData[month] = newEvents;
+      monthIndex++;
+    }
+    return filteredData
+  };
+  const newAllEvents = filterEventsByName(allEvents, allEvents[month][index].name)
+
   return (
     <>
       {/* Known More Section */}
@@ -122,9 +166,9 @@ export function EventsKnownMore() {
         <div className="moreEvents">
           <h2 className="h-bold">More Events</h2>
           <div className="events-unit">
-            {Object.keys(allEvents).map(key => (
+            {Object.keys(newAllEvents).map(key => (
               <>
-                {allEvents[key].map((card, index) => (
+                {newAllEvents[key].map((card, index) => (
                   <div className="more-event-cover" key={index} style={{ display: event.name === card.name ? "none" : "flex" }}>
                     <div className="more-event" style={{ display: "flex" }}>
                       <div className="know-more" onClick={() => window.open(`#/events/${key}/${index}`)}><h3 className="h-extrabold">KNOW MORE</h3></div>

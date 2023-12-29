@@ -25,6 +25,7 @@ export default function SRCs() {
       ...defaultStyles,
       boxShadow: state.isFocused ? "0px 0px 1.5px 1.5px var(--red)" : "none",
       borderColor: state.isFocused ? "var(--red)" : "rgba(0,0,0,0.5)",
+      width: "150px",
       "&:hover": {
         borderColor: state.isFocused ? "var(--red)" : "rgba(0,0,0,0.5)",
       }
