@@ -48,3 +48,22 @@ export const allSRCs = [
         },
     ]
 ]
+
+export const yearOptions = [
+    {
+        value: 0,
+        label: "2023-24"
+    },
+    {
+        value: 1,
+        label: "2022-23"
+    },
+    {
+        value: 2,
+        label: "2021-22"
+    },
+    {
+        value: 4,
+        label: "2020-21"
+    },
+]

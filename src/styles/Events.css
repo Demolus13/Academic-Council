@@ -48,6 +48,10 @@
   margin-top: 2rem;
 }
 
+#events .calendar select{
+  color: rgba(0, 0, 0, 0.5);
+}
+
 #events .calendar .search {
   background-color: var(--red);
   padding: 0.3rem 1rem;
@@ -135,7 +139,7 @@
   border: 2px solid white;
   border-radius: 15px;
   position: absolute;
-  right: -15px;
+  right: -16px;
   top: 1.5rem;
   box-sizing: border-box;
 }
@@ -346,6 +350,18 @@
 
   #events .sac {
     margin-top: 2rem;
+  }
+
+  #events .right-box {
+    gap: 1.5rem;
+  }
+
+  #events .right-box .fullEvent {
+    border: 1px solid white;
+  }
+
+  #events .right-box .fullEvent .event-know-more {
+    border: 1px solid white;
   }
 
   #events .right-box .fullEvent p {

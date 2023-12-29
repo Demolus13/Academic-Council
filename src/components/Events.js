@@ -1,9 +1,45 @@
-import React from 'react';
+import { React, useState } from 'react';
 import '../styles/Events.css'
-import { allEvents, eventsDict } from '../utilities/eventsData';
+import { allEvents, eventsDict, eventOptions, yearOptions } from '../utilities/eventsData';
 import { useLocation } from 'react-router-dom';
+import Select from 'react-select';
 
 export default function Events() {
+  const [selectedEvent, setSelectedEvent] = useState("");
+  const [selectedYear, setSelectedYear] = useState(0);
+  const handleEvent = (selectedOption) => {
+    setSelectedEvent(selectedOption);
+    console.log(`Option selected:`, selectedOption);
+  };
+  const handleYear = (selectedOption) => {
+    setSelectedYear(selectedOption);
+    console.log(`Option selected:`, selectedOption);
+  };
+
+  const customStyles = {
+    option: (defaultStyles, state) => ({
+      ...defaultStyles,
+      color: "black",
+      backgroundColor: state.isSelected ? "var(--red)" : "#ffffff",
+      "&:hover": {
+        backgroundColor: "rgba(237, 28, 36, 0.10)",
+      }
+    }),
+
+    control: (defaultStyles, state) => ({
+      ...defaultStyles,
+      boxShadow: state.isFocused ? "0px 0px 1.5px 1.5px var(--red)" : "none",
+      borderColor: state.isFocused ? "var(--red)" : "rgba(0,0,0,0.5)",
+      "&:hover": {
+        borderColor: state.isFocused ? "var(--red)" : "rgba(0,0,0,0.5)",
+      }
+    }),
+    singleValue: (defaultStyles) => ({
+      ...defaultStyles,
+      color: "rgba(0,0,0,0.75)",
+      borderColor: "var(--red)",
+    }),
+  };
 
   return (
     <>
@@ -13,14 +49,29 @@ export default function Events() {
         <h1 className="h-extrabold" style={{ textAlign: "center" }}>Student Academic Council</h1>
         <div className="calendar">
           <div>
-            <p className="h-bold" style={{ color: 'black' }}>EVENT TYPE</p>
-            <p className="h-bold" style={{ color: 'black', opacity: '0.5' }}>Select Category</p>
+            <p className="h-bold" style={{ color: 'black', marginBottom: "2px" }}>EVENT TYPE</p>
+            <Select
+              className="basic-single"
+              name="event-select"
+              options={eventOptions}
+              placeholder={'Select Category'}
+              styles={customStyles}
+              onChange={handleEvent}
+            />
           </div>
           <div>
-            <p className="h-bold" style={{ color: 'black' }}>ACADEMIC YEAR</p>
-            <p className="h-bold" style={{ color: 'black', opacity: '0.5' }}>2023-24</p>
+            <p className="h-bold" style={{ color: 'black', marginBottom: "2px" }}>ACADEMIC YEAR</p>
+            <Select
+              defaultValue={yearOptions[0]}
+              className="basic-single"
+              classNamePrefix="select"
+              name="year-select"
+              options={yearOptions}
+              styles={customStyles}
+              onChange={handleYear}
+            />
           </div>
-          <div className="search">Search</div>
+          {/* <div className="search">Search</div> */}
         </div>
         <h1 className="h-extrabold sac" style={{ fontSize: "1.7rem", textAlign: "center" }}>SAC EVENTS</h1>
         <div className="allEvents">

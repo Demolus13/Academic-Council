@@ -65,15 +65,20 @@
 #srcs .allCourses {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 100vw;
   box-sizing: border-box;
   padding: 0rem 3rem;
   margin: 4rem 0rem;
 }
 
+#srcs .courses-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
 #srcs .courses-unit {
-  width: 100%;
+  max-width: 90%;
   overflow: scroll;
 }
 

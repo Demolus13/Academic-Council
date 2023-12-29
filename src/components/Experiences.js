@@ -20,7 +20,7 @@ export default function Experiences({ activeLink }) {
   return (
     <>
       <div id="experiences">
-        <h1 className="h-bold">EXPERIENCES</h1>
+        <h1 className="h-bold">Experiences</h1>
         <p className="h-medium">How was your internship? How did you get selected? What did you work on? What did you like about it the most? How did your contest go? We invite students to share their experiences on the same. <br /> Finally, we publish them here. <br /> <br /> Use this button to share your own experience.</p>
         <button className="btn"><Link className="h-medium" to="https://docs.google.com/forms/d/e/1FAIpQLSeDFZ5RGLYRCUnh2v8baXWK04_DRr-AiDxxwna_SvOgWKXDCQ/viewform" rel="noreferrer" target="_blank">Share your story</Link></button>
         <div className="container h-bold">

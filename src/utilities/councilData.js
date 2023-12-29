@@ -56,12 +56,12 @@ export const allMembers = [
             email: "daradaaryan@iitgn.ac.in"
         },
         {
-            name: "Vikash Kumar Beniwal",
+            name: "Vikash Beniwal",
             position: "Coordinator for Peer Assisted Learning",
             ug: "Junior Undergraduate",
             branch: "Chemical Engineer",
             contact: "63679 22581",
-            imgSrc: "./Images/VIKASH BENIWAL .webp",
+            imgSrc: "./Images/vikash.webp",
             linkedin: "",
             www: "",
             email: "beniwalvikash@iitgn.ac.in"

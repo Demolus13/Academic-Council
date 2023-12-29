@@ -1,9 +1,40 @@
-import React from 'react';
+import { React, useState } from 'react';
 import '../styles/SRCs.css'
-import { allSRCs } from '../utilities/srcsData';
+import { allSRCs, yearOptions } from '../utilities/srcsData';
 import { useParams } from 'react-router-dom';
+import Select from 'react-select';
 
 export default function SRCs() {
+  const [selectedSRCs, setSelectedSRCs] = useState("");
+  const handleYear = (selectedOption) => {
+    setSelectedSRCs(selectedOption);
+    console.log(`Option selected:`, selectedOption);
+  };
+
+  const customStyles = {
+    option: (defaultStyles, state) => ({
+      ...defaultStyles,
+      color: "black",
+      backgroundColor: state.isSelected ? "var(--red)" : "#ffffff",
+      "&:hover": {
+        backgroundColor: "rgba(237, 28, 36, 0.10)",
+      }
+    }),
+
+    control: (defaultStyles, state) => ({
+      ...defaultStyles,
+      boxShadow: state.isFocused ? "0px 0px 1.5px 1.5px var(--red)" : "none",
+      borderColor: state.isFocused ? "var(--red)" : "rgba(0,0,0,0.5)",
+      "&:hover": {
+        borderColor: state.isFocused ? "var(--red)" : "rgba(0,0,0,0.5)",
+      }
+    }),
+    singleValue: (defaultStyles) => ({
+      ...defaultStyles,
+      color: "rgba(0,0,0,0.75)",
+      borderColor: "var(--red)",
+    }),
+  };
 
   return (
     <>
@@ -14,12 +45,21 @@ export default function SRCs() {
         <div className="calendar">
           <div>
             <p className="h-bold" style={{ color: 'black' }}>ACADEMIC YEAR</p>
-            <p className="h-bold" style={{ color: 'black', opacity: '0.5' }}>2023-24</p>
+            <Select
+              defaultValue={yearOptions[0]}
+              className="basic-single"
+              classNamePrefix="select"
+              name="year-select"
+              options={yearOptions}
+              styles={customStyles}
+              onChange={handleYear}
+            />
           </div>
-          <div className="search">Search</div>
+          {/* <div className="search">Search</div> */}
         </div>
         <div className="allCourses">
           <h2 className="h-bold">Student Run Courses</h2>
+          <div className="courses-container">
           <div className="courses-unit">
             <div className="courses">
               {allSRCs[0].map((course, index) => (
@@ -32,7 +72,9 @@ export default function SRCs() {
               ))}
             </div>
           </div>
+          </div>
           <h2 className="h-bold" style={{ marginTop: '4rem' }}>Previous SRCs</h2>
+          <div className="courses-container">
           <div className="courses-unit">
             <div className="courses">
               {allSRCs[1].map((course, index) => (
@@ -43,6 +85,7 @@ export default function SRCs() {
                 </div>
               ))}
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -77,29 +120,29 @@ export function SRCsKnownMore() {
         </div>
         <div className="allCourses">
           <h2 className="h-bold">Student Run Courses</h2>
-          <div className="courses-unit">
-            <div className="courses">
-              {allSRCs[0].map((course, index) => (
-                <div className="course" key={index}>
-                  <h3 className="h-extrabold date">{course.mmyyyy}</h3>
-                  <h3 className="h-extrabold name">{course.name}</h3>
-                  <div className="know-more"><h5 className="h-bold" onClick={() => window.open(`#/SRCs/${index}`)}>Know more</h5></div>
-                  <h5 className="instructors h-semibold"><span className="h-extrabold" style={{ color: 'var(--red)' }}>Instructors: </span>{course.instructors}</h5>
-                </div>
-              ))}
-            </div>
+            <div className="courses-unit">
+              <div className="courses">
+                {allSRCs[0].map((course, index) => (
+                  <div className="course" key={index}>
+                    <h3 className="h-extrabold date">{course.mmyyyy}</h3>
+                    <h3 className="h-extrabold name">{course.name}</h3>
+                    <div className="know-more"><h5 className="h-bold" onClick={() => window.open(`#/SRCs/${index}`)}>Know more</h5></div>
+                    <h5 className="instructors h-semibold"><span className="h-extrabold" style={{ color: 'var(--red)' }}>Instructors: </span>{course.instructors}</h5>
+                  </div>
+                ))}
+              </div>
           </div>
           <h2 className="h-bold" style={{ marginTop: '4rem' }}>Previous SRCs</h2>
-          <div className="courses-unit">
-            <div className="courses">
-              {allSRCs[1].map((course, index) => (
-                <div className="course" key={index} style={{ backgroundColor: 'transparent' }}>
-                  <h3 className="h-extrabold date" style={{ height: '60px', backgroundColor: 'white', color: 'black', borderBottom: '0px' }}>{course.yyyy}</h3>
-                  <h3 className="h-extrabold name" style={{ color: 'white', backgroundColor: 'var(--red)', borderTopRightRadius: '15px', borderBottom: '0px' }}>{course.name}</h3>
-                  <h4 className="PC-know-more h-extrabold" onClick={() => window.open(`#/SRCs/${index + allSRCs[0].length}`)}>Know more</h4>
-                </div>
-              ))}
-            </div>
+            <div className="courses-unit">
+              <div className="courses">
+                {allSRCs[1].map((course, index) => (
+                  <div className="course" key={index} style={{ backgroundColor: 'transparent' }}>
+                    <h3 className="h-extrabold date" style={{ height: '60px', backgroundColor: 'white', color: 'black', borderBottom: '0px' }}>{course.yyyy}</h3>
+                    <h3 className="h-extrabold name" style={{ color: 'white', backgroundColor: 'var(--red)', borderTopRightRadius: '15px', borderBottom: '0px' }}>{course.name}</h3>
+                    <h4 className="PC-know-more h-extrabold" onClick={() => window.open(`#/SRCs/${index + allSRCs[0].length}`)}>Know more</h4>
+                  </div>
+                ))}
+              </div>
           </div>
         </div>
       </div>

@@ -45,7 +45,7 @@ export default function Navbar({ onLinkClick }) {
               <Link to="/events" className="ham-link linkEventListener">Events</Link>
             </li>
             <li className="ham-item">
-              <Link to="/experiences" className="ham-link linkEventListener">Experiences</Link>
+              <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(1)}>Experiences</Link>
             </li>
             <ul>
               <li className="subham-item">
