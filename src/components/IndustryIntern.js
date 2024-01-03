@@ -117,7 +117,7 @@ const IndustryData = () => {
 
   return (
     <div>
-      <h1>Google Sheets Data</h1>
+      {/* <h1>Google Sheets Data</h1> */}
       <div className="table-container">{renderTable()}</div>
     </div>
   );

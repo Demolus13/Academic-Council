@@ -95,7 +95,7 @@ const AcademicData = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {row[header]}
+                        {header}
                       </a>
                     ) : (
                       row[header]
@@ -111,8 +111,8 @@ const AcademicData = () => {
   };
 
   return (
-    <div>
-      <h1>Google Sheets Data</h1>
+    <div id="acad-intern">
+      {/* <h1>Google Sheets Data</h1> */}
       <div className="table-container">{renderTable()}</div>
     </div>
   );
