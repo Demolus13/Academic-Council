@@ -551,13 +551,28 @@
 }
 
 .subunit {
-    padding: 1rem;
+    padding: 2rem;
     background-color: rgba(29, 29, 27, 0.6);
     color: white;
     font-size: 1.2rem;
     width: 85vw;
+    max-height: 90vh;
+    overflow-y: scroll;
     text-align: justify;
     white-space: pre-line;
+    box-sizing: border-box;
+}
+
+.subunit::-webkit-scrollbar {
+    display: none;
+    /* Chrome*/
+}
+
+.subunit {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .subunit span {
@@ -584,6 +599,7 @@
 @media screen and (max-width: 500px) {
     #preview .subunit {
         font-size: 0.7rem;
+        padding: 1rem;
     }
 
     #preview .unit {
