@@ -100,7 +100,7 @@ const IndustryData = () => {
                           whiteSpace: 'nowrap',
                         }}
                       >
-                        {row[header]}
+                        {header}
                       </a>
                     ) : (
                       row[header]

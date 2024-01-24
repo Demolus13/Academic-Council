@@ -16,10 +16,14 @@ function Internship() {
 
   return (
     <div id="intern">
-      <h1 className="h-extrabold" style={{marginBottom: "2rem"}}>Databases of Academic & Industrial Internships & Fellowships</h1>
-      <button onClick={handleFetchCSVData1}>Academic Internship Data</button>
-      <button onClick={handleFetchCSVData2}>Industrial Internship Data</button>
-      {activeComponent}
+      <div className="intern-box">
+        <h1 className="h-extrabold" style={{ marginBottom: "2rem" }}>Databases of Academic & Industrial Internships & Fellowships</h1>
+        <div className="intern-button">
+          <button onClick={handleFetchCSVData1}>Academic Internship Data</button>
+          <button onClick={handleFetchCSVData2}>Industrial Internship Data</button>
+        </div>
+        {activeComponent}
+      </div>
     </div>
   );
 }

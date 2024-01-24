@@ -28,6 +28,17 @@
   align-items: center;
   color: white;
   height: auto;
+  margin-bottom: 3rem;
+}
+
+#intern .intern-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: auto;
 }
 
 #intern h1 {
@@ -40,6 +51,25 @@
   text-align: center;
 }
 
+#intern .intern-button button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--red);
+  color: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#intern .intern-button button:hover {
+  transform: scale(1.05);
+}
+
+#intern .table-container input {
+  margin-bottom: 1rem;
+}
 #intern .table-container thead {
   color: var(--red);
 }
