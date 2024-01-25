@@ -204,7 +204,7 @@ export const allMembers = [
             ug: "Sophomore",
             branch: "Material Science Engineer",
             contact: "99271 66739",
-            imgSrc: "./Images/fool.webp",
+            imgSrc: "./Images/Shrey Agarwal.webp",
             linkedin: "",
             www: "",
             email: "shrey.agarwal@iitgn.ac.in"
@@ -215,7 +215,7 @@ export const allMembers = [
             ug: "Post Undergraduate",
             branch: "",
             contact: "62061 51114",
-            imgSrc: "./Images/noimg.webp",
+            imgSrc: "./Images/jayashree.webp",
             linkedin: "",
             www: "",
             email: "jayashree.mahato@iitgn.ac.in"
@@ -226,7 +226,7 @@ export const allMembers = [
             ug: "Sophomore",
             branch: "Material Science Engineer",
             contact: "83197 12668",
-            imgSrc: "./Images/noimg.webp",
+            imgSrc: "./Images/Arul Singh.webp",
             linkedin: "",
             www: "",
             email: "arul.singh@iitgn.ac.in"
