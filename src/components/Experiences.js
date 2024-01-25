@@ -4,6 +4,7 @@ import '../styles/Experiences.css';
 import { alumni, quill, qna_prof } from '../utilities/experiencesData';
 import { Link, useParams } from 'react-router-dom';
 
+
 export default function Experiences({ activeLink }) {
   const state = activeLink;
   const [isActive, setActive] = useState(state);
@@ -19,6 +20,7 @@ export default function Experiences({ activeLink }) {
 
   return (
     <>
+    <div className="your-component" style={{ backgroundImage: `url(${'./Images/CouncilBG.webp'})` }}></div>
       <div id="experiences">
         <h1 className="h-bold">Experiences</h1>
         <p className="h-medium">How was your internship? How did you get selected? What did you work on? What did you like about it the most? How did your contest go? We invite students to share their experiences on the same. <br /> Finally, we publish them here. <br /> <br /> Use this button to share your own experience.</p>
