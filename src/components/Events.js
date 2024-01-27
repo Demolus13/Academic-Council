@@ -95,7 +95,7 @@ export default function Events() {
         <div className="allEvents">
           {Object.keys(newAllEvents).map(key => (
             <>
-              <div className="left-box"><h3 className="h-semibold">{`${eventsDict[key]} ${2023 - selectedYear}`}</h3></div>
+              <div className="left-box"><h3 className="h-semibold">{`${eventsDict[key][0]} ${2023 - selectedYear + eventsDict[key][1]}`}</h3></div>
               <div className="right-box">
                 {newAllEvents[key].map((card, index) => (
                   <div key={index}>
@@ -157,7 +157,10 @@ export function EventsKnownMore() {
       <div id="events">
         <h1 className="h-extrabold" style={{ color: 'var(--red)', textAlign: "center" }}>{event.name}</h1>
         <div className="event-details">
-          <h3 className="h-semibold" style={{ display: event.description === "" ? "none" : "block" }}><span className="h-bold"></span>{event.description}</h3>
+          <h3 className="h-semibold" style={{ display: event.description === "" ? "none" : "block" }}>{event.description}</h3>
+          {Object.keys(event.links).map(key => (
+            <h3 className="h-semibold" style={{ display: event.links[key] === "" ? "none" : "block" }}><span className="h-bold">{key}: </span><a href={event.links[key]} target="_blank" rel="noreferrer">Click Here</a></h3>
+          ))}
           {event.rounds.map((round, index) => (
             <h3 className="h-semibold" style={{ display: round.details === "" ? "none" : "block" }}><span className="h-bold">Round {index + 1}: </span>{round.details}</h3>
           ))}

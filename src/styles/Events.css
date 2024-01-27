@@ -217,6 +217,11 @@
   color: var(--red);
 }
 
+#events .event-details h3 a {
+  text-decoration: none;
+  color: white;
+}
+
 #events .moreEvents {
   display: flex;
   flex-direction: column;
