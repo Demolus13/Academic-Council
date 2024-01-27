@@ -7,7 +7,7 @@ export const allMembers = [
             branch: "Chemical Engineer",
             contact: "98676 08536",
             imgSrc: "./Images/Reuben Devanesan.webp",
-            linkedin: "",
+            linkedin: "https://www.linkedin.com/in/reuben-devanesan/",
             www: "",
             email: "reuben.sd@iitgn.ac.in"
         },
@@ -18,7 +18,7 @@ export const allMembers = [
             branch: "Chemical Engineer",
             contact: "73740 16840",
             imgSrc: "./Images/Yash Khandelwal.webp",
-            linkedin: "",
+            linkedin: "https://www.linkedin.com/in/yash-khandelwal-5a7a6b212/",
             www: "",
             email: "yash.khandelwal@iitgn.ac.in"
         },
@@ -29,7 +29,7 @@ export const allMembers = [
             branch: "Computer Science Engineer",
             contact: "93140 27008",
             imgSrc: "./Images/Kalash Kankaria.webp",
-            linkedin: "",
+            linkedin: "https://www.linkedin.com/in/kalash-kankaria-2a7522202/",
             www: "",
             email: "kalash.kankaria@iitgn.ac.in"
         },
@@ -40,7 +40,7 @@ export const allMembers = [
             branch: "Chemical Engineer",
             contact: "93140 27008",
             imgSrc: "./Images/Adit profile.webp",
-            linkedin: "",
+            linkedin: "https://www.linkedin.com/in/adit-rambhia/",
             www: "",
             email: "rambhiaadit@iitgn.ac.in"
         },
@@ -51,7 +51,7 @@ export const allMembers = [
             branch: "Chemical Engineer",
             contact: "99985 83773",
             imgSrc: "./Images/AaryanDarad.webp",
-            linkedin: "",
+            linkedin: "https://www.linkedin.com/in/aaryan-darad-b1351a1ab/",
             www: "",
             email: "daradaaryan@iitgn.ac.in"
         },
@@ -62,7 +62,7 @@ export const allMembers = [
             branch: "Chemical Engineer",
             contact: "63679 22581",
             imgSrc: "./Images/vikash.webp",
-            linkedin: "",
+            linkedin: "https://www.linkedin.com/in/vikash-kumar-beniwal-656068228/",
             www: "",
             email: "beniwalvikash@iitgn.ac.in"
         },
@@ -73,7 +73,7 @@ export const allMembers = [
             branch: "Chemical Engineer",
             contact: "96644 88377",
             imgSrc: "./Images/AdityaGupte.webp",
-            linkedin: "",
+            linkedin: "https://www.linkedin.com/in/aditya-gupte-bb404422b/",
             www: "",
             email: "adityaaditya@iitgn.ac.in"
         },

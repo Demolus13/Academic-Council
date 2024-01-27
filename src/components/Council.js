@@ -37,13 +37,13 @@ export default function Council() {
               <p>{cards.ug} <br /> Contact no: {cards.contact}</p>
               <div className="links">
                 <Link to={cards.linkedin} rel="noreferrer" target="_blank">
-                  <img src="https://drive.google.com/uc?export=view&id=14VbiFeYQ3PFaRzNSSP4m3txRIBA2fGC4" alt="" />
+                  <img src="/Images/linkedin.webp" alt="" />
                 </Link>
                 <Link to={cards.www} rel="noreferrer" target="_blank">
-                  <img src="https://drive.google.com/uc?export=view&id=1bAXNVRNZ9WFyEYTTOSSFtkknHIrc721t" alt="" />
+                  <img src="/Images/world-wide-web.webp" alt="" />
                 </Link>
                 <Link to={`mailto:${cards.email}`} rel="noreferrer" target="_blank">
-                  <img src="https://drive.google.com/uc?export=view&id=1zPs88eeqf_Y-41a_AoV0nEWBnX0R6Rej" alt="" />
+                  <img src="/Images/mail.webp" alt="" />
                 </Link>
               </div>
             </div>

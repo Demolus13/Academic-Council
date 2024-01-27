@@ -48,17 +48,17 @@ export default function Navbar({ onLinkClick }) {
               <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(1)}>Experiences</Link>
             </li>
             <ul>
-              <li className="subham-item">
+            <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
                 <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(1)}>Alumni Corner</Link>
               </li>
-              <li className="subham-item">
+              <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
                 <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(2)}>The Quill</Link>
               </li>
-              <li className="subham-item">
+              <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
                 <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(3)}>Student Archive</Link>
               </li>
 
-              <li className="subham-item">
+              <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
                 <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(4)}>QnA with Faculty</Link>
               </li>
             </ul>
