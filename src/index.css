@@ -7,7 +7,7 @@
   --blue: rgb(26, 46, 79);
 }
 
-body{
+/* body{
   overflow-x: hidden;
 }
 
@@ -21,16 +21,16 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--blue);
   border-radius: 0.5em;
-}
+} */
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
-} */
+}
 
 /* Utilities */
 .h-extrabold{
