@@ -133,6 +133,17 @@ export const allMembers = [
             email: "parth.govale@iitgn.ac.in"
         },
         {
+            name: "Anay Sisodiya",
+            position: "Webmaster",
+            ug: "Junior Undergraduate",
+            branch: "Material Science Engineer",
+            contact: "62638 18327",
+            imgSrc: "./Images/noimg.webp",
+            linkedin: "",
+            www: "",
+            email: "sisodiyaanay@iitgn.ac.in"
+        },
+        {
             name: "Birudugadda Srivibhav",
             position: "General Member",
             ug: "Sophomore",

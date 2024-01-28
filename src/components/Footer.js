@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footer-item btn">
           <p className="h-semibold"><Link to={`mailto:academic.secretary@iitgn.ac.in`} rel="noreferrer" target="_blank">academic.secretary@iitgn.ac.in</Link></p>
         </div>
-        <p className="footer-item h-semibold" style={{ marginBottom: "10px" }}>Website developed by: <br /> Netram Choudhary & Parth Govale</p>
+        <p className="footer-item h-semibold" style={{ marginBottom: "10px" }}>Website developed by: <br /> Netram Choudhary, Anay Sisodiya & Parth Govale</p>
         <p className="footer-item h-semibold" style={{ marginBottom: "0px" }}>Website designed by: <br /> Yash Ahire</p>
       </div>
       <img src={"/student-academic-council/Images/IITGN Logo.webp"} alt="IITGN Logo" />
