@@ -7,14 +7,30 @@
   --blue: rgb(26, 46, 79);
 }
 
+body{
+  overflow-x: hidden;
+}
+
 body::-webkit-scrollbar {
-  display: none; /* Chrome*/
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(26, 46, 79, 0.85);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 0.5em;
+}
+
+/* body::-webkit-scrollbar {
+  display: none;
 }
 
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
 
 /* Utilities */
 .h-extrabold{

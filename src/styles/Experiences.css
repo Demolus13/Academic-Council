@@ -187,20 +187,21 @@ background-image: url('../Images/CouncilBG.webp');
 .alumni-unit {
     max-width: 90%;
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
     gap: 3rem;
 }
 
 .alumni-unit::-webkit-scrollbar {
-    display: none;
-    /* Chrome*/
+    width: 1em;
 }
 
-.alumni-unit {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+.alumni-unit::-webkit-scrollbar-track {
+    background: rgba(26, 46, 79, 0.5);
+    border-radius: 0.5em;
+}
+.alumni-unit::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 0.5em;
 }
 
 .alumni-card {
@@ -264,20 +265,21 @@ background-image: url('../Images/CouncilBG.webp');
 .quill-unit {
     max-width: 90%;
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
     gap: 3rem;
 }
 
 .quill-unit::-webkit-scrollbar {
-    display: none;
-    /* Chrome*/
+    width: 1em;
 }
 
-.quill-unit {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+.quill-unit::-webkit-scrollbar-track {
+    background: rgba(26, 46, 79, 0.5);
+    border-radius: 0.5em;
+}
+.quill-unit::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 0.5em;
 }
 
 .quill-card {
