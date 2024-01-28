@@ -62,6 +62,7 @@ export default function Events() {
   return (
     <>
       {/* Events Section */}
+      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/EventsBG.webp'})` }}></div>
       <div id="events">
         <h1 className="h-extrabold" style={{ color: 'var(--red)', textAlign: "center" }}>Events</h1>
         <h1 className="h-extrabold" style={{ textAlign: "center" }}>Student Academic Council</h1>
@@ -154,6 +155,7 @@ export function EventsKnownMore() {
   return (
     <>
       {/* Known More Section */}
+      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/EventsBG.webp'})` }}></div>
       <div id="events">
         <h1 className="h-extrabold" style={{ color: 'var(--red)', textAlign: "center" }}>{event.name}</h1>
         <div className="event-details">

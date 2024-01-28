@@ -15,6 +15,8 @@ function Internship() {
 
 
   return (
+    <>
+    <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/EventsBG.webp'})` }}></div>
     <div id="intern">
       <div className="intern-box">
         <h1 className="h-extrabold" style={{ marginBottom: "2rem" }}>Databases of Academic & Industrial Internships & Fellowships</h1>
@@ -25,6 +27,7 @@ function Internship() {
         {activeComponent}
       </div>
     </div>
+    </>
   );
 }
 

@@ -1,6 +1,5 @@
 #intern::before {
   content: "";
-  background-image: url(../../public/Images/Events\ BG.webp);
   background-size: cover;
   background-position: center;
   position: fixed;

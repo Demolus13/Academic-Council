@@ -20,7 +20,7 @@ export default function Experiences({ activeLink }) {
 
   return (
     <>
-    <div className="your-component" style={{ backgroundImage: `url(${'./Images/CouncilBG.webp'})` }}></div>
+    <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/ExperiencesBG.webp'})` }}></div>
       <div id="experiences">
         <h1 className="h-bold">Experiences</h1>
         <p className="h-medium">How was your internship? How did you get selected? What did you work on? What did you like about it the most? How did your contest go? We invite students to share their experiences on the same. <br /> Finally, we publish them here. <br /> <br /> Use this button to share your own experience.</p>
@@ -34,7 +34,7 @@ export default function Experiences({ activeLink }) {
         <form className="search" action="backend.php">
           <input type="text" placeholder="What are you looking for......" />
           <div className="i-search">
-            <img src="https://drive.google.com/uc?export=view&id=1UKD2Iqs7ZPZ6L7xLa3fFZs9PK3jMPI54" alt="" />
+            <img src="/student-academic-council/Images/search.webp" alt="" />
           </div>
         </form>
         <div id="alumni-corner" className={`container-1 ${isActive === 1 ? "active" : ""}`}>
@@ -123,6 +123,7 @@ export function Preview(props) {
   return (
     <>
       {/* preview Section */}
+      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/PreviewBG.webp'})` }}></div>
       <div id="preview">
         <div id="preview-corner" className={`container-1 ${props.isActive === 0 ? "active" : ""}`}>
           <div className="preview-container">

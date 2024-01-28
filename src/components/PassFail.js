@@ -160,6 +160,8 @@ class PassFailCalculator extends Component {
     const { cpi, spi, sems, selectedCourses } = this.state;
 
     return (
+      <>
+      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/ExperiencesBG.webp'})` }}></div>
       <div id="passfail">
         <div className="container" style={{ paddingTop: '20px', paddingBottom: '50px' }}>
           <div className="row" style={{ marginBottom: "20px" }}>
@@ -218,6 +220,7 @@ class PassFailCalculator extends Component {
           )}
         </div>
       </div>
+      </>
     );
   }
 }

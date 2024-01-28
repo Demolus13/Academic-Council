@@ -2,7 +2,6 @@
 /* https://drive.google.com/file/d/1MvwXJyfe_Ua3gCctK_-LUhQK6hnsdT_G/view*/
 #events::before {
   content: "";
-  background-image: url(../../public/Images/Events\ BG.webp);
   background-size: cover;
   background-position: center;
   position: fixed;

@@ -1,7 +1,6 @@
 /* Home Section*/
 #home::before {
   content: "";
-  background-image: url(https://drive.google.com/uc?export=view&id=1E5QFR4j5HHvA2flFcC-RPncnTAeddFDU);
   background-size: cover;
   position: fixed;
   inset: 0px;

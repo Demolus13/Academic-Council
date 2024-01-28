@@ -215,7 +215,7 @@ export const allMembers = [
             ug: "Post Undergraduate",
             branch: "",
             contact: "62061 51114",
-            imgSrc: "./Images/jayashree.webp",
+            imgSrc: "./Images/Jayashree.webp",
             linkedin: "",
             www: "",
             email: "jayashree.mahato@iitgn.ac.in"

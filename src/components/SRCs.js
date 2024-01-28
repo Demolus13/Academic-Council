@@ -40,6 +40,7 @@ export default function SRCs() {
   return (
     <>
       {/* srcs Section */}
+      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/SRCsBG.webp'})` }}></div>
       <div id="srcs">
         <h1 className="h-extrabold" style={{ color: 'var(--red)', textAlign: "center" }}>Student Run Courses</h1>
         <p className="h-semibold srcs-initial">In Student Run Courses, students with expertise in a particular field teach to other interested students. These courses do not carry credits but help students pick up valuable skills from their peers.</p>
@@ -107,6 +108,7 @@ export function SRCsKnownMore() {
   return (
     <>
       {/* Known More Section */}
+      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/SRCsBG.webp'})` }}></div>
       <div id="srcs">
         <h1 className="h-extrabold" style={{ color: 'var(--red)', textAlign: "center" }}>Student Run Courses</h1>
         <h1 className="h-extrabold" style={{ textAlign: "center" }}>{course.name}</h1>

@@ -20,6 +20,7 @@ export default function Council() {
   return (
     <>
       {/* council Section */}
+      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/student-academic-council/Images/CouncilBG.webp'})` }}></div>
       <div id="council">
         <h1 className="h-bold">Student Academic Council 20{23 - currentIndex}-20{24 - currentIndex}</h1>
         <div className="switch-council">
@@ -37,13 +38,13 @@ export default function Council() {
               <p>{cards.ug} <br /> Contact no: {cards.contact}</p>
               <div className="links">
                 <Link to={cards.linkedin} rel="noreferrer" target="_blank">
-                  <img src="/Images/linkedin.webp" alt="" />
+                  <img src="/student-academic-council/Images/linkedin.webp" alt="" />
                 </Link>
                 <Link to={cards.www} rel="noreferrer" target="_blank">
-                  <img src="/Images/world-wide-web.webp" alt="" />
+                  <img src="/student-academic-council/Images/world-wide-web.webp" alt="" />
                 </Link>
                 <Link to={`mailto:${cards.email}`} rel="noreferrer" target="_blank">
-                  <img src="/Images/mail.webp" alt="" />
+                  <img src="/student-academic-council/Images/mail.webp" alt="" />
                 </Link>
               </div>
             </div>
