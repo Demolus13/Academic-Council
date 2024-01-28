@@ -2,8 +2,8 @@ export const allEvents = {
     "jan": [
         {
             id: 0,
-            name: "Guidance Session on Academic Internships",
-            category: "guidance session",
+            name: "Advanced Excel Workshop",
+            category: "workshops & webinars",
             summary: "The Student Academic Council, in collaboration with the Professional Development Council, organized a two-day workshop on 'Introduction to Advanced Excel.' The workshop was conducted by IIT Gandhinagar students who have mastered Advanced Excel",
             description: "The Student Academic Council, in collaboration with the Professional Development Council, organized a two-day workshop on 'Introduction to Advanced Excel.' The workshop was conducted by IIT Gandhinagar students who have mastered Advanced Excel"
             +"\n Topics covered:" 
@@ -31,7 +31,7 @@ export const allEvents = {
         {
             id: 0,
             name: "Dexter's Quest",
-            category: "quest",
+            category: "quiz & quest",
             summary: "Remember Dexter's Laboratory? We present to you an event where all of us are helping Dexter in a Quest to escape the traps set by DeeDee and Mandark. You need to find ingenious ways of clearing the traps and restoring your Lab (our Sheds).",
             description: "On 6th - 9th November, the Student Academic Council conducted its flagship event Dexter's Quest!! after a gap of about 5 years. It is based on the cartoon show Dexter's Laboratory, in which the participants have to solve difficult challenges as a part of a Quest laid by Dexter the super-genius one and his friends Dee Dee and Mandark. If this wasn't enough then the event had exciting prizes like earphones, speakers etc. with a total prize pool of Rs 11000 to appropriately award Dexter's Chosen Ones."
             + "\n The event consisted of 2 Rounds in which participants had to participate in a team of 3-4 students. Round 1 was online, whereas Round 2 was offline with the top 8 teams from Round 1 being selected for it." 
@@ -52,7 +52,7 @@ export const allEvents = {
         {
             id: 0,
             name: "Kya Aap Baarhvi Pass Se Tez Hai?",
-            category: "quiz",
+            category: "quiz & quest",
             summary: "The Academic Council's sixth edition of Kya Aap Baarhvi Pass Se Tez Hain? highlighted the role of curiosity for future engineers/scientists. It urged students to question everyday processes, emphasizing that without curiosity, we can't fully appreciate the work of engineers/scientists. The event drew 145+ students.",
             description: "On 9th - 10th September, the Student Academic Council conducted it's flagship event, 'Kya Aap Barhvi Pass Se Tez Hai?' after a gap of one year. The event had been conceptualized to make us realize that curiosity is vital for becoming an engineer/scientist. We, as budding engineers/researchers, need to have the ability to look at everyday processes around us and ask: Why or How? Unless we do that, we will only be students who can pass exams but still won't be able to appreciate the brilliance and contributions of engineers/scientists in our society. "
             + "\n The event consisted of 2 Rounds in which participants had to participate in a team of 3-4 students. Round 1 was online, whereas Round 2 was offline, with the top 8 teams from Round 1 being selected for it. The event proved to be highly successful, boasting a significant turnout of approximately 150 students who exhibited both passion and intellectual prowess in responding to questions and solving proofs. The teams demonstrated strong competitiveness, culminating in a challenging decision-making process to determine the ultimate winners."
@@ -103,7 +103,7 @@ export const allEvents = {
         {
             id: 1,
             name: "Webinar on Guidance for GRE and TOEFL",
-            category: "webinar",
+            category: "workshops & webinars",
             summary: "The Student Academic Council held a webinar for GRE and TOEFL aspirants, benefiting students planning to take the exams this year or next. GRE and TOEFL are standardized tests for graduate program admission. GRE assesses readiness for graduate-level coursework, while TOEFL measures English proficiency. Most US universities require both scores for admission.",
             description: "On the 22nd June 2023, the Student Academic Council conducted a 'webinar on guidance for GRE and TOEFL examinations', which are crucial for students who are interested in pursuing their Master's or PhD abroad in well reputed universities. GRE and TOEFL are two standardized tests required for admission to graduate programs. GRE is a graduate school entrance exam that measures your readiness for graduate-level coursework. In contrast, TOEFL is a test that measures your ability to read, write, speak, and understand English at the university level. Most universities in the US require both GRE and TOEFL scores for admission to their graduate programs." 
             + " \n Many of our Alumni have gone abroad for their further studies and hence we invited them for the same, as there is no one better than them for the same. This year, we had the following panel that with the relevant experience and expertise for this webinar:"
@@ -143,20 +143,16 @@ export const eventOptions = [
         label: "Guidance Session"
     },
     {
-        value: "webinar",
-        label: "Webinar"
+        value: "workshops & webinars",
+        label: "Workshops & Webinars"
     },
     {
         value: "quill",
         label: "Quill"
     },
     {
-        value: "quiz",
-        label: "Quiz"
-    },
-    {
-        value: "quest",
-        label: "Quest"
+        value: "quiz & quest",
+        label: "Quiz & Quest"
     },
 ]
 

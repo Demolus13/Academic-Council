@@ -80,6 +80,9 @@ export default function Navbar({ onLinkClick }) {
               <Link to="/SRCs" className="ham-link linkEventListener">SRCs</Link>
             </li>
             <li className="ham-item">
+              <Link to="/internships" className="ham-link linkEventListener">Internships</Link>
+            </li>
+            <li className="ham-item">
               <Link to="https://sites.google.com/iitgn.ac.in/iws/advisories" className="ham-link linkEventListener">Advisories</Link>
             </li>
             <li className="ham-item">
