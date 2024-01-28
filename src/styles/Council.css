@@ -81,9 +81,13 @@
   border-radius: 40px;
 }
 
-.cards img {
-  max-width: 100%;
+.cards .img img {
+  width: 100%;
   border-radius: 20px;
+}
+
+.cards .icons {
+  max-width: 100%;
 }
 
 .cards h2 {

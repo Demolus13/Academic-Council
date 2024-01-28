@@ -38,13 +38,13 @@ export default function Council() {
               <p>{cards.ug} <br /> Contact no: {cards.contact}</p>
               <div className="links">
                 <Link to={cards.linkedin} rel="noreferrer" target="_blank">
-                  <img src="/student-academic-council/Images/linkedin.webp" alt="" />
+                  <img className="icons" src="/student-academic-council/Images/linkedin.webp" alt="" />
                 </Link>
                 <Link to={cards.www} rel="noreferrer" target="_blank">
-                  <img src="/student-academic-council/Images/world-wide-web.webp" alt="" />
+                  <img className="icons" src="/student-academic-council/Images/world-wide-web.webp" alt="" />
                 </Link>
                 <Link to={`mailto:${cards.email}`} rel="noreferrer" target="_blank">
-                  <img src="/student-academic-council/Images/mail.webp" alt="" />
+                  <img className="icons" src="/student-academic-council/Images/mail.webp" alt="" />
                 </Link>
               </div>
             </div>
