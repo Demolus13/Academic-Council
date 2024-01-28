@@ -212,7 +212,7 @@ export const allMembers = [
         {
             name: "Jayashree Mahato",
             position: "Social Media Manager",
-            ug: "Post Undergraduate",
+            ug: "Postgraduate",
             branch: "",
             contact: "62061 51114",
             imgSrc: "./Images/Jayashree.webp",
@@ -289,12 +289,12 @@ export const allMembers = [
             email: "yash.khandelwal@iitgn.ac.in"
         },
         {
-            name: "Deepak Dhariwal",
+            name: "Deepak Patel",
             position: "Coordinator for Class Representatives and Course Feedback",
             ug: "Senior Undergraduate",
             branch: "Chemical Engineer",
             contact: "",
-            imgSrc: "./Images/deepak.webp",
+            imgSrc: "./Images/noimg.webp",
             linkedin: "",
             www: "",
             email: "deepak.p@alumni.iitgn.ac.in"
@@ -694,13 +694,13 @@ export const allMembers = [
             ug: "Senior Undergraduate",
             branch: "Chemical Engineer",
             contact: "",
-            imgSrc: "./Images/aditya.webp",
+            imgSrc: "./Images/noimg.webp",
             linkedin: "",
             www: "",
             email: "aditya.ss@alumni.iitgn.ac.in"
         },
         {
-            name: "Deepak Dhariwal",
+            name: "Deepak Patel",
             position: "General Member",
             ug: "Senior Undergraduate",
             branch: "Chemical Engineer",
