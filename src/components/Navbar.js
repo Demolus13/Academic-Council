@@ -83,10 +83,10 @@ export default function Navbar({ onLinkClick }) {
               <Link to="/internships" className="ham-link linkEventListener">Internships</Link>
             </li>
             <li className="ham-item">
-              <Link to="https://sites.google.com/iitgn.ac.in/iws/advisories" className="ham-link linkEventListener">Advisories</Link>
+              <Link to="https://sites.google.com/iitgn.ac.in/iws/advisories" className="ham-link linkEventListener" target="blank">Advisories</Link>
             </li>
             <li className="ham-item">
-              <Link to="https://academics.iitgn.ac.in/request/index.php" className="ham-link linkEventListener">Request Portal</Link>
+              <Link to="https://academics.iitgn.ac.in/request/index.php" className="ham-link linkEventListener" target="blank">Request Portal</Link>
             </li>
           </ul>
         </div>
