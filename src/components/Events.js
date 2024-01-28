@@ -97,7 +97,7 @@ export default function Events() {
           {Object.keys(newAllEvents).map((key, outerIndex) => (
             <>
               <div className="left-box"><h3 className="h-semibold">{`${eventsDict[key][0]} ${2023 - selectedYear + eventsDict[key][1]}`}</h3></div>
-              <div className="right-box" style={outerIndex%2 === 0 ? {backgroundImage: `url(${'//student-academic-council/Images/right-arrow.webp'})`}:{backgroundImage: `url(${'//student-academic-council/Images/left-arrow.webp'})`}}>
+              <div className="right-box" style={outerIndex%2 === 0 ? {backgroundImage: `url(${'/student-academic-council/Images/right-arrow.webp'})`}:{backgroundImage: `url(${'/student-academic-council/Images/left-arrow.webp'})`}}>
                 {newAllEvents[key].map((card, index) => (
                   <div key={index}>
                     <div className="event">
