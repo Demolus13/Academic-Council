@@ -20,7 +20,7 @@ export default function Council() {
   return (
     <>
       {/* council Section */}
-      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/student-academic-council/Images/CouncilBG.webp'})` }}></div>
+      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/CouncilBG.webp'})` }}></div>
       <div id="council">
         <h1 className="h-bold">Student Academic Council 20{23 - currentIndex}-20{24 - currentIndex}</h1>
         <div className="switch-council">
