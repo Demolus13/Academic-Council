@@ -3,7 +3,7 @@ export const allEvents = {
         {
             id: 0,
             name: "Advanced Excel Workshop",
-            category: "workshops & webinars",
+            category: "workshops",
             summary: "The Student Academic Council, in collaboration with the Professional Development Council, organized a two-day workshop on 'Introduction to Advanced Excel.' The workshop was conducted by IIT Gandhinagar students who have mastered Advanced Excel",
             description: "The Student Academic Council, in collaboration with the Professional Development Council, organized a two-day workshop on 'Introduction to Advanced Excel.' The workshop was conducted by IIT Gandhinagar students who have mastered Advanced Excel"
             +"\n Topics covered:" 
@@ -103,7 +103,7 @@ export const allEvents = {
         {
             id: 1,
             name: "Webinar on Guidance for GRE and TOEFL",
-            category: "workshops & webinars",
+            category: "guidance session",
             summary: "The Student Academic Council held a webinar for GRE and TOEFL aspirants, benefiting students planning to take the exams this year or next. GRE and TOEFL are standardized tests for graduate program admission. GRE assesses readiness for graduate-level coursework, while TOEFL measures English proficiency. Most US universities require both scores for admission.",
             description: "On the 22nd June 2023, the Student Academic Council conducted a 'webinar on guidance for GRE and TOEFL examinations', which are crucial for students who are interested in pursuing their Master's or PhD abroad in well reputed universities. GRE and TOEFL are two standardized tests required for admission to graduate programs. GRE is a graduate school entrance exam that measures your readiness for graduate-level coursework. In contrast, TOEFL is a test that measures your ability to read, write, speak, and understand English at the university level. Most universities in the US require both GRE and TOEFL scores for admission to their graduate programs." 
             + " \n Many of our Alumni have gone abroad for their further studies and hence we invited them for the same, as there is no one better than them for the same. This year, we had the following panel that with the relevant experience and expertise for this webinar:"
@@ -143,8 +143,8 @@ export const eventOptions = [
         label: "Guidance Session"
     },
     {
-        value: "workshops & webinars",
-        label: "Workshops & Webinars"
+        value: "workshops",
+        label: "Workshops"
     },
     {
         value: "quill",
