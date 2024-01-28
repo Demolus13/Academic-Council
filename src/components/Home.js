@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       {/* Home Section */}
-      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/IITGNBG.webp'})` }}></div>
+      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/IITGNBG.webp'})`, backgroundPosition: 'left' }}></div>
       <div id="home">
         <h1 className="h-extrabold">Student Academic Council</h1>
         <p className="h-semibold">IIT Gandhinagar prides itself in the freedom it gives to its students. The Student Academic Council is an extension of that same freedom - to cater to the academic needs of the student body, you need a student body. That's where we come in.</p>

@@ -94,10 +94,10 @@ export default function Events() {
         </div>
         <h1 className="h-extrabold sac" style={{ fontSize: "1.7rem", textAlign: "center" }}>SAC EVENTS</h1>
         <div className="allEvents">
-          {Object.keys(newAllEvents).map(key => (
+          {Object.keys(newAllEvents).map((key, outerIndex) => (
             <>
               <div className="left-box"><h3 className="h-semibold">{`${eventsDict[key][0]} ${2023 - selectedYear + eventsDict[key][1]}`}</h3></div>
-              <div className="right-box">
+              <div className="right-box" style={outerIndex%2 === 0 ? {backgroundImage: `url(${'//student-academic-council/Images/right-arrow.webp'})`}:{backgroundImage: `url(${'//student-academic-council/Images/left-arrow.webp'})`}}>
                 {newAllEvents[key].map((card, index) => (
                   <div key={index}>
                     <div className="event">

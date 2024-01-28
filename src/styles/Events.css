@@ -101,7 +101,6 @@
   padding: 0.5rem 0rem 1.5rem 6rem;
   border-left: 1.5px solid white;
   box-sizing: border-box;
-  background-image: url(../../public/Images/right-arrow.webp);
   background-repeat: no-repeat;
   background-size: 40px;
   background-position: 2rem calc(1.5rem - 5px);
@@ -124,7 +123,6 @@
   border-right: 1.5px solid white;
   box-sizing: border-box;
   transform: translateX(-100%);
-  background-image: url(../../public/Images/left-arrow.webp);
   background-repeat: no-repeat;
   background-size: 40px;
   background-position: calc(100% - 2rem) calc(1.5rem - 5px);
