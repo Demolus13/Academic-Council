@@ -78,7 +78,7 @@
 }
 #srcs .courses-unit {
   max-width: 90%;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 
 #srcs .courses {
@@ -89,12 +89,16 @@
 }
 
 .courses-unit::-webkit-scrollbar {
-  display: none;
+  width: 1em;
 }
 
-.courses-unit {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.courses-unit::-webkit-scrollbar-track {
+  background: rgba(26, 46, 79, 0.85);
+  border-radius: 0.5em;
+}
+.courses-unit::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 0.5em;
 }
 
 #srcs .course {

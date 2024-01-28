@@ -63,7 +63,7 @@ export default function SRCs() {
           <h2 className="h-bold">Student Run Courses</h2>
           <div className="courses-container">
           <div className="courses-unit">
-            <div className="courses">
+            <div className="courses" style={{marginBottom: '1rem'}}>
               {allSRCs[0].map((course, index) => (
                 <div className="course" key={index}>
                   <h3 className="h-extrabold date">{course.mmyyyy}</h3>
@@ -78,7 +78,7 @@ export default function SRCs() {
           <h2 className="h-bold" style={{ marginTop: '4rem' }}>Previous SRCs</h2>
           <div className="courses-container">
           <div className="courses-unit">
-            <div className="courses">
+            <div className="courses" style={{marginBottom: '1rem'}}>
               {allSRCs[1].map((course, index) => (
                 <div className="course" key={index} style={{ backgroundColor: 'transparent' }}>
                   <h3 className="h-extrabold date" style={{ height: '60px', backgroundColor: 'white', color: 'black', borderBottom: '0px' }}>{course.yyyy}</h3>
@@ -124,7 +124,7 @@ export function SRCsKnownMore() {
         <div className="allCourses">
           <h2 className="h-bold">Student Run Courses</h2>
             <div className="courses-unit">
-              <div className="courses">
+              <div className="courses" style={{marginBottom: '1rem'}}>
                 {allSRCs[0].map((course, index) => (
                   <div className="course" key={index}>
                     <h3 className="h-extrabold date">{course.mmyyyy}</h3>
@@ -137,7 +137,7 @@ export function SRCsKnownMore() {
           </div>
           <h2 className="h-bold" style={{ marginTop: '4rem' }}>Previous SRCs</h2>
             <div className="courses-unit">
-              <div className="courses">
+              <div className="courses" style={{marginBottom: '1rem'}}>
                 {allSRCs[1].map((course, index) => (
                   <div className="course" key={index} style={{ backgroundColor: 'transparent' }}>
                     <h3 className="h-extrabold date" style={{ height: '60px', backgroundColor: 'white', color: 'black', borderBottom: '0px' }}>{course.yyyy}</h3>
