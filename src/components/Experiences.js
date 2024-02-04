@@ -5,7 +5,7 @@ import { alumni, quill, qna_prof } from '../utilities/experiencesData';
 import { Link, useParams } from 'react-router-dom';
 
 
-export default function Experiences({ activeLink = 1 }) {
+export default function Experiences({ activeLink }) {
   const state = activeLink;
   const [isActive, setActive] = useState(state);
   const showAlumni = (view) => {
@@ -20,16 +20,16 @@ export default function Experiences({ activeLink = 1 }) {
 
   return (
     <>
-    <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/ExperiencesBG.webp'})` }}></div>
+    {/* <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/ExperiencesBG.webp'})` }}></div> */}
       <div id="experiences">
         <h1 className="h-bold">Experiences</h1>
         <p className="h-medium">How was your internship? How did you get selected? What did you work on? What did you like about it the most? How did your contest go? We invite students to share their experiences on the same. <br /> Finally, we publish them here. <br /> <br /> Use this button to share your own experience.</p>
         <button className="btn"><Link className="h-medium" to="https://docs.google.com/forms/d/e/1FAIpQLSeDFZ5RGLYRCUnh2v8baXWK04_DRr-AiDxxwna_SvOgWKXDCQ/viewform" rel="noreferrer" target="_blank">Share your story</Link></button>
         <div className="container h-bold">
-          <h3 className={`subunit-1 ${isActive === 1 ? "active" : ""}`} onClick={() => setActive(1)}>Alumni Corner</h3>
-          <h3 className={`subunit-2 ${isActive === 2 ? "active" : ""}`} onClick={() => setActive(2)}>The Quill</h3>
-          <h3 className={`subunit-1 ${isActive === 3 ? "active" : ""}`} onClick={() => setActive(3)}>Student Archive</h3>
-          <h3 className={`subunit-2 ${isActive === 4 ? "active" : ""}`} onClick={() => setActive(4)}>QnA with Faculty</h3>
+          <h3 className={`subunit-1 ${isActive === 0 ? "active" : ""}`} onClick={() => setActive(0)}>Alumni Corner</h3>
+          <h3 className={`subunit-2 ${isActive === 1 ? "active" : ""}`} onClick={() => setActive(1)}>The Quill</h3>
+          <h3 className={`subunit-1 ${isActive === 2 ? "active" : ""}`} onClick={() => setActive(2)}>Student Archive</h3>
+          <h3 className={`subunit-2 ${isActive === 3 ? "active" : ""}`} onClick={() => setActive(3)}>QnA with Faculty</h3>
         </div>
         <form className="search" action="backend.php">
           <input type="text" placeholder="What are you looking for......" />
@@ -37,7 +37,7 @@ export default function Experiences({ activeLink = 1 }) {
             <img src="/student-academic-council/Images/search.webp" alt="" />
           </div>
         </form>
-        <div id="alumni-corner" className={`container-1 ${isActive === 1 ? "active" : ""}`}>
+        <div id="alumni-corner" className={`container-1 ${isActive === 0 ? "active" : ""}`}>
           <div className="alumni-container">
             <div className="alumni-unit">
               {alumni.map((card, index) => (
@@ -53,7 +53,7 @@ export default function Experiences({ activeLink = 1 }) {
             </div>
           </div>
         </div>
-        <div id="quill" className={`container-2 h-medium ${isActive === 2 ? "active" : ""}`}>
+        <div id="quill" className={`container-2 h-medium ${isActive === 1 ? "active" : ""}`}>
           <div className="quill-container">
             <div className="quill-unit">
               {quill.map((card, index) => (
@@ -69,7 +69,7 @@ export default function Experiences({ activeLink = 1 }) {
             </div>
           </div>
         </div>
-        <div className={`container-3 ${isActive === 3 ? "active" : ""}`}>
+        <div className={`container-3 ${isActive === 2 ? "active" : ""}`}>
           <button className="btn">
             <Link className="h-medium" to="./internship-series">Academic Internship series</Link>
           </button>
@@ -86,7 +86,7 @@ export default function Experiences({ activeLink = 1 }) {
             <Link className="h-medium" to="./overseas">Overseas Experiences</Link>
           </button>
         </div>
-        <div id="quill" className={`container-2 h-medium ${isActive === 4 ? "active" : ""}`}>
+        <div id="quill" className={`container-2 h-medium ${isActive === 3 ? "active" : ""}`}>
           <div className="quill-container">
             <div className="quill-unit">
               {qna_prof.map((card, index) => (

@@ -25,7 +25,7 @@ export default function Navbar({ onLinkClick }) {
       <ul>
         <li className="navbar-item"><Link to="/" className={loc === "/" ? "active" : ""}>Home</Link></li>
         <li className="navbar-item"><Link to="/council" className={loc.startsWith("/council") ? "active" : ""}>Council</Link></li>
-        <li className="navbar-item"><Link to="/experiences" className={loc.startsWith("/experiences") ? "active" : ""} onClick={() => onLinkClick(1)}>Experiences</Link></li>
+        <li className="navbar-item"><Link to="/experiences" className={loc.startsWith("/experiences") ? "active" : ""} onClick={() => onLinkClick(0)}>Experiences</Link></li>
         <div className={`hamburger ${isActive ? "active" : ""}`} onClick={Toggle}>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -45,21 +45,21 @@ export default function Navbar({ onLinkClick }) {
               <Link to="/events" className="ham-link linkEventListener">Events</Link>
             </li>
             <li className="ham-item">
-              <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(1)}>Experiences</Link>
+              <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(0)}>Experiences</Link>
             </li>
             <ul>
             <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
-                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(1)}>Alumni Corner</Link>
+                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(0)}>Alumni Corner</Link>
               </li>
               <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
-                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(2)}>The Quill</Link>
+                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(1)}>The Quill</Link>
               </li>
               <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
-                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(3)}>Student Archive</Link>
+                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(2)}>Student Archive</Link>
               </li>
 
               <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
-                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(4)}>QnA with Faculty</Link>
+                <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(3)}>QnA with Faculty</Link>
               </li>
             </ul>
           </ul>
