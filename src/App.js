@@ -8,6 +8,7 @@ import Events, { EventsKnownMore } from './components/Events';
 import { eventsDict } from './utilities/eventsData';
 import Experiences, { Preview } from './components/Experiences';
 import PassFailCalculator from './components/PassFail';
+import GradeTracker from './components/GradeTracker';
 import SRCs, { SRCsKnownMore } from './components/SRCs';
 import Internship from './components/Internships';
 import Updated from './components/Updated';
@@ -36,6 +37,7 @@ function App() {
           <Route path={`/experiences/${path}/:index`} element={<Preview isActive={index} />} />
         ))}
         <Route path='/calculator' element={<PassFailCalculator />} />
+        <Route path='/grade-tracker' element={<GradeTracker />} />
         <Route path='/SRCs' element={<SRCs />} />
         <Route path='/SRCs/:index' element={<SRCsKnownMore />} />
         <Route path='/internships' element={<Internship />} />
