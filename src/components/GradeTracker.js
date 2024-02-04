@@ -52,10 +52,11 @@ export default function GradeTracker() {
   }
 
   // Display the user information
-  function displayUserInfo(name, branch, program, admissionYear) {
+  function displayUserInfo(name, branch, branch2, program, admissionYear) {
     const userInfoContainer = document.getElementById('userInfo');
     const userInfoElement = document.createElement('div');
-    userInfoElement.innerHTML = `<div class="name">${name} | ${program} '${admissionYear.slice(-2)} ${branch}</div>`;
+    let branchInfo = program === 'Dual Majors' ? `${branch} & ${branch2}` : branch;
+    userInfoElement.innerHTML = `<div class="name">${name} | ${program} '${admissionYear.slice(-2)} ${branchInfo}</div>`;
     userInfoContainer.appendChild(userInfoElement);
   }
 
@@ -323,7 +324,7 @@ export default function GradeTracker() {
 
         // Create a structured course object
         let extendedCore = ['ES 331', 'CS 614', 'CS 433', 'CS 432', 'ES 645'];
-        let branch2;
+        let branch2 = '';
         if (program !== 'Dual Majors') {
           branch2 = branch;
         } else {
@@ -415,7 +416,7 @@ export default function GradeTracker() {
     // Hide the input section and show the output section
     document.getElementById('inputSection').style.display = 'none';
     document.getElementById('outputSection').style.display = 'flex';
-    displayUserInfo(name, branch, program, admissionYear);
+    displayUserInfo(name, branch, branch2, program, admissionYear);
   }
 
   const items = document.querySelectorAll('.course-table');
@@ -472,8 +473,9 @@ export default function GradeTracker() {
   return (
     <>
       {/* Grade Tracker Section */}
-      <div className="your-component" style={{ backgroundImage: `url(${'/Images/ExperiencesBG.webp'})` }}></div>
+      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/ExperiencesBG.webp'})` }}></div>
       <div id="grade-tracker">
+        <h1 className="h-bold">Graduation Credits Tracker</h1>
         <div id="userInfoSection" className="container">
           <label className="inputLabel" htmlFor="name">
             Name:
@@ -550,8 +552,6 @@ export default function GradeTracker() {
 
         <div id="outputSection" style={{ display: "none" }}>
           <div id="heading-and-name">
-            <h1 className="main-heading">Graduation Credits Tracker</h1>
-
             <div id="userInfo"></div>
           </div>
 

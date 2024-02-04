@@ -5,7 +5,7 @@ import { alumni, quill, qna_prof } from '../utilities/experiencesData';
 import { Link, useParams } from 'react-router-dom';
 
 
-export default function Experiences({ activeLink }) {
+export default function Experiences({ activeLink = 1 }) {
   const state = activeLink;
   const [isActive, setActive] = useState(state);
   const showAlumni = (view) => {

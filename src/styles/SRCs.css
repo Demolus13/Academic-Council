@@ -78,7 +78,7 @@
 }
 #srcs .courses-unit {
   max-width: 90%;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 #srcs .courses {

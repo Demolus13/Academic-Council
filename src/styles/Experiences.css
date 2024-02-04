@@ -187,7 +187,7 @@ background-image: url('../Images/CouncilBG.webp');
 .alumni-unit {
     max-width: 90%;
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     gap: 3rem;
 }
 
@@ -265,7 +265,7 @@ background-image: url('../Images/CouncilBG.webp');
 .quill-unit {
     max-width: 90%;
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     gap: 3rem;
 }
 
@@ -391,7 +391,7 @@ background-image: url('../Images/CouncilBG.webp');
         margin: 0px;
         width: 90%;
         max-height: 60vh;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 
     .container-1 .unit img {
@@ -571,7 +571,7 @@ background-image: url('../Images/CouncilBG.webp');
     font-size: 1.2rem;
     width: 85vw;
     max-height: 90vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     text-align: justify;
     white-space: pre-line;
     box-sizing: border-box;
