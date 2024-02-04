@@ -178,39 +178,47 @@ export default function GradeTracker() {
 
   // Fetch the compulsory courses based on the branch and year
   async function fetchCompulsoryCourses(branch, year) {
-    try {
-      const arrayBuffer = await (await fetch(process.env.PUBLIC_URL + "/Sheets/course-codes.xlsx")).arrayBuffer();
-      const data = new Uint8Array(arrayBuffer);
-      const workbook = XLSX.read(data);
-      const sheetName = `year ${year}`;
+    // try {
+    const arrayBuffer = await (await fetch(process.env.PUBLIC_URL + "/Sheets/coures-codes.xlsx")).arrayBuffer();
+    const data = new Uint8Array(arrayBuffer);
 
-      // Check if the sheet exists in the workbook
-      if (!workbook.SheetNames.includes(sheetName)) {
-        console.error(`Sheet '${sheetName}' not found in the workbook.`);
-        return [];
-      }
+    // Use SheetJS to read the Excel file
+    const workbook = XLSX.read(data, {type: 'array'});
 
-      // Extract the sheet and convert it to JSON
-      const sheet = workbook.Sheets[sheetName];
-      const jsonData = XLSX.utils.sheet_to_json(sheet);
+    // Construct the sheet name dynamically based on the year
+    const sheetName = `year ${year}`;
 
-      // Extract compulsory courses based on the branch
-      const branchCompulsoryCourses = {};
-      jsonData.forEach(row => {
-        const branchName = row['Branch'];
-        const courses = Object.values(row)
-          .filter(Boolean)
-          .filter(value => typeof value === 'string' && value.match(/^[A-Z]+\s\d+$/))
-          .map(course => course.trim());
-
-        branchCompulsoryCourses[branchName] = courses;
-      });
-
-      return branchCompulsoryCourses[branch] || [];
-    } catch (error) {
-      console.error('Error fetching compulsory courses:', error);
+    // Check if the sheet exists in the workbook
+    if (!workbook.SheetNames.includes(sheetName)) {
+      console.error(`Sheet '${sheetName}' not found in the workbook.`);
       return [];
     }
+
+    // Access the specified sheet
+    const sheet = workbook.Sheets[sheetName];
+
+    // Convert the sheet data to JSON
+    const jsonData = XLSX.utils.sheet_to_json(sheet);
+
+    // Extract compulsory courses based on the branch
+    const branchCompulsoryCourses = {};
+    jsonData.forEach(row => {
+      const branchName = row['Branch'];
+
+      // Filter out all properties in the row that represent course codes
+      const courses = Object.values(row)
+        .filter(Boolean)
+        .filter(value => typeof value === 'string' && value.match(/^[A-Z]+\s\d+$/))
+        .map(course => course.trim());
+
+      branchCompulsoryCourses[branchName] = courses;
+    });
+
+    return branchCompulsoryCourses[branch] || [];
+    // } catch (error) {
+    //   console.error('Error fetching compulsory courses:', error);
+    //   return [];
+    // }
   }
 
   // Parse the input and add courses to the corresponding tables
@@ -345,7 +353,7 @@ export default function GradeTracker() {
             || branch2CompulsoryCourses.some(entry => code.startsWith(entry + 'A'))
             || branch2CompulsoryCourses.some(entry => code.startsWith(entry + 'B'))
             || branch2CompulsoryCourses.includes(code)) {
-            console.log(`Course ${code} found in branchCompulsoryCourses ${branch}, ${branch2}`);
+            // console.log(`Course ${code} found in branchCompulsoryCourses ${branch}, ${branch2}`);
             compulsoryCoursesList.appendChild(li);
           }
           else if ((code.startsWith('PH') || code.startsWith('EH') || code.startsWith('CH')) && bsCreditsSum < maxBSCredits) {
@@ -410,6 +418,13 @@ export default function GradeTracker() {
     displayUserInfo(name, branch, program, admissionYear);
   }
 
+  const items = document.querySelectorAll('.course-table');
+  items.forEach(item => {
+    item.addEventListener('dragstart', drag);
+  });
+  document.addEventListener('dragover', allowDrop);
+  document.addEventListener('drop', drop);
+
   useEffect(() => {
     // Show/hide branch2 based on the selected program
     document.getElementById('program').addEventListener('change', function () {
@@ -456,8 +471,8 @@ export default function GradeTracker() {
 
   return (
     <>
-      {/* Updated Section */}
-      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/ExperiencesBG.webp'})` }}></div>
+      {/* Grade Tracker Section */}
+      <div className="your-component" style={{ backgroundImage: `url(${'/Images/ExperiencesBG.webp'})` }}></div>
       <div id="grade-tracker">
         <div id="userInfoSection" className="container">
           <label className="inputLabel" htmlFor="name">
@@ -522,7 +537,7 @@ export default function GradeTracker() {
 
         <div id="inputSection" style={{ display: "none" }}>
           <div id="input-section">
-            <h2 style={{width: "35vw"}}>Enter Courses</h2>
+            <h2 style={{ width: "35vw" }}>Enter Courses</h2>
             <textarea
               id="courseInput"
               rows="10"
@@ -546,7 +561,7 @@ export default function GradeTracker() {
               className="course-table"
               id="compulsory-courses"
               onDrop={drop}
-              onDropOver={allowDrop}
+              onDragOver={allowDrop}
               onDragEnd={dragend}
               onDragLeave={dragleave}
             >
@@ -565,7 +580,7 @@ export default function GradeTracker() {
               className="course-table"
               id="hs-courses"
               onDrop={drop}
-              onDropOver={allowDrop}
+              onDragOver={allowDrop}
               onDragEnd={dragend}
               onDragLeave={dragleave}
             >
@@ -581,7 +596,7 @@ export default function GradeTracker() {
               className="course-table"
               id="open-elective-courses"
               onDrop={drop}
-              onDropOver={allowDrop}
+              onDragOver={allowDrop}
               onDragEnd={dragend}
               onDragLeave={dragleave}
             >
@@ -597,7 +612,7 @@ export default function GradeTracker() {
               className="course-table"
               id="extended-core-courses"
               onDrop={drop}
-              onDropOver={allowDrop}
+              onDragOver={allowDrop}
               onDragEnd={dragend}
               onDragLeave={dragleave}
             >
@@ -613,7 +628,7 @@ export default function GradeTracker() {
               className="course-table"
               id="physical-education"
               onDrop={drop}
-              onDropOver={allowDrop}
+              onDragOver={allowDrop}
               onDragEnd={dragend}
               onDragLeave={dragleave}
             >
@@ -634,7 +649,7 @@ export default function GradeTracker() {
               className="course-table"
               id="bs-elective-courses"
               onDrop={drop}
-              onDropOver={allowDrop}
+              onDragOver={allowDrop}
               onDragEnd={dragend}
               onDragLeave={dragleave}
             >
@@ -651,7 +666,7 @@ export default function GradeTracker() {
               className="course-table"
               id="science-basket-courses"
               onDrop={drop}
-              onDropOver={allowDrop}
+              onDragOver={allowDrop}
               onDragEnd={dragend}
               onDragLeave={dragleave}
             >
@@ -667,7 +682,7 @@ export default function GradeTracker() {
               className="course-table"
               id="math-basket-courses"
               onDrop={drop}
-              onDropOver={allowDrop}
+              onDragOver={allowDrop}
               onDragEnd={dragend}
               onDragLeave={dragleave}
             >
@@ -683,7 +698,7 @@ export default function GradeTracker() {
               className="course-table"
               id="open-project-courses"
               onDrop={drop}
-              onDropOver={allowDrop}
+              onDragOver={allowDrop}
               onDragEnd={dragend}
               onDragLeave={dragleave}
             >
@@ -699,7 +714,7 @@ export default function GradeTracker() {
               className="course-table"
               id="all-courses"
               onDrop={drop}
-              onDropOver={allowDrop}
+              onDragOver={allowDrop}
               onDragEnd={dragend}
               onDragLeave={dragleave}
             >
