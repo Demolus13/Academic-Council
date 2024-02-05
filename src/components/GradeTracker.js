@@ -159,7 +159,8 @@ export default function GradeTracker() {
   // Fetch the compulsory courses based on the branch and year
   async function fetchCompulsoryCourses(branch, year) {
     try {
-      const arrayBuffer = await (await fetch(process.env.PUBLIC_URL + "/Sheets/coures-codes.xlsx")).arrayBuffer();
+      // const arrayBuffer = await (await fetch(process.env.PUBLIC_URL + "/Sheets/coures-codes.xlsx")).arrayBuffer();
+      const arrayBuffer = await (await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vT5YfVyI1__Jq2DnEB6VEzjwEu5TaTJON6E0CRk5tH0uztCrlgd7u3e96EL4PDYFofR1jSGBJk6k_2D/pub?output=xlsx")).arrayBuffer();
       const data = new Uint8Array(arrayBuffer);
 
       // Use SheetJS to read the Excel file
