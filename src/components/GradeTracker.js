@@ -30,27 +30,6 @@ export default function GradeTracker() {
     event.dataTransfer.setData("text", event.target.id);
   }
 
-  // Validate the input fields and show the input section
-  function showInputSection() {
-    const userInfoSection = document.getElementById("userInfoSection");
-    const inputSection = document.getElementById("inputSection");
-
-    const name = document.getElementById("name").value;
-    // const rollNo = document.getElementById('rollNo').value;
-    const branch = document.getElementById("branch").value;
-    // const branch2 = document.getElementById("branch2").value;
-    const program = document.getElementById("program").value;
-    const admissionYear = document.getElementById("admissionYear").value;
-
-    if (name && branch && program && admissionYear) {
-      userInfoSection.style.display = "none";
-      inputSection.style.display = "block";
-    } else {
-      alert("Please fill in all user information fields.");
-    }
-
-  }
-
   // Display the user information
   function displayUserInfo(name, branch, branch2, program, admissionYear) {
     const userInfoContainer = document.getElementById('userInfo');
@@ -179,51 +158,64 @@ export default function GradeTracker() {
 
   // Fetch the compulsory courses based on the branch and year
   async function fetchCompulsoryCourses(branch, year) {
-    // try {
-    const arrayBuffer = await (await fetch(process.env.PUBLIC_URL + "/Sheets/coures-codes.xlsx")).arrayBuffer();
-    const data = new Uint8Array(arrayBuffer);
+    try {
+      const arrayBuffer = await (await fetch(process.env.PUBLIC_URL + "/Sheets/coures-codes.xlsx")).arrayBuffer();
+      const data = new Uint8Array(arrayBuffer);
 
-    // Use SheetJS to read the Excel file
-    const workbook = XLSX.read(data, { type: 'array' });
+      // Use SheetJS to read the Excel file
+      const workbook = XLSX.read(data, { type: 'array' });
 
-    // Construct the sheet name dynamically based on the year
-    const sheetName = `year ${year}`;
+      // Construct the sheet name dynamically based on the year
+      const sheetName = `year ${year}`;
 
-    // Check if the sheet exists in the workbook
-    if (!workbook.SheetNames.includes(sheetName)) {
-      console.error(`Sheet '${sheetName}' not found in the workbook.`);
+      // Check if the sheet exists in the workbook
+      if (!workbook.SheetNames.includes(sheetName)) {
+        console.error(`Sheet '${sheetName}' not found in the workbook.`);
+        return [];
+      }
+
+      // Access the specified sheet
+      const sheet = workbook.Sheets[sheetName];
+
+      // Convert the sheet data to JSON
+      const jsonData = XLSX.utils.sheet_to_json(sheet);
+
+      // Extract compulsory courses based on the branch
+      const branchCompulsoryCourses = {};
+      jsonData.forEach(row => {
+        const branchName = row['Branch'];
+
+        // Filter out all properties in the row that represent course codes
+        const courses = Object.values(row)
+          .filter(Boolean)
+          .filter(value => typeof value === 'string' && value.match(/^[A-Z]+\s\d+$/))
+          .map(course => course.trim());
+
+        branchCompulsoryCourses[branchName] = courses;
+      });
+
+      return branchCompulsoryCourses[branch] || [];
+    } catch (error) {
+      console.error('Error fetching compulsory courses:', error);
       return [];
     }
-
-    // Access the specified sheet
-    const sheet = workbook.Sheets[sheetName];
-
-    // Convert the sheet data to JSON
-    const jsonData = XLSX.utils.sheet_to_json(sheet);
-
-    // Extract compulsory courses based on the branch
-    const branchCompulsoryCourses = {};
-    jsonData.forEach(row => {
-      const branchName = row['Branch'];
-
-      // Filter out all properties in the row that represent course codes
-      const courses = Object.values(row)
-        .filter(Boolean)
-        .filter(value => typeof value === 'string' && value.match(/^[A-Z]+\s\d+$/))
-        .map(course => course.trim());
-
-      branchCompulsoryCourses[branchName] = courses;
-    });
-
-    return branchCompulsoryCourses[branch] || [];
-    // } catch (error) {
-    //   console.error('Error fetching compulsory courses:', error);
-    //   return [];
-    // }
   }
 
   // Parse the input and add courses to the corresponding tables
   async function parseInput() {
+
+    const name = document.getElementById("name").value;
+    // const rollNo = document.getElementById('rollNo').value;
+    const branch = document.getElementById("branch").value;
+    const branch2 = document.getElementById("branch2").value;
+    const program = document.getElementById("program").value;
+    const admissionYear = document.getElementById("admissionYear").value;
+
+    if (!(name && branch && program && admissionYear)) {
+      alert("Please fill in all user information fields.");
+      return;
+    }
+
     const inputTextArea = document.getElementById('courseInput');
     const inputText = inputTextArea.value;
     const lines = inputText.split('\n');
@@ -241,11 +233,6 @@ export default function GradeTracker() {
     const physicalEducationList = document.getElementById('physical-education-list');
 
     // Get the selected admissionYear, program, and branch from sessionStorage
-    const name = document.getElementById('name').value;
-    const program = document.getElementById('program').value;
-    const branch = document.getElementById('branch').value;
-    const branch2 = document.getElementById('branch2').value;
-    const admissionYear = document.getElementById('admissionYear').value;
     const branchCompulsoryCourses = await fetchCompulsoryCourses(branch, admissionYear);
     const branch2CompulsoryCourses = await fetchCompulsoryCourses(branch2, admissionYear);
 
@@ -337,6 +324,8 @@ export default function GradeTracker() {
         if (admissionYear < '2022') {
           if (code.startsWith('PE') || code.startsWith('IN') || code.startsWith('FP')) {
             physicalEducationList.appendChild(li);
+          } else if (code.startsWith('SC')){
+            allCoursesList.appendChild(li);
           } else if ((extendedCore.some(entry => code.startsWith(entry))) ||
             ((branch === 'CSE' || branch2 === 'CSE') && extendedCore.some(entry => code.startsWith(entry + " (R)")))) {
             extendedCoreCoursesList.appendChild(li);
@@ -414,7 +403,7 @@ export default function GradeTracker() {
     updateCreditSums();
 
     // Hide the input section and show the output section
-    document.getElementById('inputSection').style.display = 'none';
+    document.getElementById('gradeSections').style.display = 'none';
     document.getElementById('outputSection').style.display = 'flex';
     displayUserInfo(name, branch, branch2, program, admissionYear);
   }
@@ -476,82 +465,84 @@ export default function GradeTracker() {
       <div className="your-component" style={{ backgroundImage: `url(${'./Images/ExperiencesBG.webp'})` }}></div>
       <div id="grade-tracker">
         <h1 className="h-bold">Graduation Requirement Tracker</h1>
-        <div className="gradeSections">
+        <div id="gradeSections">
           <div id="userInfoSection" className="container">
-            <label className="inputLabel" htmlFor="name">
-              Name:
-            </label>
-            <input type="text" id="name" placeholder="Enter your name" />
+            <div className="user-input-section">
+              <div id="user-section">
 
-            <label className="inputLabel" htmlFor="program">
-              Program:
-            </label>
-            <select id="program">
-              <option className="opt" value="B.Tech">
-                B.Tech
-              </option>
-              <option value="M.Tech">M.Tech</option>
-              <option value="Dual Majors">Dual Majors</option>
-            </select>
+                <label className="inputLabel" htmlFor="name" style={{margin: "0px"}}>
+                  Name:
+                </label>
+                <input type="text" id="name" placeholder="Enter your name" />
 
-            <label className="inputLabel" htmlFor="branch">
-              Branch:
-            </label>
-            <select id="branch">
-              <option value="CSE">Computer Science and Engineering</option>
-              <option value="EE">Electrical Engineering</option>
-              <option value="ME">Mechanical Engineering</option>
-              <option value="CE">Civil Engineering</option>
-              <option value="CL">Chemical Engineering</option>
-              <option value="MSE">Materials Engineering</option>
-            </select>
+                <label className="inputLabel" htmlFor="program">
+                  Program:
+                </label>
+                <select id="program">
+                  <option className="opt" value="B.Tech">
+                    B.Tech
+                  </option>
+                  <option value="M.Tech">M.Tech</option>
+                  <option value="Dual Majors">Dual Majors</option>
+                </select>
 
-            <label
-              id="branch2label"
-              className="inputLabel"
-              htmlFor="branch2"
-              style={{ display: "none" }}
-            >
-              Branch 2:{" "}
-            </label>
-            <select id="branch2" style={{ display: "none" }}>
-              <option value="CSE">Computer Science and Engineering</option>
-              <option value="EE">Electrical Engineering</option>
-              <option value="ME">Mechanical Engineering</option>
-              <option value="CE">Civil Engineering</option>
-              <option value="CL">Chemical Engineering</option>
-              <option value="MSE">Materials Engineering</option>
-            </select>
+                <label className="inputLabel" htmlFor="branch">
+                  Branch:
+                </label>
+                <select id="branch">
+                  <option value="CSE">Computer Science and Engineering</option>
+                  <option value="EE">Electrical Engineering</option>
+                  <option value="ME">Mechanical Engineering</option>
+                  <option value="CE">Civil Engineering</option>
+                  <option value="CL">Chemical Engineering</option>
+                  <option value="MSE">Materials Engineering</option>
+                </select>
 
-            <label className="inputLabel" htmlFor="admissionYear">
-              Year of Admission (2019-2024):
-            </label>
-            <select id="admissionYear">
-              <option value="2019">2019</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
-            </select>
+                <label
+                  id="branch2label"
+                  className="inputLabel"
+                  htmlFor="branch2"
+                  style={{ display: "none" }}
+                >
+                  Branch 2:{" "}
+                </label>
+                <select id="branch2" style={{ display: "none" }}>
+                  <option value="CSE">Computer Science and Engineering</option>
+                  <option value="EE">Electrical Engineering</option>
+                  <option value="ME">Mechanical Engineering</option>
+                  <option value="CE">Civil Engineering</option>
+                  <option value="CL">Chemical Engineering</option>
+                  <option value="MSE">Materials Engineering</option>
+                </select>
 
-            <button onClick={showInputSection}>Next</button>
-          </div>
+                <label className="inputLabel" htmlFor="admissionYear">
+                  Year of Admission (2019-2024):
+                </label>
+                <select id="admissionYear">
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                </select>
+              </div>
 
-          <div id="inputSection">
-            <div id="input-section">
-              <label className="inputLabel" htmlFor="name">
-                Enter Courses:
-              </label>
-              {/* <h2 style={{ width: "400px" }}>Enter Courses</h2> */}
-              <textarea
-                id="courseInput"
-                rows="10"
-                cols="50"
-                placeholder="Enter courses in the specified format"
-              ></textarea>
-              <button onClick={parseInput}>Submit</button>
+              <div id="input-section">
+                <label className="inputLabel" htmlFor="course" style={{margin: "0px"}}>
+                  Enter Courses:
+                </label>
+                {/* <h2 style={{ width: "400px" }}>Enter Courses</h2> */}
+                <textarea
+                  id="courseInput"
+                  rows="10"
+                  cols="50"
+                  placeholder="Enter courses in the specified format"
+                  style={{height: '100%' }}
+                ></textarea>
+              </div>
             </div>
+            <button onClick={parseInput}>Submit</button>
           </div>
         </div>
 
