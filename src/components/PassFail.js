@@ -166,7 +166,7 @@ class PassFailCalculator extends Component {
         <div className="container" style={{ paddingTop: '20px', paddingBottom: '50px' }}>
           <div className="row" style={{ marginBottom: "20px" }}>
             <div className="col-lg-12 col-sm-10">
-              <h1 className='passfailHeading'>Pass Fail Calculator</h1>
+              <h1 className='h-bold'>Pass Fail Calculator</h1>
               <p>The pass fail calculator helps the students to figure out what courses to add to Pass/Fail given the choices they have to reap its benefits.</p>
               <p style={{ marginBottom: "10px" }}>The document below contains the step-by-step process to use this feature.</p>
 
