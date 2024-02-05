@@ -37,7 +37,7 @@ function App() {
           <Route path={`/experiences/${path}/:index`} element={<Preview isActive={index} />} />
         ))}
         <Route path='/calculator' element={<PassFailCalculator />} />
-        <Route path='/grade-tracker' element={<GradeTracker />} />
+        <Route path='/grade-reg-tracker' element={<GradeTracker />} />
         <Route path='/SRCs' element={<SRCs />} />
         <Route path='/SRCs/:index' element={<SRCsKnownMore />} />
         <Route path='/internships' element={<Internship />} />
