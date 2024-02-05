@@ -161,11 +161,6 @@
 #input-section {
   display: flex;
   flex-direction: column;
-  /* 20px */
-  border-radius: 0.5rem;
-  /* 8px */
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
-  /* 10px */
   margin-bottom: 0.75rem;
   /* 20px */
 }
