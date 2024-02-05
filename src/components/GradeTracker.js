@@ -109,27 +109,28 @@ export default function GradeTracker() {
       maxOpenProjectCredits = 12;
     }
 
-    else if (year === "2022") {
+    else if (year >= "2022") {
       maxCompulsoryCredits = 120;
-      maxHSCredits = 32;
-      maxOpenElectiveCredits = 12;
+      maxHSCredits = 28;
+      maxOpenElectiveCredits = 16;
       maxExtendedCoreCredits = 12;
       maxBSCredits = 12;
       maxScienceBasketCredits = 12;
-      maxMathBasketCredits = 12;
-      maxOpenProjectCredits = 12;
+      // also add BS elective
+      maxMathBasketCredits = 2;
+      maxOpenProjectCredits = 4;
     }
 
-    else if (year === "2023") {
-      maxCompulsoryCredits = 120;
-      maxHSCredits = 32;
-      maxOpenElectiveCredits = 12;
-      maxExtendedCoreCredits = 12;
-      maxBSCredits = 12;
-      maxScienceBasketCredits = 12;
-      maxMathBasketCredits = 12;
-      maxOpenProjectCredits = 12;
-    }
+    // else if (year === "2023") {
+    //   maxCompulsoryCredits = 120;
+    //   maxHSCredits = 32;
+    //   maxOpenElectiveCredits = 12;
+    //   maxExtendedCoreCredits = 12;
+    //   maxBSCredits = 12;
+    //   maxScienceBasketCredits = 12;
+    //   maxMathBasketCredits = 12;
+    //   maxOpenProjectCredits = 12;
+    // }
 
     // Update the credit sums for each course table
     updateCreditSum('all-courses', 120);
@@ -207,7 +208,7 @@ export default function GradeTracker() {
     const name = document.getElementById("name").value;
     // const rollNo = document.getElementById('rollNo').value;
     const branch = document.getElementById("branch").value;
-    const branch2 = document.getElementById("branch2").value;
+    let branch2 = document.getElementById("branch2").value;
     const program = document.getElementById("program").value;
     const admissionYear = document.getElementById("admissionYear").value;
 
@@ -233,8 +234,17 @@ export default function GradeTracker() {
     const physicalEducationList = document.getElementById('physical-education-list');
 
     // Get the selected admissionYear, program, and branch from sessionStorage
+    if (program !== 'Dual Majors') {
+      branch2 = branch;
+      console.log(branch2, "branch2")
+      console.log(branch, "branch")
+    } else {
+      branch2 = document.getElementById('branch2').value;
+      console.log(branch2, "branch2")
+    }
     const branchCompulsoryCourses = await fetchCompulsoryCourses(branch, admissionYear);
-    const branch2CompulsoryCourses = await fetchCompulsoryCourses(branch2, admissionYear);
+
+    let branch2CompulsoryCourses = await fetchCompulsoryCourses(branch2, admissionYear);
 
     // Define maximum HS and BS credits based on the admission year
     let hsCreditsSum = 0;
@@ -311,12 +321,7 @@ export default function GradeTracker() {
 
         // Create a structured course object
         let extendedCore = ['ES 331', 'CS 614', 'CS 433', 'CS 432', 'ES 645'];
-        let branch2 = '';
-        if (program !== 'Dual Majors') {
-          branch2 = branch;
-        } else {
-          branch2 = document.getElementById('branch2').value;
-        }
+
         li.appendChild(leftSection);
         li.appendChild(rightSection);
 
@@ -324,7 +329,7 @@ export default function GradeTracker() {
         if (admissionYear < '2022') {
           if (code.startsWith('PE') || code.startsWith('IN') || code.startsWith('FP')) {
             physicalEducationList.appendChild(li);
-          } else if (code.startsWith('SC')){
+          } else if (code.startsWith('SC')) {
             allCoursesList.appendChild(li);
           } else if ((extendedCore.some(entry => code.startsWith(entry))) ||
             ((branch === 'CSE' || branch2 === 'CSE') && extendedCore.some(entry => code.startsWith(entry + " (R)")))) {
@@ -334,11 +339,13 @@ export default function GradeTracker() {
             hsCoursesList.appendChild(li);
           } else if (branchCompulsoryCourses.includes(code)
             || branchCompulsoryCourses.some(entry => code.startsWith(entry + "(N)"))
+            || branchCompulsoryCourses.some(entry => code.startsWith(entry + " (N)"))
             || branchCompulsoryCourses.some(entry => code.startsWith(entry + " (R)"))
             || branchCompulsoryCourses.some(entry => code.startsWith(entry + 'A'))
             || branchCompulsoryCourses.some(entry => code.startsWith(entry + 'B'))
             || branchCompulsoryCourses.includes(code)
             || branch2CompulsoryCourses.some(entry => code.startsWith(entry + "(N)"))
+            || branch2CompulsoryCourses.some(entry => code.startsWith(entry + " (N)"))
             || branch2CompulsoryCourses.some(entry => code.startsWith(entry + " (R)"))
             || branch2CompulsoryCourses.some(entry => code.startsWith(entry + 'A'))
             || branch2CompulsoryCourses.some(entry => code.startsWith(entry + 'B'))
@@ -372,8 +379,20 @@ export default function GradeTracker() {
           } else if ((code.startsWith('HS') || code.startsWith('MS ') || code.startsWith('DES')) && hsCreditsSum < maxHSCredits) {
             hsCreditsSum += course.credits;
             hsCoursesList.appendChild(li);
-          } else if (branchCompulsoryCourses.includes(code) || branch2CompulsoryCourses.includes(code)) {
-            console.log(`Course ${code} found in branchCompulsoryCourses`);
+          } else if (branchCompulsoryCourses.includes(code)
+            || branchCompulsoryCourses.some(entry => code.startsWith(entry + "(N)"))
+            || branchCompulsoryCourses.some(entry => code.startsWith(entry + " (N)"))
+            || branchCompulsoryCourses.some(entry => code.startsWith(entry + " (R)"))
+            || branchCompulsoryCourses.some(entry => code.startsWith(entry + 'A'))
+            || branchCompulsoryCourses.some(entry => code.startsWith(entry + 'B'))
+            || branchCompulsoryCourses.includes(code)
+            || branch2CompulsoryCourses.some(entry => code.startsWith(entry + "(N)"))
+            || branch2CompulsoryCourses.some(entry => code.startsWith(entry + " (N)"))
+            || branch2CompulsoryCourses.some(entry => code.startsWith(entry + " (R)"))
+            || branch2CompulsoryCourses.some(entry => code.startsWith(entry + 'A'))
+            || branch2CompulsoryCourses.some(entry => code.startsWith(entry + 'B'))
+            || branch2CompulsoryCourses.includes(code)) {
+            // console.log(`Course ${code} found in branchCompulsoryCourses ${branch}, ${branch2}`);
             compulsoryCoursesList.appendChild(li);
           }
           else if (code.startsWith('PH') || code.startsWith('EH') || code.startsWith('CH')) {
@@ -381,6 +400,10 @@ export default function GradeTracker() {
           }
           else if (code.startsWith('MA')) {
             mathBasketCoursesList.appendChild(li)
+          }
+          else if (code.endsWith('99')) {
+            console.log("Open Project", course)
+            openProjectCoursesList.appendChild(li)
           }
 
           else {
@@ -470,7 +493,7 @@ export default function GradeTracker() {
             <div className="user-input-section">
               <div id="user-section">
 
-                <label className="inputLabel" htmlFor="name" style={{margin: "0px"}}>
+                <label className="inputLabel" htmlFor="name" style={{ margin: "0px" }}>
                   Name:
                 </label>
                 <input type="text" id="name" placeholder="Enter your name" />
@@ -529,7 +552,7 @@ export default function GradeTracker() {
               </div>
 
               <div id="input-section">
-                <label className="inputLabel" htmlFor="course" style={{margin: "0px"}}>
+                <label className="inputLabel" htmlFor="course" style={{ margin: "0px" }}>
                   Enter Courses:
                 </label>
                 {/* <h2 style={{ width: "400px" }}>Enter Courses</h2> */}
@@ -538,7 +561,7 @@ export default function GradeTracker() {
                   rows="10"
                   cols="50"
                   placeholder="Enter courses in the specified format"
-                  style={{height: '100%' }}
+                  style={{ height: '100%' }}
                 ></textarea>
               </div>
             </div>
