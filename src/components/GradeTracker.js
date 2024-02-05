@@ -137,11 +137,13 @@ export default function GradeTracker() {
     updateCreditSum('compulsory-courses', maxCompulsoryCredits);
     updateCreditSum('hs-courses', maxHSCredits);
     updateCreditSum('open-elective-courses', maxOpenElectiveCredits);
+    updateCreditSum('physical-education', maxOpenElectiveCredits);
     updateCreditSum('extended-core-courses', maxExtendedCoreCredits);
     updateCreditSum('bs-elective-courses', maxBSCredits);
     updateCreditSum('science-basket-courses', maxScienceBasketCredits);
     updateCreditSum('math-basket-courses', maxMathBasketCredits);
     updateCreditSum('open-project-courses', maxOpenProjectCredits);
+    updateCreditSum('all-courses', maxOpenProjectCredits);
   }
 
   // Add highlighted classs to the drag and drop elements
@@ -354,7 +356,7 @@ export default function GradeTracker() {
             // console.log(`Course ${code} found in branchCompulsoryCourses ${branch}, ${branch2}`);
             compulsoryCoursesList.appendChild(li);
           }
-          else if ((code.startsWith('PH') || code.startsWith('EH') || code.startsWith('CH')) && bsCreditsSum < maxBSCredits) {
+          else if ((code.startsWith('PH') || code.startsWith('EH') || code.startsWith('CH') || code.startsWith('CG')) && bsCreditsSum < maxBSCredits) {
             bsCreditsSum += course.credits;
             bsElectiveCoursesList.appendChild(li);
           }
@@ -588,7 +590,7 @@ export default function GradeTracker() {
               <h2>Core Courses</h2>
               <ul id="compulsory-courses-list"></ul>
               <div className="credits-container">
-                <p id="compulsory-courses-credit-sum">Total Credits: 0</p>
+                <p id="compulsory-courses-credit-sum">Completed Credits: 0</p>
                 <p
                   id="compulsory-courses-max-credits"
                   style={{ display: "none" }}
@@ -607,7 +609,7 @@ export default function GradeTracker() {
               <h2>HSS Courses</h2>
               <ul id="hs-courses-list"></ul>
               <div className="credits-container">
-                <p id="hs-courses-credit-sum">Total Credits: 0</p>
+                <p id="hs-courses-credit-sum">Completed Credits: 0</p>
                 <p id="hs-courses-max-credits"></p>
               </div>
             </div>
@@ -623,7 +625,7 @@ export default function GradeTracker() {
               <h2>Open Electives</h2>
               <ul id="open-elective-courses-list"></ul>
               <div className="credits-container">
-                <p id="open-elective-courses-credit-sum">Total Credits: 0</p>
+                <p id="open-elective-courses-credit-sum">Completed Credits: 0</p>
                 <p id="open-elective-courses-max-credits"></p>
               </div>
             </div>
@@ -639,7 +641,7 @@ export default function GradeTracker() {
               <h2>Extended Core Courses</h2>
               <ul id="extended-core-courses-list"></ul>
               <div className="credits-container">
-                <p id="extended-core-courses-credit-sum">Total Credits: 0</p>
+                <p id="extended-core-courses-credit-sum">Completed Credits: 0</p>
                 <p id="extended-core-courses-max-credits"></p>
               </div>
             </div>
@@ -657,9 +659,7 @@ export default function GradeTracker() {
               <div className="credits-container">
                 <p id="physical-education-credit-sum"></p>
                 <p
-                  id="physical-education-max-credits"
-                  style={{ display: "none" }}
-                ></p>
+                  id="physical-education-max-credits" style={{ display: "none" }}></p>
               </div>
             </div>
 
@@ -676,7 +676,7 @@ export default function GradeTracker() {
               <h2>BS Electives</h2>
               <ul id="bs-elective-courses-list"></ul>
               <div className="credits-container">
-                <p id="bs-elective-courses-credit-sum">Total Credits: 0</p>
+                <p id="bs-elective-courses-credit-sum">Completed Credits: 0</p>
                 <p id="bs-elective-courses-max-credits"></p>
               </div>
             </div>
@@ -693,7 +693,7 @@ export default function GradeTracker() {
               <h2>Science Basket</h2>
               <ul id="science-basket-courses-list"></ul>
               <div className="credits-container">
-                <p id="science-basket-courses-credit-sum">Total Credits: 0</p>
+                <p id="science-basket-courses-credit-sum">Completed Credits: 0</p>
                 <p id="science-basket-courses-max-credits"></p>
               </div>
             </div>
@@ -709,7 +709,7 @@ export default function GradeTracker() {
               <h2>Maths Basket</h2>
               <ul id="math-basket-courses-list"></ul>
               <div className="credits-container">
-                <p id="math-basket-courses-credit-sum">Total Credits: 0</p>
+                <p id="math-basket-courses-credit-sum">Completed Credits: 0</p>
                 <p id="math-basket-courses-max-credits"></p>
               </div>
             </div>
@@ -725,7 +725,7 @@ export default function GradeTracker() {
               <h2>Open project</h2>
               <ul id="open-project-courses-list"></ul>
               <div className="credits-container">
-                <p id="open-project-courses-credit-sum">Total Credits: 0</p>
+                <p id="open-project-courses-credit-sum">Completed Credits: 0</p>
                 <p id="open-project-courses-max-credits"></p>
               </div>
             </div>
@@ -742,6 +742,7 @@ export default function GradeTracker() {
               <ul id="all-courses-list"></ul>
               <div className="credits-container">
                 {/* <!-- <p id="all-courses-credit-sum">Total Credits: 0</p> --> */}
+                <p id="all-courses-credit-sum">Completed Credits: 0</p>
                 <p id="all-courses-max-credits" style={{ display: "none" }}></p>
               </div>
             </div>
