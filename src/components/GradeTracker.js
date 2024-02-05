@@ -184,7 +184,7 @@ export default function GradeTracker() {
     const data = new Uint8Array(arrayBuffer);
 
     // Use SheetJS to read the Excel file
-    const workbook = XLSX.read(data, {type: 'array'});
+    const workbook = XLSX.read(data, { type: 'array' });
 
     // Construct the sheet name dynamically based on the year
     const sheetName = `year ${year}`;
@@ -473,80 +473,85 @@ export default function GradeTracker() {
   return (
     <>
       {/* Grade Tracker Section */}
-      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/ExperiencesBG.webp'})` }}></div>
+      <div className="your-component" style={{ backgroundImage: `url(${'./Images/ExperiencesBG.webp'})` }}></div>
       <div id="grade-tracker">
-        <h1 className="h-bold">Graduation Credits Tracker</h1>
-        <div id="userInfoSection" className="container">
-          <label className="inputLabel" htmlFor="name">
-            Name:
-          </label>
-          <input type="text" id="name" placeholder="Enter your name" />
+        <h1 className="h-bold">Graduation Requirement Tracker</h1>
+        <div className="gradeSections">
+          <div id="userInfoSection" className="container">
+            <label className="inputLabel" htmlFor="name">
+              Name:
+            </label>
+            <input type="text" id="name" placeholder="Enter your name" />
 
-          <label className="inputLabel" htmlFor="program">
-            Program:
-          </label>
-          <select id="program">
-            <option className="opt" value="B.Tech">
-              B.Tech
-            </option>
-            <option value="M.Tech">M.Tech</option>
-            <option value="Dual Majors">Dual Majors</option>
-          </select>
+            <label className="inputLabel" htmlFor="program">
+              Program:
+            </label>
+            <select id="program">
+              <option className="opt" value="B.Tech">
+                B.Tech
+              </option>
+              <option value="M.Tech">M.Tech</option>
+              <option value="Dual Majors">Dual Majors</option>
+            </select>
 
-          <label className="inputLabel" htmlFor="branch">
-            Branch:
-          </label>
-          <select id="branch">
-            <option value="CSE">Computer Science and Engineering</option>
-            <option value="EE">Electrical Engineering</option>
-            <option value="ME">Mechanical Engineering</option>
-            <option value="CE">Civil Engineering</option>
-            <option value="CL">Chemical Engineering</option>
-            <option value="MSE">Materials Engineering</option>
-          </select>
+            <label className="inputLabel" htmlFor="branch">
+              Branch:
+            </label>
+            <select id="branch">
+              <option value="CSE">Computer Science and Engineering</option>
+              <option value="EE">Electrical Engineering</option>
+              <option value="ME">Mechanical Engineering</option>
+              <option value="CE">Civil Engineering</option>
+              <option value="CL">Chemical Engineering</option>
+              <option value="MSE">Materials Engineering</option>
+            </select>
 
-          <label
-            id="branch2label"
-            className="inputLabel"
-            htmlFor="branch2"
-            style={{ display: "none" }}
-          >
-            Branch 2:{" "}
-          </label>
-          <select id="branch2" style={{ display: "none" }}>
-            <option value="CSE">Computer Science and Engineering</option>
-            <option value="EE">Electrical Engineering</option>
-            <option value="ME">Mechanical Engineering</option>
-            <option value="CE">Civil Engineering</option>
-            <option value="CL">Chemical Engineering</option>
-            <option value="MSE">Materials Engineering</option>
-          </select>
+            <label
+              id="branch2label"
+              className="inputLabel"
+              htmlFor="branch2"
+              style={{ display: "none" }}
+            >
+              Branch 2:{" "}
+            </label>
+            <select id="branch2" style={{ display: "none" }}>
+              <option value="CSE">Computer Science and Engineering</option>
+              <option value="EE">Electrical Engineering</option>
+              <option value="ME">Mechanical Engineering</option>
+              <option value="CE">Civil Engineering</option>
+              <option value="CL">Chemical Engineering</option>
+              <option value="MSE">Materials Engineering</option>
+            </select>
 
-          <label className="inputLabel" htmlFor="admissionYear">
-            Year of Admission (2019-2024):
-          </label>
-          <select id="admissionYear">
-            <option value="2019">2019</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-            <option value="2024">2024</option>
-          </select>
+            <label className="inputLabel" htmlFor="admissionYear">
+              Year of Admission (2019-2024):
+            </label>
+            <select id="admissionYear">
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+            </select>
 
-          <button onClick={showInputSection}>Next</button>
-        </div>
+            <button onClick={showInputSection}>Next</button>
+          </div>
 
-        <div id="inputSection" style={{ display: "none" }}>
-          <div id="input-section">
-            <h2 style={{ width: "35vw" }}>Enter Courses</h2>
-            <textarea
-              id="courseInput"
-              rows="10"
-              cols="50"
-              placeholder="Enter courses in the specified format"
-            ></textarea>
-            <button onClick={parseInput}>Submit</button>
+          <div id="inputSection">
+            <div id="input-section">
+              <label className="inputLabel" htmlFor="name">
+                Enter Courses:
+              </label>
+              {/* <h2 style={{ width: "400px" }}>Enter Courses</h2> */}
+              <textarea
+                id="courseInput"
+                rows="10"
+                cols="50"
+                placeholder="Enter courses in the specified format"
+              ></textarea>
+              <button onClick={parseInput}>Submit</button>
+            </div>
           </div>
         </div>
 

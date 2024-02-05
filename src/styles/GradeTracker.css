@@ -27,7 +27,6 @@
   align-items: center;
   color: white;
   min-height: calc(100vh - 77px);
-  padding: 0rem 1rem;
   font-size: 1rem;
 }
 
@@ -39,6 +38,13 @@
 #grade-tracker .container {
   padding: 1.25rem;
   /* 20px */
+}
+
+#grade-tracker .gradeSections{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 2rem;
 }
 
 #grade-tracker label.inputLabel {
@@ -55,7 +61,7 @@
 #grade-tracker textarea,
 #grade-tracker input,
 #grade-tracker select {
-  width: 350px;
+  width: 400px;
   padding: 0.25rem;
   /* 20px */
   margin: 0.75rem 0rem;
@@ -120,7 +126,7 @@
   /* 10px */
   padding: 0.25rem;
   /* 20px */
-  width: 350px;
+  width: 400px;
   box-sizing: border-box;
   border: none;
   border-radius: 0.25rem;
@@ -139,7 +145,6 @@
 #inputSection {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
   margin: 3rem 0rem;
   /* 64px */
   border: 0.0625rem solid var(--blue);
@@ -152,6 +157,8 @@
 }
 
 #input-section {
+  display: flex;
+  flex-direction: column;
   padding: 1.25rem;
   /* 20px */
   border-radius: 0.5rem;
