@@ -35,7 +35,7 @@
   text-align: center;
 }
 
-#grade-tracker .gradeSections{
+#grade-tracker .gradeSections {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -152,19 +152,15 @@
   /* 10px */
 }
 
-#grade-tracker .user-input-section{
+#grade-tracker .user-input-section {
   display: flex;
   gap: 2rem;
 }
 
-#user-section, #input-section {
+#user-section,
+#input-section {
   display: flex;
   flex-direction: column;
-  /* 20px */
-  border-radius: 0.5rem;
-  /* 8px */
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
-  /* 10px */
   margin-bottom: 0.75rem;
   /* 20px */
 }
@@ -415,11 +411,30 @@
   #grade-tracker {
     font-size: 0.85rem;
   }
+
+  #grade-tracker .user-input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
   #grade-tracker h1 {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width:475px) {
+
+  #grade-tracker textarea,
+  #grade-tracker input,
+  #grade-tracker select {
+    width: 300px;
+  }
+
+  #grade-tracker button {
+    width: 300px;
   }
 }
 

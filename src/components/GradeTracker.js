@@ -160,7 +160,8 @@ export default function GradeTracker() {
   // Fetch the compulsory courses based on the branch and year
   async function fetchCompulsoryCourses(branch, year) {
     try {
-      const arrayBuffer = await (await fetch(process.env.PUBLIC_URL + "/Sheets/coures-codes.xlsx")).arrayBuffer();
+      // const arrayBuffer = await (await fetch(process.env.PUBLIC_URL + "/Sheets/coures-codes.xlsx")).arrayBuffer();
+      const arrayBuffer = await (await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vT5YfVyI1__Jq2DnEB6VEzjwEu5TaTJON6E0CRk5tH0uztCrlgd7u3e96EL4PDYFofR1jSGBJk6k_2D/pub?output=xlsx")).arrayBuffer();
       const data = new Uint8Array(arrayBuffer);
 
       // Use SheetJS to read the Excel file
@@ -485,9 +486,9 @@ export default function GradeTracker() {
   return (
     <>
       {/* Grade Tracker Section */}
-      <div className="your-component" style={{ backgroundImage: `url(${'./Images/ExperiencesBG.webp'})` }}></div>
+      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/ExperiencesBG.webp'})` }}></div>
       <div id="grade-tracker">
-        <h1 className="h-bold">Graduation Requirement Tracker</h1>
+        <h1 className="h-bold">Graduation Requirements Tracker [Beta]</h1>
         <div id="gradeSections">
           <div id="userInfoSection" className="container">
             <div className="user-input-section">
