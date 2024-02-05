@@ -45,6 +45,9 @@ export default function Navbar({ onLinkClick }) {
               <Link to="/events" className="ham-link linkEventListener">Events</Link>
             </li>
             <li className="ham-item">
+              <Link to="/SRCs" className="ham-link linkEventListener">SRCs</Link>
+            </li>
+            <li className="ham-item">
               <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(0)}>Experiences</Link>
             </li>
             <ul>
@@ -62,31 +65,43 @@ export default function Navbar({ onLinkClick }) {
                 <Link to="/experiences" className="ham-link linkEventListener" onClick={() => onLinkClick(3)}>QnA with Faculty</Link>
               </li>
             </ul>
-          </ul>
-          <ul className="ham-subcontainer">
-            <li className="ham-item">
-              <Link to="/calculator" className="ham-link linkEventListener">P/F Calculator</Link>
-            </li>
             <li className="ham-item">
               <Link to="/CRs" className="ham-link linkEventListener">CRs</Link>
             </li>
+          </ul>
+          <ul className="ham-subcontainer">
             <li className="ham-item">
-              <Link to="https://students.iitgn.ac.in/student-acad-council/project-courses/login" className="ham-link linkEventListener" target="blank">Project Courses</Link>
+              <Link to="/grade-req-tracker" className="ham-link linkEventListener">Grad Req Tracker</Link>
             </li>
             <li className="ham-item">
-              <Link to="/ADH-PAL" className="ham-link linkEventListener">ADH & PAL</Link>
-            </li>
-            <li className="ham-item">
-              <Link to="/SRCs" className="ham-link linkEventListener">SRCs</Link>
+              <Link to="/calculator" className="ham-link linkEventListener">P/F Calculator</Link>
             </li>
             <li className="ham-item">
               <Link to="/internships" className="ham-link linkEventListener">Internships</Link>
             </li>
             <li className="ham-item">
-              <Link to="https://sites.google.com/iitgn.ac.in/iws/advisories" className="ham-link linkEventListener" target="blank">Advisories</Link>
+              <Link to="https://students.iitgn.ac.in/student-acad-council/project-courses/login" className="ham-link linkEventListener" target="blank">Project Courses</Link>
             </li>
             <li className="ham-item">
-              <Link to="https://academics.iitgn.ac.in/request/index.php" className="ham-link linkEventListener" target="blank">Request Portal</Link>
+              <Link to="/" className="ham-link linkEventListener">Important Links</Link>
+            </li>
+            <ul>
+            <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
+                <Link to="https://sites.google.com/iitgn.ac.in/iws/advisories" className="ham-link linkEventListener" target="blank">Advisories</Link>
+              </li>
+              <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
+                <Link to="https://academics.iitgn.ac.in/request/index.php" className="ham-link linkEventListener" target="blank">Request Portal</Link>
+              </li>
+              <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
+                <Link to="/experiences" className="ham-link linkEventListener">OCEO</Link>
+              </li>
+
+              <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
+                <Link to="/experiences" className="ham-link linkEventListener">Acad Calendar</Link>
+              </li>
+            </ul>
+            <li className="ham-item">
+              <Link to="/ADH-PAL" className="ham-link linkEventListener">ADH & PAL</Link>
             </li>
           </ul>
         </div>
