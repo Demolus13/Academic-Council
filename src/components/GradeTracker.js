@@ -486,7 +486,7 @@ export default function GradeTracker() {
   return (
     <>
       {/* Grade Tracker Section */}
-      <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/ExperiencesBG.webp'})` }}></div>
+      <div className="your-component" style={{ backgroundImage: `url(${'/Images/ExperiencesBG.webp'})` }}></div>
       <div id="grade-tracker">
         <h1 className="h-bold">Graduation Requirements Tracker [Beta]</h1>
         <div id="gradeSections">

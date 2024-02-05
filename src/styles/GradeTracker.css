@@ -147,7 +147,7 @@
   /* 1px */
   border-radius: 0.5rem;
   /* 5px */
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
   box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
   /* 10px */
 }
@@ -182,7 +182,7 @@
   color: white;
 }
 
-.name {
+#grade-tracker .name {
   font-weight: 600;
   text-align: center;
   font-size: 1.25rem;

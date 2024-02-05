@@ -182,7 +182,7 @@ background-image: url('../Images/CouncilBG.webp');
 }
 
 .alumni-unit::-webkit-scrollbar {
-    width: 1em;
+    height: 0.75rem;
 }
 
 .alumni-unit::-webkit-scrollbar-track {
@@ -260,7 +260,7 @@ background-image: url('../Images/CouncilBG.webp');
 }
 
 .quill-unit::-webkit-scrollbar {
-    width: 1em;
+    height: 0.75rem;
 }
 
 .quill-unit::-webkit-scrollbar-track {
