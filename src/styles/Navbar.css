@@ -221,8 +221,20 @@
   }
 }
 
-@media screen and (max-height: 871px) {
+@media screen and (max-height: 1000px) {
   .ham-item {
     margin: 5px;
+  }
+  .subham-item {
+    margin: 2.5px 0px;
+  }
+}
+
+@media screen and (max-height: 871px) {
+  .ham-item {
+    margin: 3px;
+  }
+  .subham-item {
+    margin: 1.5px 0px;
   }
 }

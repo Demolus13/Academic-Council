@@ -33,6 +33,12 @@
   padding: 0rem 1rem;
 }
 
+#passfail h1 {
+  font-size: 2.6rem;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
 #passfail .guide {
   text-decoration: none;
   font-weight: 500;
@@ -47,13 +53,6 @@
 /* Style the Paste Course section */
 .form-group {
   margin-top: 20px;
-}
-
-.passfailHeading {
-  size: 200%;
-  text-align: center;
-  padding-bottom: 15px;
-
 }
 
 textarea.form-control {
@@ -155,4 +154,11 @@ h2 {
 .selected-course:hover {
   background-color: red;
   color: white;
+}
+
+/* Responsive Section */
+@media screen and (max-width: 600px) {
+  #passfail h1 {
+    font-size: 1.5rem;
+  }
 }

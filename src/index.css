@@ -7,10 +7,6 @@
   --blue: rgb(26, 46, 79);
 }
 
-body{
-  overflow-x: hidden;
-}
-
 /* body::-webkit-scrollbar {
   width: 1em;
 }

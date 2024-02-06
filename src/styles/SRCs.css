@@ -89,11 +89,11 @@
 }
 
 .courses-unit::-webkit-scrollbar {
-  width: 1em;
+  height: 0.75rem;
 }
 
 .courses-unit::-webkit-scrollbar-track {
-  background: rgba(26, 46, 79, 0.85);
+  background: rgba(26, 46, 79, 0.5);
   border-radius: 0.5em;
 }
 .courses-unit::-webkit-scrollbar-thumb {
