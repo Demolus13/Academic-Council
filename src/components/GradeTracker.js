@@ -519,6 +519,7 @@ export default function GradeTracker() {
                 </label>
                 <select id="branch">
                   <option value="CSE">Computer Science and Engineering</option>
+                  <option value="AI">Artificial Intelligence</option>
                   <option value="EE">Electrical Engineering</option>
                   <option value="ME">Mechanical Engineering</option>
                   <option value="CE">Civil Engineering</option>
