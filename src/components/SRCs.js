@@ -62,32 +62,32 @@ export default function SRCs() {
         <div className="allCourses">
           <h2 className="h-bold">Student Run Courses</h2>
           <div className="courses-container">
-          <div className="courses-unit">
-            <div className="courses" style={{marginBottom: '1rem'}}>
-              {allSRCs[0].map((course, index) => (
-                <div className="course" key={index}>
-                  <h3 className="h-extrabold date">{course.mmyyyy}</h3>
-                  <h3 className="h-extrabold name">{course.name}</h3>
-                  <div className="know-more"><h5 className="h-bold" onClick={() => window.open(`#/SRCs/${index}`)}>Know more</h5></div>
-                  <h5 className="instructors h-semibold"><span className="h-extrabold" style={{ color: 'var(--red)' }}>Instructors: </span>{course.instructors}</h5>
-                </div>
-              ))}
+            <div className="courses-unit">
+              <div className="courses" style={{ marginBottom: '1rem' }}>
+                {allSRCs[0].map((course, index) => (
+                  <div className="course" key={index}>
+                    <h3 className="h-extrabold date">{course.mmyyyy}</h3>
+                    <h3 className="h-extrabold name">{course.name}</h3>
+                    <div className="know-more"><h5 className="h-bold" onClick={() => window.open(`#/SRCs/${index}`)}>Know more</h5></div>
+                    <h5 className="instructors h-semibold"><span className="h-extrabold" style={{ color: 'var(--red)' }}>Instructors: </span>{course.instructors}</h5>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
           </div>
           <h2 className="h-bold" style={{ marginTop: '4rem' }}>Previous SRCs</h2>
           <div className="courses-container">
-          <div className="courses-unit">
-            <div className="courses" style={{marginBottom: '1rem'}}>
-              {allSRCs[1].map((course, index) => (
-                <div className="course" key={index} style={{ backgroundColor: 'transparent' }}>
-                  <h3 className="h-extrabold date" style={{ height: '60px', backgroundColor: 'white', color: 'black', borderBottom: '0px' }}>{course.yyyy}</h3>
-                  <h3 className="h-extrabold name" style={{ color: 'white', backgroundColor: 'var(--red)', borderTopRightRadius: '15px', borderBottom: '0px' }}>{course.name}</h3>
-                  <h4 className="PC-know-more h-extrabold" onClick={() => window.open(`#/SRCs/${index + allSRCs[0].length}`)}>Know more</h4>
-                </div>
-              ))}
+            <div className="courses-unit">
+              <div className="courses" style={{ marginBottom: '1rem' }}>
+                {allSRCs[1].map((course, index) => (
+                  <div className="course" key={index} style={{ backgroundColor: 'transparent' }}>
+                    <h3 className="h-extrabold date" style={{ height: '60px', backgroundColor: 'white', color: 'black', borderBottom: '0px' }}>{course.yyyy}</h3>
+                    <h3 className="h-extrabold name" style={{ color: 'white', backgroundColor: 'var(--red)', borderTopRightRadius: '15px', borderBottom: '0px' }}>{course.name}</h3>
+                    <h4 className="PC-know-more h-extrabold" onClick={() => window.open(`#/SRCs/${index + allSRCs[0].length}`)}>Know more</h4>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
@@ -123,29 +123,29 @@ export function SRCsKnownMore() {
         </div>
         <div className="allCourses">
           <h2 className="h-bold">Student Run Courses</h2>
-            <div className="courses-unit">
-              <div className="courses" style={{marginBottom: '1rem'}}>
-                {allSRCs[0].map((course, index) => (
-                  <div className="course" key={index}>
-                    <h3 className="h-extrabold date">{course.mmyyyy}</h3>
-                    <h3 className="h-extrabold name">{course.name}</h3>
-                    <div className="know-more"><h5 className="h-bold" onClick={() => window.open(`#/SRCs/${index}`)}>Know more</h5></div>
-                    <h5 className="instructors h-semibold"><span className="h-extrabold" style={{ color: 'var(--red)' }}>Instructors: </span>{course.instructors}</h5>
-                  </div>
-                ))}
-              </div>
+          <div className="courses-unit">
+            <div className="courses" style={{ marginBottom: '1rem' }}>
+              {allSRCs[0].map((course, index) => (
+                <div className="course" key={index}>
+                  <h3 className="h-extrabold date">{course.mmyyyy}</h3>
+                  <h3 className="h-extrabold name">{course.name}</h3>
+                  <div className="know-more"><h5 className="h-bold" onClick={() => window.open(`#/SRCs/${index}`)}>Know more</h5></div>
+                  <h5 className="instructors h-semibold"><span className="h-extrabold" style={{ color: 'var(--red)' }}>Instructors: </span>{course.instructors}</h5>
+                </div>
+              ))}
+            </div>
           </div>
           <h2 className="h-bold" style={{ marginTop: '4rem' }}>Previous SRCs</h2>
-            <div className="courses-unit">
-              <div className="courses" style={{marginBottom: '1rem'}}>
-                {allSRCs[1].map((course, index) => (
-                  <div className="course" key={index} style={{ backgroundColor: 'transparent' }}>
-                    <h3 className="h-extrabold date" style={{ height: '60px', backgroundColor: 'white', color: 'black', borderBottom: '0px' }}>{course.yyyy}</h3>
-                    <h3 className="h-extrabold name" style={{ color: 'white', backgroundColor: 'var(--red)', borderTopRightRadius: '15px', borderBottom: '0px' }}>{course.name}</h3>
-                    <h4 className="PC-know-more h-extrabold" onClick={() => window.open(`#/SRCs/${index + allSRCs[0].length}`)}>Know more</h4>
-                  </div>
-                ))}
-              </div>
+          <div className="courses-unit">
+            <div className="courses" style={{ marginBottom: '1rem' }}>
+              {allSRCs[1].map((course, index) => (
+                <div className="course" key={index} style={{ backgroundColor: 'transparent' }}>
+                  <h3 className="h-extrabold date" style={{ height: '60px', backgroundColor: 'white', color: 'black', borderBottom: '0px' }}>{course.yyyy}</h3>
+                  <h3 className="h-extrabold name" style={{ color: 'white', backgroundColor: 'var(--red)', borderTopRightRadius: '15px', borderBottom: '0px' }}>{course.name}</h3>
+                  <h4 className="PC-know-more h-extrabold" onClick={() => window.open(`#/SRCs/${index + allSRCs[0].length}`)}>Know more</h4>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
