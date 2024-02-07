@@ -213,7 +213,7 @@
 #course-tables {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   /* 20px */
   justify-content: center;
   margin: 4rem 0rem;

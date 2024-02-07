@@ -103,7 +103,7 @@ export default function GradeTracker() {
       maxHSCredits = 32;
       maxOpenElectiveCredits = 12;
       maxExtendedCoreCredits = 12;
-      maxBSCredits = 12;
+      maxBSCredits = 4;
       maxScienceBasketCredits = 12;
       maxMathBasketCredits = 12;
       maxOpenProjectCredits = 12;
@@ -114,9 +114,8 @@ export default function GradeTracker() {
       maxHSCredits = 28;
       maxOpenElectiveCredits = 16;
       maxExtendedCoreCredits = 12;
-      maxBSCredits = 12;
-      maxScienceBasketCredits = 12;
-      // also add BS elective
+      maxBSCredits = 4;
+      maxScienceBasketCredits = 8;
       maxMathBasketCredits = 2;
       maxOpenProjectCredits = 4;
     }
@@ -137,11 +136,13 @@ export default function GradeTracker() {
     updateCreditSum('compulsory-courses', maxCompulsoryCredits);
     updateCreditSum('hs-courses', maxHSCredits);
     updateCreditSum('open-elective-courses', maxOpenElectiveCredits);
+    updateCreditSum('physical-education', maxOpenElectiveCredits);
     updateCreditSum('extended-core-courses', maxExtendedCoreCredits);
     updateCreditSum('bs-elective-courses', maxBSCredits);
     updateCreditSum('science-basket-courses', maxScienceBasketCredits);
     updateCreditSum('math-basket-courses', maxMathBasketCredits);
     updateCreditSum('open-project-courses', maxOpenProjectCredits);
+    updateCreditSum('all-courses', maxOpenProjectCredits);
   }
 
   // Add highlighted classs to the drag and drop elements
@@ -354,7 +355,7 @@ export default function GradeTracker() {
             // console.log(`Course ${code} found in branchCompulsoryCourses ${branch}, ${branch2}`);
             compulsoryCoursesList.appendChild(li);
           }
-          else if ((code.startsWith('PH') || code.startsWith('EH') || code.startsWith('CH')) && bsCreditsSum < maxBSCredits) {
+          else if ((code.startsWith('PH') || code.startsWith('EH') || code.startsWith('CH') || code.startsWith('CG')) && bsCreditsSum < maxBSCredits) {
             bsCreditsSum += course.credits;
             bsElectiveCoursesList.appendChild(li);
           }
@@ -374,9 +375,9 @@ export default function GradeTracker() {
         else if (admissionYear >= 2022) {
           if (code.startsWith('PE') || code.startsWith('IN') || code.startsWith('FP')) {
             physicalEducationList.appendChild(li);
-          } else if ((extendedCore.some(entry => code.startsWith(entry))) ||
-            ((branch === 'CSE' || branch2 === 'CSE') && extendedCore.some(entry => code.startsWith(entry + " (R)")))) {
-            extendedCoreCoursesList.appendChild(li);
+          }
+          else if (code.startsWith('SC')) {
+            allCoursesList.appendChild(li);
           } else if ((code.startsWith('HS') || code.startsWith('MS ') || code.startsWith('DES')) && hsCreditsSum < maxHSCredits) {
             hsCreditsSum += course.credits;
             hsCoursesList.appendChild(li);
@@ -396,6 +397,9 @@ export default function GradeTracker() {
             // console.log(`Course ${code} found in branchCompulsoryCourses ${branch}, ${branch2}`);
             compulsoryCoursesList.appendChild(li);
           }
+          // else if (course.code.startsWith(branch) || course.code.startsWith(branch2)) {
+          //   extendedCoreCoursesList.appendChild(li);
+          // }
           else if (code.startsWith('PH') || code.startsWith('EH') || code.startsWith('CH')) {
             scienceBasketCoursesList.appendChild(li);
           }
@@ -409,13 +413,11 @@ export default function GradeTracker() {
 
           else {
             openElectiveCoursesList.appendChild(li);
-            if (branch !== 'CSE' && branch2 !== 'CSE') {
-              document.getElementById('extended-core-courses').style.display = 'none';
-            }
           }
 
           // Hide BS Electives table for admissionYear >= 2022
-          document.getElementById('bs-elective-courses').style.display = 'none';
+          // document.getElementById('bs-elective-courses').style.display = 'none';
+          document.getElementById('extended-core-courses').style.display = 'none';
         }
       } else {
         console.error(`Line ${index + 1} is undefined.`);
@@ -489,6 +491,8 @@ export default function GradeTracker() {
       <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/ExperiencesBG.webp'})` }}></div>
       <div id="grade-tracker">
         <h1 className="h-bold">Graduation Requirements Tracker [Beta]</h1>
+        <a className="btn btn-info guide" href="/student-academic-council/PDFs/P_F_Calculator_Guide.pdf" target="_">Pass Fail Calculator Guide</a>
+
         <div id="gradeSections">
           <div id="userInfoSection" className="container">
             <div className="user-input-section">
@@ -515,6 +519,7 @@ export default function GradeTracker() {
                 </label>
                 <select id="branch">
                   <option value="CSE">Computer Science and Engineering</option>
+                  <option value="AI">Artificial Intelligence</option>
                   <option value="EE">Electrical Engineering</option>
                   <option value="ME">Mechanical Engineering</option>
                   <option value="CE">Civil Engineering</option>
@@ -588,7 +593,7 @@ export default function GradeTracker() {
               <h2>Core Courses</h2>
               <ul id="compulsory-courses-list"></ul>
               <div className="credits-container">
-                <p id="compulsory-courses-credit-sum">Total Credits: 0</p>
+                <p id="compulsory-courses-credit-sum">Completed Credits: 0</p>
                 <p
                   id="compulsory-courses-max-credits"
                   style={{ display: "none" }}
@@ -607,7 +612,7 @@ export default function GradeTracker() {
               <h2>HSS Courses</h2>
               <ul id="hs-courses-list"></ul>
               <div className="credits-container">
-                <p id="hs-courses-credit-sum">Total Credits: 0</p>
+                <p id="hs-courses-credit-sum">Completed Credits: 0</p>
                 <p id="hs-courses-max-credits"></p>
               </div>
             </div>
@@ -623,7 +628,7 @@ export default function GradeTracker() {
               <h2>Open Electives</h2>
               <ul id="open-elective-courses-list"></ul>
               <div className="credits-container">
-                <p id="open-elective-courses-credit-sum">Total Credits: 0</p>
+                <p id="open-elective-courses-credit-sum">Completed Credits: 0</p>
                 <p id="open-elective-courses-max-credits"></p>
               </div>
             </div>
@@ -639,29 +644,11 @@ export default function GradeTracker() {
               <h2>Extended Core Courses</h2>
               <ul id="extended-core-courses-list"></ul>
               <div className="credits-container">
-                <p id="extended-core-courses-credit-sum">Total Credits: 0</p>
+                <p id="extended-core-courses-credit-sum">Completed Credits: 0</p>
                 <p id="extended-core-courses-max-credits"></p>
               </div>
             </div>
 
-            <div
-              className="course-table"
-              id="physical-education"
-              onDrop={drop}
-              onDragOver={allowDrop}
-              onDragEnd={dragend}
-              onDragLeave={dragleave}
-            >
-              <h2>Others</h2>
-              <ul id="physical-education-list"></ul>
-              <div className="credits-container">
-                <p id="physical-education-credit-sum"></p>
-                <p
-                  id="physical-education-max-credits"
-                  style={{ display: "none" }}
-                ></p>
-              </div>
-            </div>
 
             {/* <!-- For admissionYear < 2022 --> */}
 
@@ -676,7 +663,7 @@ export default function GradeTracker() {
               <h2>BS Electives</h2>
               <ul id="bs-elective-courses-list"></ul>
               <div className="credits-container">
-                <p id="bs-elective-courses-credit-sum">Total Credits: 0</p>
+                <p id="bs-elective-courses-credit-sum">Completed Credits: 0</p>
                 <p id="bs-elective-courses-max-credits"></p>
               </div>
             </div>
@@ -693,7 +680,7 @@ export default function GradeTracker() {
               <h2>Science Basket</h2>
               <ul id="science-basket-courses-list"></ul>
               <div className="credits-container">
-                <p id="science-basket-courses-credit-sum">Total Credits: 0</p>
+                <p id="science-basket-courses-credit-sum">Completed Credits: 0</p>
                 <p id="science-basket-courses-max-credits"></p>
               </div>
             </div>
@@ -709,7 +696,7 @@ export default function GradeTracker() {
               <h2>Maths Basket</h2>
               <ul id="math-basket-courses-list"></ul>
               <div className="credits-container">
-                <p id="math-basket-courses-credit-sum">Total Credits: 0</p>
+                <p id="math-basket-courses-credit-sum">Completed Credits: 0</p>
                 <p id="math-basket-courses-max-credits"></p>
               </div>
             </div>
@@ -725,8 +712,26 @@ export default function GradeTracker() {
               <h2>Open project</h2>
               <ul id="open-project-courses-list"></ul>
               <div className="credits-container">
-                <p id="open-project-courses-credit-sum">Total Credits: 0</p>
+                <p id="open-project-courses-credit-sum">Completed Credits: 0</p>
                 <p id="open-project-courses-max-credits"></p>
+              </div>
+            </div>
+
+            {/* Other courses */}
+            <div
+              className="course-table"
+              id="physical-education"
+              onDrop={drop}
+              onDragOver={allowDrop}
+              onDragEnd={dragend}
+              onDragLeave={dragleave}
+            >
+              <h2>Others</h2>
+              <ul id="physical-education-list"></ul>
+              <div className="credits-container">
+                <p id="physical-education-credit-sum"></p>
+                <p
+                  id="physical-education-max-credits" style={{ display: "none" }}></p>
               </div>
             </div>
 
@@ -742,9 +747,12 @@ export default function GradeTracker() {
               <ul id="all-courses-list"></ul>
               <div className="credits-container">
                 {/* <!-- <p id="all-courses-credit-sum">Total Credits: 0</p> --> */}
+                <p id="all-courses-credit-sum">Completed Credits: 0</p>
                 <p id="all-courses-max-credits" style={{ display: "none" }}></p>
               </div>
             </div>
+
+
           </div>
         </div>
       </div>
