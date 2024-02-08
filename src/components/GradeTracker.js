@@ -375,6 +375,8 @@ export default function GradeTracker() {
           document.getElementById('science-basket-courses').style.display = 'none';
           document.getElementById('math-basket-courses').style.display = 'none';
           document.getElementById('open-project-courses').style.display = 'none';
+          document.getElementById('discipline-elective-courses').style.display = 'none';
+          document.getElementById('general-education-courses').style.display = 'none';
         }
 
         else if (admissionYear >= 2022) {
