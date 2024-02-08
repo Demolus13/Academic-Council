@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 0.5em;
 } */
 
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
   display: none;
 }
 

@@ -131,7 +131,7 @@
   color: white;
 }
 
-.ham-item a {
+.ham-item a, .ham-item div {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
@@ -188,7 +188,7 @@
 }
 
 @media screen and (max-width: 590px) {
-  .ham-item a {
+  .ham-item a, .ham-item div {
     font-size: 1rem;
   }
 
@@ -212,7 +212,7 @@
 }
 
 @media screen and (max-width: 360px) {
-  .ham-item a {
+  .ham-item a, .ham-item div {
     font-size: 0.75rem;
   }
 
@@ -221,20 +221,23 @@
   }
 }
 
-@media screen and (max-height: 1000px) {
-  .ham-item {
-    margin: 5px;
-  }
-  .subham-item {
-    margin: 2.5px 0px;
-  }
-}
-
-@media screen and (max-height: 871px) {
+@media screen and (max-height: 1050px) and (max-width: 1350px){
   .ham-item {
     margin: 3px;
   }
   .subham-item {
-    margin: 1.5px 0px;
+    margin: 2px 0px;
+    background-size: 1.15rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media screen and (max-height: 860px) and (max-width: 1300px) {
+  .ham-item a, .ham-item div {
+    font-size: 1.25rem;
+  }
+
+  .subham-item a {
+    font-size: 1.15rem;
   }
 }
