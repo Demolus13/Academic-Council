@@ -105,7 +105,7 @@ export default function GradeTracker() {
       maxHSCredits = 32;
       maxOpenElectiveCredits = 12;
       maxExtendedCoreCredits = 12;
-      maxBSCredits = 4;
+      maxBSCredits = 12;
       maxScienceBasketCredits = 12;
       maxMathBasketCredits = 12;
       maxOpenProjectCredits = 12;
