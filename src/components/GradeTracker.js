@@ -1,9 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import '../styles/GradeTracker.css'
 import * as XLSX from "xlsx";
 
 export default function GradeTracker() {
   // Highlight the drop area when a course is dragged over
+
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(true);
+    parseInput();
+  }
+
   function allowDrop(event) {
     event.preventDefault();
     const dropArea = event.target.closest('.course-table');
@@ -81,7 +89,7 @@ export default function GradeTracker() {
     if (year === "2019") {
       maxCompulsoryCredits = 120;
       maxHSCredits = 32;
-      maxOpenElectiveCredits = 12;
+      maxOpenElectiveCredits = 16;
       maxExtendedCoreCredits = 12;
       maxBSCredits = 8;
       maxScienceBasketCredits = 12;
@@ -92,7 +100,7 @@ export default function GradeTracker() {
     else if (year === "2020") {
       maxCompulsoryCredits = 120;
       maxHSCredits = 32;
-      maxOpenElectiveCredits = 12;
+      maxOpenElectiveCredits = 16;
       maxExtendedCoreCredits = 12;
       maxBSCredits = 8;
       maxScienceBasketCredits = 12;
@@ -103,7 +111,7 @@ export default function GradeTracker() {
     else if (year === "2021") {
       maxCompulsoryCredits = 120;
       maxHSCredits = 32;
-      maxOpenElectiveCredits = 12;
+      maxOpenElectiveCredits = 16;
       maxExtendedCoreCredits = 12;
       maxBSCredits = 12;
       maxScienceBasketCredits = 12;
@@ -578,7 +586,7 @@ export default function GradeTracker() {
                 ></textarea>
               </div>
             </div>
-            <button onClick={parseInput}>Submit</button>
+            <button onClick={handleClick} disabled={isClicked}>Submit</button>
           </div>
         </div>
 
