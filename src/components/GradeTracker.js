@@ -491,7 +491,7 @@ export default function GradeTracker() {
       <div className="your-component" style={{ backgroundImage: `url(${'/student-academic-council/Images/ExperiencesBG.webp'})` }}></div>
       <div id="grade-tracker">
         <h1 className="h-bold">Graduation Requirements Tracker [Beta]</h1>
-        <a className="btn btn-info guide" href="/student-academic-council/PDFs/P_F_Calculator_Guide.pdf" target="_">Pass Fail Calculator Guide</a>
+        <a className="btn btn-info guide" href="/student-academic-council/PDFs/Grad_Tracker_Guide.pdf" target="_">Grade Requirements Tracker Guide</a>
 
         <div id="gradeSections">
           <div id="userInfoSection" className="container">
