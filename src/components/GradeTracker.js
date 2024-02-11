@@ -75,6 +75,8 @@ export default function GradeTracker() {
     let maxScienceBasketCredits;
     let maxMathBasketCredits;
     let maxOpenProjectCredits;
+    let maxGeneralEducationCredits;
+    let maxDisciplineElectiveCredits;
 
     if (year === "2019") {
       maxCompulsoryCredits = 120;
@@ -118,6 +120,8 @@ export default function GradeTracker() {
       maxScienceBasketCredits = 8;
       maxMathBasketCredits = 2;
       maxOpenProjectCredits = 4;
+      maxGeneralEducationCredits = 4;
+      maxDisciplineElectiveCredits = 4;
     }
 
     // else if (year === "2023") {
@@ -142,7 +146,8 @@ export default function GradeTracker() {
     updateCreditSum('science-basket-courses', maxScienceBasketCredits);
     updateCreditSum('math-basket-courses', maxMathBasketCredits);
     updateCreditSum('open-project-courses', maxOpenProjectCredits);
-    updateCreditSum('all-courses', maxOpenProjectCredits);
+    updateCreditSum('general-education-courses', maxGeneralEducationCredits);
+    updateCreditSum('discipline-elective-courses', maxDisciplineElectiveCredits);
   }
 
   // Add highlighted classs to the drag and drop elements
@@ -370,6 +375,8 @@ export default function GradeTracker() {
           document.getElementById('science-basket-courses').style.display = 'none';
           document.getElementById('math-basket-courses').style.display = 'none';
           document.getElementById('open-project-courses').style.display = 'none';
+          document.getElementById('discipline-elective-courses').style.display = 'none';
+          document.getElementById('general-education-courses').style.display = 'none';
         }
 
         else if (admissionYear >= 2022) {
@@ -693,7 +700,7 @@ export default function GradeTracker() {
               onDragEnd={dragend}
               onDragLeave={dragleave}
             >
-              <h2>Maths Basket</h2>
+              <h2>Mathematics Basket</h2>
               <ul id="math-basket-courses-list"></ul>
               <div className="credits-container">
                 <p id="math-basket-courses-credit-sum">Completed Credits: 0</p>
@@ -714,6 +721,38 @@ export default function GradeTracker() {
               <div className="credits-container">
                 <p id="open-project-courses-credit-sum">Completed Credits: 0</p>
                 <p id="open-project-courses-max-credits"></p>
+              </div>
+            </div>
+
+            <div
+              className="course-table"
+              id="general-education-courses"
+              onDrop={drop}
+              onDragOver={allowDrop}
+              onDragEnd={dragend}
+              onDragLeave={dragleave}
+            >
+              <h2>General Education</h2>
+              <ul id="general-education-courses-list"></ul>
+              <div className="credits-container">
+                <p id="general-education-courses-credit-sum">Completed Credits: 0</p>
+                <p id="general-education-courses-max-credits"></p>
+              </div>
+            </div>
+
+            <div
+              className="course-table"
+              id="discipline-elective-courses"
+              onDrop={drop}
+              onDragOver={allowDrop}
+              onDragEnd={dragend}
+              onDragLeave={dragleave}
+            >
+              <h2>Discipline Elective</h2>
+              <ul id="discipline-elective-courses-list"></ul>
+              <div className="credits-container">
+                <p id="discipline-elective-courses-credit-sum">Completed Credits: 0</p>
+                <p id="discipline-elective-courses-max-credits"></p>
               </div>
             </div>
 
