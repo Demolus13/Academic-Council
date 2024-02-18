@@ -87,10 +87,10 @@ export default function Navbar({ onLinkClick }) {
             </li>
             <ul>
             <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
-                <Link to="https://sites.google.com/iitgn.ac.in/iws/advisories" className="ham-link linkEventListener" target="blank">Advisories</Link>
+                <Link to="https://sites.google.com/iitgn.ac.in/iws/" className="ham-link linkEventListener" target="blank">Advisories</Link>
               </li>
               <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
-                <Link to="https://academics.iitgn.ac.in/request/index.php" className="ham-link linkEventListener" target="blank">Request Portal</Link>
+                <Link to="https://academics.iitgn.ac.in/request/home.php" className="ham-link linkEventListener" target="blank">Request Portal</Link>
               </li>
               <li className="subham-item" style={{backgroundImage: `url(${"/student-academic-council/Images/arrow.svg"})`}}>
                 <Link to="https://iitgn.ac.in/careers/ocep" className="ham-link linkEventListener" target="blank">OCEO</Link>
